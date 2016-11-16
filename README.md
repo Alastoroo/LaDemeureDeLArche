@@ -1,4 +1,4 @@
-# LaDeumeureDeLArche
+# LaDemeureDeLArche
 1. Fork le projet sur VOTRE github 
 2. Dans le terminal de votre CP Crée un Dossier du nom du projet (mkdir nom_projet)
 3. Puis Clone le projet dans votre dossier ( git clone lien du projet )
