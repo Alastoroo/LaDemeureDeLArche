@@ -10,6 +10,6 @@
 
   
 
-                                          LA DEUMEURE DE L'ARCHE
+                                          LA DEMEURE DE L'ARCHE
 
-      Refonte du site La deumeure de l'arche. 
+      Refonte du site La demeure de l'arche. 
