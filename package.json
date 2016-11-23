@@ -1,0 +1,27 @@
+{
+  "name": "lademeuredelarche",
+  "version": "1.0.0",
+  "description": "site pour la demeure de larche",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alastoroo/LaDeumeureDeLArche.git"
+  },
+  "author": "wildcodeschool",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Alastoroo/LaDeumeureDeLArche/issues"
+  },
+  "homepage": "https://github.com/Alastoroo/LaDeumeureDeLArche#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "jade": "^1.11.0",
+    "mongoose": "^4.6.8",
+    "path": "^0.12.7"
+  }
+}
