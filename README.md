@@ -7,6 +7,9 @@
 6. -se placer sur votre branch ( git checkout nom_branch ex : git checkout gallery );
 7. -faire ces tests en local ( sur ça branch );
 8. -si les test son ok ( avec l'aval de l'equipe ) faire un merge de votre branch sur LA RECETTE;
+</br>
+</br>
+9. -Toute les pages HTML du site doivent ce trouver dans le dossier VIEWS ( avec le index.jade );
 
   
 
