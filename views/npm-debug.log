@@ -1,52 +1,29 @@
 0 info it worked if it ends with ok
-<<<<<<< HEAD
-1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'start' ]
-2 info using npm@3.10.8
-3 info using node@v6.9.1
-=======
 1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'start' ]
 2 info using npm@3.10.3
 3 info using node@v6.7.0
->>>>>>> 90b10f8ca65a4f59632dfc372292aa8cae7539e0
 4 verbose run-script [ 'prestart', 'start', 'poststart' ]
 5 info lifecycle lademeuredelarche@1.0.0~prestart: lademeuredelarche@1.0.0
 6 silly lifecycle lademeuredelarche@1.0.0~prestart: no script for prestart, continuing
 7 info lifecycle lademeuredelarche@1.0.0~start: lademeuredelarche@1.0.0
 8 verbose lifecycle lademeuredelarche@1.0.0~start: unsafe-perm in lifecycle true
-<<<<<<< HEAD
-9 verbose lifecycle lademeuredelarche@1.0.0~start: PATH: /usr/lib/node_modules/npm/bin/node-gyp-bin:/home/celine/Wild Code School/Demeure-Arche/node_modules/.bin:/home/celine/.rvm/gems/ruby-2.3.0/bin:/home/celine/.rvm/gems/ruby-2.3.0@global/bin:/home/celine/.rvm/rubies/ruby-2.3.0/bin:/home/celine/bin:/home/celine/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/celine/.rvm/bin
-10 verbose lifecycle lademeuredelarche@1.0.0~start: CWD: /home/celine/Wild Code School/Demeure-Arche
-=======
 9 verbose lifecycle lademeuredelarche@1.0.0~start: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/home/apprenti/demeuredeArche/LaDemeureDeLArche/node_modules/.bin:/usr/local/bin:/home/apprenti/.rvm/gems/ruby-2.3.0/bin:/home/apprenti/.rvm/gems/ruby-2.3.0@global/bin:/home/apprenti/.rvm/rubies/ruby-2.3.0/bin:/home/apprenti/bin:/home/apprenti/.local/bin:/home/apprenti/bin:/home/apprenti/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/apprenti/.rvm/bin:/snap/bin:/home/apprenti/.rvm/bin:/home/apprenti/.rvm/bin
 10 verbose lifecycle lademeuredelarche@1.0.0~start: CWD: /home/apprenti/demeuredeArche/LaDemeureDeLArche
->>>>>>> 90b10f8ca65a4f59632dfc372292aa8cae7539e0
 11 silly lifecycle lademeuredelarche@1.0.0~start: Args: [ '-c', 'nodemon app.js' ]
 12 info lifecycle lademeuredelarche@1.0.0~start: Failed to exec start script
 13 verbose stack Error: lademeuredelarche@1.0.0 start: `nodemon app.js`
 13 verbose stack spawn ENOENT
-<<<<<<< HEAD
-13 verbose stack     at ChildProcess.<anonymous> (/usr/lib/node_modules/npm/lib/utils/spawn.js:33:16)
-=======
 13 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:33:16)
->>>>>>> 90b10f8ca65a4f59632dfc372292aa8cae7539e0
 13 verbose stack     at emitTwo (events.js:106:13)
 13 verbose stack     at ChildProcess.emit (events.js:191:7)
 13 verbose stack     at maybeClose (internal/child_process.js:877:16)
 13 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
 14 verbose pkgid lademeuredelarche@1.0.0
-<<<<<<< HEAD
-15 verbose cwd /home/celine/Wild Code School/Demeure-Arche
-16 error Linux 4.4.0-51-generic
-17 error argv "/usr/bin/nodejs" "/usr/bin/npm" "start"
-18 error node v6.9.1
-19 error npm  v3.10.8
-=======
-15 verbose cwd /home/apprenti/demeuredeArche/LaDemeureDeLArche
+15 verbose cwd /home/apprenti/demeuredeArche/LaDemeureDeLArche/views
 16 error Linux 4.4.0-47-generic
 17 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "start"
 18 error node v6.7.0
 19 error npm  v3.10.3
->>>>>>> 90b10f8ca65a4f59632dfc372292aa8cae7539e0
 20 error file sh
 21 error code ELIFECYCLE
 22 error errno ENOENT
