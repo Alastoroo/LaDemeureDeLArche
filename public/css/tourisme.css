@@ -1,0 +1,34 @@
+
+#pageTourisme{
+  padding-top: 280px;
+}
+.thumbnail{
+
+}
+.thumbnail a img{
+  height: 150px;
+}
+
+.thumbnail h3{
+text-decoration: none;
+color: black;
+}
+.thumbnail p{
+text-decoration: none;
+color: black;
+}
+#titleTourisme{
+  border: none;
+  color:#9d2501;
+  font-size: 24px;
+  line-height: 26px;
+}
+/*
+.photo{
+  height: 150px;
+  background-image: url("../img/tourisme/bambouserie.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+*/
+/************************************************************************/

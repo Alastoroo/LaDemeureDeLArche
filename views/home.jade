@@ -1,0 +1,222 @@
+doctype html
+html(lang='en')
+  head
+    title Bootstrap Case
+    |     
+    meta(charset='utf-8')
+    |     
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    |     
+    link(rel='stylesheet', href='../public/css/bootstrap.min.css')
+    |     
+    link(rel='stylesheet', href='../public/css/navbar.css')
+    |     
+    link(rel='stylesheet', href='../public/css/home.css')
+    |     
+    link(rel='shortcut icon', href='fonts/ico/favicon.png')
+    |     
+    link(href='../public/fonts/font-awesome.min.css', rel='stylesheet')
+    |     
+    link(href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic', rel='stylesheet', type='text/css')
+    |     
+    link(href='http://fonts.googleapis.com/css?family=Raleway:400,300,700', rel='stylesheet', type='text/css')
+    |     
+    link(href='https://fonts.googleapis.com/css?family=Gloria+Hallelujah', rel='stylesheet')
+  body
+    nav.navbar.navbar-default.navbar-fixed-top
+      #logo.row
+        .col-lg-12
+          img.img-responsive.center-block(src='../public/img/HEADER-HOME4.png')
+          |               
+          h3 Chambres d&apos;h&ocirc;tes et g&icirc;te aux portes des C&eacute;vennes
+      |       
+      .container
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+            span.sr-only Toggle navigation
+            |       
+            span.icon-bar
+            |       
+            span.icon-bar
+            |       
+            span.icon-bar
+        |           
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          .container-fluid
+            .row
+              nav#cbp-hrmenu.cbp-hrmenu
+                ul
+                  li.active
+                    a(href='#')
+                      i.glyphicon.glyphicon-home
+                  |                               
+                  li
+                    a.hvr-sweep-to-right(href='#') La demeure
+                  |                               
+                  li
+                    a.hvr-sweep-to-right(href='#')
+                      | S&eacute;jours
+                      b.caret
+                    |                                   
+                    .cbp-hrsub
+                      .cbp-hrsub-inner.center-block
+                        div
+                          a(href='#')
+                            h4 Chambres
+                        |                                           
+                        div
+                          a(href='#')
+                            h4 Suites
+                        |                                           
+                        div
+                          a(href='#')
+                            h4 L&apos;Appart
+                      // /cbp-hrsub-inner
+                    // /cbp-hrsub
+                  |                               
+                  li
+                    a.hvr-sweep-to-right(href='#') Aux alentours
+                  |                               
+                  li
+                    a.hvr-sweep-to-right(href='#') Livre d&apos;Or
+                  |                               
+                  li
+                    a.hvr-sweep-to-right(href='#') Nous contacter
+                  |                               
+                  button.btn.btn-default.btn-lg(type='submit') R&eacute;server
+    // SLIDE HOME
+    #homeDemeure.container-fluid
+      .row
+        .col-lg-12.text-justify
+          .col-lg-9
+            h3#title La Demeure de l&apos;Arche
+            |     
+            p(style='font-size:16px;')
+              | Situ&eacute;e dans le Gard, tout pr&egrave;s d&rsquo;Ales &laquo; la porte des C&eacute;vennes &raquo;, la Demeure de l&rsquo;Arche vous accueille dans ses chambres d&rsquo;h&ocirc;tes et ses suites de charme uniques. Sa d&eacute;coration soign&eacute;e est un savant m&eacute;lange d&rsquo;inspirations &agrave; la fois modernes et traditionnelles. Chaque habitation poss&egrave;de une terrasse priv&eacute;e avec vue sur le parc, les C&eacute;vennes ou le ch&acirc;teau de Montmoirac.
+              br
+              | Vous pourrez nager (piscine exceptionnelle de 25mX10m avec cuisine d&rsquo;&eacute;t&eacute;, salle de bain et WC), jouer au tennis, au ping-pong ou &agrave; la p&eacute;tanque et profiter d&rsquo;autres activit&eacute;s au milieu de son parc arbor&eacute; de deux hectares.
+          #homeGeographie.col-lg-3
+      |     
+      .row
+        .col-sm-6.col-md-3
+          .thumbnail
+            .caption
+              h3 Chambres &agrave; la Nuit
+              |             
+              p
+                | .Toute l&rsquo;ann&eacute;e, profitez de nos chambres d&rsquo;h&ocirc;tes pour une ou plusieurs nuits dans le meilleur confort, et un service de qualit&eacute;
+        |       
+        .col-sm-6.col-md-3
+          .thumbnail
+            .caption
+              h3 Forfait Week-end
+              |             
+              p
+                | Vous pouvez louer votre chambre ou votre suite le temps d&rsquo;un agr&eacute;able week-end, qui vous permettra de d&eacute;couvrir une r&eacute;gion touristique riche en surprises.
+        |       
+        .col-sm-6.col-md-3
+          .thumbnail
+            .caption
+              h3 Longs s&eacute;jours
+              |             
+              p
+                | Nous proposons &eacute;galement des tarifs pr&eacute;f&eacute;rentiels pour vos longs s&eacute;jours, afin d&rsquo;appr&eacute;cier au mieux la Demeure de l&rsquo;Arche, un lieu id&eacute;al pour vos vacances.
+        |       
+        .col-sm-6.col-md-3
+          .thumbnail
+            .caption
+              h3 Ev&eacute;nements familiaux ou d&rsquo;entreprise:
+              |             
+              p
+                | Mariages, anniversaires, f&ecirc;tes priv&eacute;es: r&eacute;unissez vos proches dans un lieu rien qu&rsquo;&agrave; vous le temps d&rsquo;une soir&eacute;e ou d&rsquo;un week-end.
+    // COMMENTAIRES
+    .container-fluid
+      .row
+        .col-md-6
+          #carousel-example-generic.carousel.slide(data-ride='carousel')
+            // Wrapper for slides
+            #commentaires.carousel-inner(role='listbox')
+              .item.active
+                p(style='font-size:24px;') Commentaires 1
+              |     
+              .item
+                p(style='font-size:24px;') Commentaires 2
+              |     
+              .item
+                p(style='font-size:24px;') Commentaires 3
+            // Controls
+            a.left.carousel-control(href='#carousel-example-generic', role='button', data-slide='prev')
+              span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+              |     
+              span.sr-only Previous
+            |   
+            a.right.carousel-control(href='#carousel-example-generic', role='button', data-slide='next')
+              span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+              |     
+              span.sr-only Next
+        .col-md-6
+    // FIN COMMENTAIRES
+    // barre de reservation
+    nav.navbar.navbar-default.navbar-fixed-bottom
+      .container-fluid
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+            span.sr-only Toggle navigation
+            |       
+            span.icon-bar
+            |       
+            span.icon-bar
+            |       
+            span.icon-bar
+        // BARRE de RESERVATIOn UNIQUEMENT DANS LA HOME
+        #bs-example-navbar-collapse-2.collapse.navbar-collapse
+          form.form-inline
+            .form-group
+              label(for='exampleInputDate') Arriv&eacute;e
+              |                       
+              input#exampleInputDate.form-control(type='date', placeholder='Date')
+            |                   
+            .form-group
+              label(for='exampleInputDate2') D&eacute;part
+              |                       
+              input#exampleInputDate2.form-control(type='date', placeholder='Date')
+            |                   
+            .form-group
+              label(for='exampleInputList') S&eacute;jour
+              |                       
+              select#formSejour
+                optgroup(label='Chambres')
+                  option(value='ChambreAzur') Chambre Azur
+                  |               
+                  option(value='ChambreRomance') Chambre Romance
+                |           
+                optgroup(label='Suite')
+                  option(value='SuiteRenoir') SuiteRenoir
+                  |               
+                  option(value='SuiteZen') Suite Zen
+                |               
+                option(value='Appart') L&apos;Appart
+            |                   
+            #formNumber.form-group
+              label(for='exampleInputNumber') Adulte(s)
+              |                       
+              input#exampleInputNumber.form-control(type='number', placeholder='Nbr')
+            |                   
+            #formNumber.form-group
+              label(for='exampleInputNumber2') Enfant(s)
+              |                       
+              input#exampleInputNumber.form-control(type='number', placeholder='Nbr')
+            |                   
+            button.btn.btn-default.btn-lg(type='submit') R&eacute;server
+        // /.navbar-collapse
+      // /.container-fluid
+    // /.fin barre de reservation
+    script(src='../public/js/jquery.min.js')
+    script(src='../public/js/bootstrap.min.js')
+    script(src='../public/js/cbpHorizontalMenu.min.js')
+    script.
+      jQuery(document).ready(function() {
+      $(function() {
+      cbpHorizontalMenu.init();
+      });
+      });

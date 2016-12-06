@@ -1,0 +1,63 @@
+/************barre de reservation*********************************/
+.form-group{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-right: 10px;
+}
+.form-group label{
+  margin-right: 10px;
+  font-size: 14px;
+  color:white;
+}
+#formNumber{
+width:150px;
+  }
+#formNumber input{
+    width: 40%;
+  }
+#formSejour{
+  height: 33px;
+  border-radius: 5px;
+  border-color: #999966;
+  background-color: white;
+  }
+/*******zone home demeure*****************************************/
+
+#homeDemeure{
+padding-top: 280px;
+margin-bottom: 100px;
+}
+ .thumbnail{
+  height: 150px;
+}
+.caption h3{
+margin-top: 0px;
+}
+#title{
+  font-size: 36px;
+}
+
+#txtDemeure p{
+    font-size: 18px;
+  }
+#homeGeographie{
+    background-color: #999966;
+    height: 250px;
+    background-image: url("../img/Carte-cevennes-france.png");
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position:top left;
+    margin-bottom: 20px;
+  }
+/**************slide commentaires****************************/
+
+#commentaires{
+margin-bottom: 100px;
+  }
+#commentaires p{
+  height: 150px;
+  text-align: center;
+}
+#commentaires .item{
+background-color: white;
+}
