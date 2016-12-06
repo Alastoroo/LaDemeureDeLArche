@@ -1,0 +1,90 @@
+h1{
+  font-size: 35px;
+}
+/* Home Page Carousel */
+html,
+body {
+    height: 100%;
+}
+
+header.carousel {
+    height: 100%;
+}
+
+header.carousel .item,
+header.carousel .item.active,
+header.carousel .carousel-inner {
+    height: 100%;
+}
+
+header.carousel .fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+/* partie chambres*/
+
+.fixtop {
+display: inline-block;
+text-align: center;
+float: left;
+padding-left: 220px;
+}
+.fixtop1 {
+display: inline-block;
+text-align: center;
+float: left;
+padding-left: 250px;
+}
+.fixtop3 {
+display: inline-block;
+text-align: center;
+padding-left: 200px;
+}
+.fixtop4 {
+display: inline-block;
+text-align: center;
+padding-left: 100px;
+}
+
+
+li {
+display: inline-block;
+width: 200px;
+margin-left: 20px;
+vertical-align: top;
+text-align: center;
+}
+.container-fluid {
+  width: 80%;
+}
+h2.explication1 {
+  margin-bottom: 10px;
+  font-size: 22px;
+  line-height: 0.5;
+  letter-spacing: -1px;
+}
+.description {
+  padding-left: 50px;
+padding-bottom:  20px;
+
+}
+
+i.glyphicon {
+  font-size: 18px !important;
+  color: #2E3438;
+  padding-right: 5px;
+}
+
+img.img1 {
+	max-width: 20%;
+	height: auto;
+}
+
+#carousel-example-generic {
+  overflow: hidden;
+	position: relative;
+  top: 100px;
+	margin:0 auto;
+}

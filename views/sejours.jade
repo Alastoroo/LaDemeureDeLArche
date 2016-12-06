@@ -1,0 +1,180 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    |     
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    |     
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    |     
+    link(href='css/bootstrap.min.css', rel='stylesheet')
+    |     
+    link(rel='stylesheet', href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css  ')
+    // Latest compiled and minified CSS
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
+    // Optional theme
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css', integrity='sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp', crossorigin='anonymous')
+    |     
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+    // Latest compiled and minified JavaScript
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa', crossorigin='anonymous')
+    |     
+    link(rel='stylesheet', href='css/style.css', type='text/css')
+    |     
+    title Les sejours
+  |   
+  body
+    br
+    |     
+    br
+    |     
+    .container-fluid
+      .row
+        .col-md-4.positionCarrousel
+          #carousel-example-generic.carousel.slide(data-ride='carousel')
+            ol.carousel-indicators
+              li.active(data-target='#carousel-example-generic', data-slide-to='0')
+              |           
+              li(data-target='#carousel-example-generic', data-slide-to='1')
+              |           
+              li(data-target='#carousel-example-generic', data-slide-to='2')
+              |           
+              li(data-target='#carousel-example-generic', data-slide-to='3')
+              |           
+              li(data-target='#carousel-example-generic', data-slide-to='4')
+              |           
+              li(data-target='#carousel-example-generic', data-slide-to='5')
+            |         
+            .carousel-inner
+              .item.active
+                img.img-responsive(src='../public/img/appart/appart.jpg', alt='photo salon')
+                |           
+                .carousel-caption
+              |         
+              .item
+                img.img-responsive(src='../public/img/appart/appart-cuisine.jpg', alt='photo de la cuisine')
+                |           
+                .carousel-caption
+              |         
+              .item
+                img.img-responsive(src='../public/img/appart/appart-terrasse1.jpg', alt='photo de la terrasse')
+                |           
+                .carousel-caption
+              |         
+              .item
+                img.img-responsive(src='../public/img/appart/appart3.jpg', alt='photo du salon')
+                |           
+                .carousel-caption
+              |         
+              .item
+                img.img-responsive(src='../public/img/appart/appart6.jpg', alt='photo du salon')
+                |           
+                .carousel-caption
+              |         
+              .item
+                img.img-responsive(src='img/appart/chb-appart1.jpg', alt='photo du salon')
+                |           
+                .carousel-caption
+            |         
+            a.left.carousel-control(href='#carousel-example-generic', data-slide='prev')
+              span.glyphicon.glyphicon-chevron-left
+            |         
+            a.right.carousel-control(href='#carousel-example-generic', data-slide='next')
+              span.glyphicon.glyphicon-chevron-right
+        |   
+        #chambreDescription.row.well.centered.text-justify
+          .col-md-8.description
+            h1 L&apos;appartement
+            |     
+            p
+              | L&rsquo;appartement de 65m2 situ&eacute; en rez de jardin pouvant accueillir de deux &agrave; quatre personnes dans une d&eacute;coration aux couleurs chaudes. Il est compos&eacute; de deux chambres, d&rsquo;une cuisine salon avec TV grand &eacute;cran plat, WiFi, d&rsquo;une salle de bain, d&rsquo;un WC et de deux terrasses Nord et Sud avec possibilit&eacute; de faire un barbecue l&apos;&eacute;t&eacute;. Un parking gratuit et priv&eacute; est disponible sur place.
+            |     
+            h2.explication1 Descriptif
+            |     
+            p
+              strong Chambre parentale
+              | :&nbsp;Un lit deux personnes 160&times;200 avec des rangements, des fauteuils et un acc&egrave;s privatif par grande baie vitr&eacute;e &agrave; la terrasse Nord avec coin farniente au frais pour l&rsquo;&eacute;t&eacute;.
+              br
+              |     
+              strong Chambre secondaire
+              | :&nbsp;Deux lits de 90 avec des rangements.
+            |     
+            h2.explication1 Equipements 
+            |     
+            p
+              strong Cuisine
+              | : r&eacute;frig&eacute;rateur, lave vaisselle, four, plaques halog&egrave;nes, micro-ondes, cafeti&egrave;re, bouilloire, grille pain.
+              br
+              |     
+              strong Salon
+              | : une table familiale, canap&eacute;, table basse, TV &eacute;cran plat.
+              br
+              |     
+              strong Salle de bain
+              | : douche, toilettes, seche-cheveux.
+      |   
+      section#reservation
+        .row.lead
+          .col-xs-3
+            h4.fixtop1(span='') DESCRIPTION
+          |         
+          .col-xs-2
+            h4.fixtop(span='') TOTAL
+          |       
+          .col-xs-3
+            h4.fixtop3(span='') RESERVATION
+          |     
+          .col-xs-4
+            h4.fixtop4(span='') OFFRIR LE SEJOUR
+        hr
+        |    
+        ul#menu.list-unstyled.list-inline
+          li
+            i.glyphicon.glyphicon-user
+            i.glyphicon.glyphicon-user
+            i.glyphicon.glyphicon-user
+            i.glyphicon.glyphicon-user
+            br
+          li Location appartement de 2 &agrave; 4 personnes &agrave; la semaine
+          |       
+          li
+            strong &euro;980.00
+            br
+            | Prix pour 7 nuits
+          |       
+          li
+            button.btn.btn-lg.btn-primary(type='button', href='#') R&eacute;servez
+          |       
+          li
+            a(href='#')
+              img.img1(src='logo/icon3-gift.png', alt='idée cadeau')
+        hr
+        ul#menu.list-unstyled.list-inline
+          li
+            i.glyphicon.glyphicon-user
+            i.glyphicon.glyphicon-user
+            i.glyphicon.glyphicon-user
+            i.glyphicon.glyphicon-user
+            br
+          li Location appartement de 2 &agrave; 4 personnes pour le week-end
+          |    
+          li
+            strong &euro;280.00
+            br
+            | Prix pour 2 nuits
+          |    
+          li
+            button.btn.btn-lg.btn-primary(type='button', href='#') R&eacute;servez
+          |    
+          li
+            a(href='#')
+              img.img1(src='logo/icon3-gift.png', alt='idée cadeau')
+        hr
+    |     
+    script.
+      $('.carousel').carousel('cycle')({
+      interval: 3000
+      })
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+    |   
+    script(type='text/javascript', src='main.js')

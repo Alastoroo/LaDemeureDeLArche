@@ -1,0 +1,61 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    |     
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    |     
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    |     
+    link(href='css/bootstrap.min.css', rel='stylesheet')
+    |     
+    link(rel='stylesheet', href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css  ')
+    // Latest compiled and minified CSS
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
+    // Optional theme
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css', integrity='sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp', crossorigin='anonymous')
+    // Latest compiled and minified JavaScript
+    script(src='js/jquery.min.js')
+    |     
+    link(rel='stylesheet', href='style.css', type='text/css')
+  body
+     
+    header#myCarousel.carousel.slide
+      ol.carousel-indicators
+        li.active(data-target='#myCarousel', data-slide-to='0')
+        |             
+        li(data-target='#myCarousel', data-slide-to='1')
+        |             
+        li(data-target='#myCarousel', data-slide-to='2')
+        |             
+        li(data-target='#myCarousel', data-slide-to='3')
+      |         
+      .carousel-inner
+        .item.active
+          .fill(style="background-image:url('../public/img/demeure/ARCHE.jpg');")
+          |                 
+          .carousel-caption
+        |             
+        .item
+          .fill(style="background-image:url('../public/img/demeure/piscine.jpg');")
+          |                 
+          .carousel-caption
+        |             
+        .item
+          .fill(style="background-image:url('../public/img/demeure/entree.jpg');")
+          |                 
+          .carousel-caption
+        |             
+        .item
+          .fill(style="background-image:url('../public/img/demeure/home4.jpg');")
+          |                 
+          .carousel-caption
+            h2 Caption 3
+      |     
+      script(src='js/bootstrap.min.js')
+    
+      // Script to Activate the Carousel
+      script.
+        $('.carousel').carousel({
+        interval: 5000 //changes the speed
+        })
