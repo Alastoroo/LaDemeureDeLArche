@@ -1,10 +1,10 @@
 .navbar{
- background-color: #999966;
+ background-color: #999966 !important;
 }
 .navbar .navbar-nav {
   display: inline-block;
-  float: none;
-  vertical-align: top;
+  /*float: none; */
+  /*vertical-align: top;*/
 }
 .navbar .navbar-collapse {
   text-align: center;
@@ -148,7 +148,7 @@ font-family: 'Fira Sans', sans-serif;
 	}
 }
 /***********************************************************/
-@media screen and (max-width: 36em) {
+@media screen and (max-width: 16em) {
 	.cbp-hrmenu .cbp-hrsub-inner > div {
 		width: 100%;
 		float: none;
