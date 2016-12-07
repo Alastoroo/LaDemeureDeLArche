@@ -3,7 +3,6 @@ var router = express.Router();
 var path = require('path');
 var jade = require('jade');
 
-
      router
        .route("/")
        .get(function(req,res){
