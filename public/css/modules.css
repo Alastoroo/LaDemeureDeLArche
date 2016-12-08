@@ -19,7 +19,6 @@
 
 .b3 {
   border-right: 2px solid white;
-  border-top: 2px solid white;
   padding-right: 0px;
   padding-top: 0px;
 }
@@ -27,18 +26,16 @@
 .b4{
   border-left: 2px solid white;
   border-right: 2px solid white;
-  border-top: 2px solid white;
   padding-left: 0px;
   padding-right: 0px;
 }
 
 .b5 {
   border-left: 2px solid white;
-  border-top: 2px solid white;
   padding-left: 0px;
   padding-top: 0px;
 }
 
-.container {
+.box {
   width: 95%;
 }
