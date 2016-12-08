@@ -1,8 +1,8 @@
 h1{
   font-size: 35px;
 }
-/* Home Page Carousel */
-/*html,
+/*Home Page Carousel */
+html,
 body {
     height: 100%;
 }
@@ -109,11 +109,6 @@ width: 500px;
 margin-bottom: 10px;
 }
 
-/*.dropdown-menu{
-  width: 1000px;
-  background-color: black;
-}*/
-
 /* FOOTER DEBUT */
 .footer-bs {
   background-color: #eaeaea;
@@ -174,7 +169,5 @@ hr {
     border: 0;
     border-top: 1px solid #999966;
 }
-
-
 
 /* FOOTER FIN */
