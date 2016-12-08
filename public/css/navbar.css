@@ -2,12 +2,13 @@
  background-color: #999966 !important;
 }
 .navbar .navbar-nav {
-  display: inline-block;
-  /*float: none; */
-  /*vertical-align: top;*/
+  display: inline;
+  float: none;
+  vertical-align: top;
 }
-.navbar .navbar-collapse {
-  text-align: center;
+
+ul{
+  font-size: 20px;
 }
 
 #logo{
