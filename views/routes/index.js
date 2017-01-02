@@ -15,28 +15,10 @@ var jade = require('jade');
            res.render("sejours");
          });
          router
-           .route("/demeure")
+           .route("/sejours")
            .get(function(req,res){
-             res.render("demeure");
+             res.render("sejours");
            });
-           router
-            .route("/livre")
-            .get(function(req,res){
-              res.render("livre");
-            });
-            router
-            .route("/contact")
-            .get(function(req,res){
-               res.render("contact");
-            });
-            router
-            .route("/reservation")
-            .get(function(req,res){
-               res.render("reservation");
-            });
-
-
-
 
 
        router
