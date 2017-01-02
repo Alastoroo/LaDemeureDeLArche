@@ -3,14 +3,21 @@ var router = express.Router();
 var path = require('path');
 var jade = require('jade');
 
+
      router
        .route("/")
        .get(function(req,res){
          res.render("index");
        });
+       router
+         .route("/sejours")
+         .get(function(req,res){
+           res.render("sejours");
+         });
 
        router
              .route('/users') // on declare la route
+
              .get(function(req,res){ //on va recuperer les users
                User
                    .find() // on va aller chercher tout les utilisateur dans notre base donné

@@ -1,8 +1,16 @@
+doctype html
+
+html(lang='en')
+  head
+    include ./head
 sejours
   |     
   title Les sejours
   |   
   body
+  
+    include ./header
+
     br
     |     
     br
@@ -26,27 +34,27 @@ sejours
             |         
             .carousel-inner
               .item.active
-                img.img-responsive(src='../public/img/appart/appart.jpg', alt='photo salon')
+                img.img-responsive(src='img/appart/appart.jpg', alt='photo salon')
                 |           
                 .carousel-caption
               |         
               .item
-                img.img-responsive(src='../public/img/appart/appart-cuisine.jpg', alt='photo de la cuisine')
+                img.img-responsive(src='img/appart/appart-cuisine.jpg', alt='photo de la cuisine')
                 |           
                 .carousel-caption
               |         
               .item
-                img.img-responsive(src='../public/img/appart/appart-terrasse1.jpg', alt='photo de la terrasse')
+                img.img-responsive(src='img/appart/appart-terrasse1.jpg', alt='photo de la terrasse')
                 |           
                 .carousel-caption
               |         
               .item
-                img.img-responsive(src='../public/img/appart/appart3.jpg', alt='photo du salon')
+                img.img-responsive(src='img/appart/appart3.jpg', alt='photo du salon')
                 |           
                 .carousel-caption
               |         
               .item
-                img.img-responsive(src='../public/img/appart/appart6.jpg', alt='photo du salon')
+                img.img-responsive(src='img/appart/appart6.jpg', alt='photo du salon')
                 |           
                 .carousel-caption
               |         
@@ -126,7 +134,7 @@ sejours
           |       
           li
             a(href='#')
-              img.img1(src='logo/icon3-gift.png', alt='idée cadeau')
+              img.img1(src='img/logo/icon3-gift.png', alt='idée cadeau')
         hr
         ul#menu.list-unstyled.list-inline
           li
@@ -147,13 +155,12 @@ sejours
           |    
           li
             a(href='#')
-              img.img1(src='logo/icon3-gift.png', alt='idée cadeau')
+              img.img1(src='img/logo/icon3-gift.png', alt='idée cadeau')
         hr
     |     
+    include ./footer
     script.
       $('.carousel').carousel('cycle')({
       interval: 3000
       })
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
-    |   
-    script(type='text/javascript', src='main.js')
+        
