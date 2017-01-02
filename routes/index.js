@@ -14,6 +14,12 @@ var jade = require('jade');
          .get(function(req,res){
            res.render("sejours");
          });
+         router
+           .route("/sejours")
+           .get(function(req,res){
+             res.render("sejours");
+           });
+
 
        router
              .route('/users') // on declare la route

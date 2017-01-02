@@ -13,6 +13,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/sejours', routes);
+app.use('/tourisme', routes);
 
 var server = app.listen(app.get("port"), function(){
     console.log("Le serveur tourne sur "+server.address().address+":"+server.address().port)
