@@ -55,8 +55,9 @@ margin-left: 20px;
 vertical-align: top;
 text-align: center;
 }
-#homeChambre container-fluid {
+#homeChambre.container-fluid {
   width: 80%;
+  padding-top: 250px;
 }
 h2.explication1 {
   margin-bottom: 10px;
@@ -67,6 +68,7 @@ h2.explication1 {
 .description {
   padding-left: 50px;
 padding-bottom:  20px;
+
 
 }
 
@@ -84,7 +86,7 @@ img.img1 {
 #carousel-example-generic {
   overflow: hidden;
 	position: relative;
-  top: 100px;
+  top: 20px;
 	margin:0 auto;
 }
 
