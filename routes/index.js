@@ -34,6 +34,11 @@ var jade = require('jade');
             .get(function(req,res){
                res.render("reservation");
             });
+            router
+            .route("/tourisme")
+            .get(function(req,res){
+               res.render("tourisme");
+            });
 
 
 
