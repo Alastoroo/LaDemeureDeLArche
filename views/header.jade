@@ -1,6 +1,6 @@
 header
     nav.navbar.navbar-default.navbar-fixed-top
-      .container-fluid
+      #menu.container-fluid
         #logo.row
           .col-lg-12
             img.img-responsive.center-block(src='img/HEADER-HOME4.png')
@@ -20,12 +20,12 @@ header
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           ul.nav.navbar-nav
             li
-              a(href='#')
+              a(href='home')
                 i.glyphicon.glyphicon-home
                 span.sr-only (current)
             |           
             li
-              a(href='#') La Demeure
+              a(href='demeure') La Demeure
             |           
             li.dropdown
               a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
@@ -34,25 +34,25 @@ header
               |             
               ul.dropdown-menu
                 li
-                  a(href='#') Chambres
+                  a(href='sejours#chambres') Chambres
                 |               
                 li
-                  a(href='#') Suites
+                  a(href='sejours#suites') Suites
                 |               
                 li
-                  a(href='#') L&apos;Appart
+                  a(href='sejours#appart') L&apos;Appart
             |               
             li
-              a(href='#') Aux alentours
+              a(href='tourisme') Aux alentours
             |                   
             li
-              a(href='#') Livre d&apos;Or
+              a(href='livre') Livre d&apos;Or
             |                       
             li
-              a(href='#') Nous contacter
+              a(href='contact') Nous contacter
             |                             
             li
-              button.btn.btn-default(type='submit') R&eacute;server
+              a.btn.btn-default.btn-reservation(href='reservation.jade', type='submit') R&eacute;server
         // /.navbar-collapse
       // /.container-fluid
     script(src='../public/js/jquery.min.js')

@@ -3,7 +3,7 @@ doctype html
 html(lang='en')
   head
     include ./head
-  tourisme
+tourisme
   |     
   title Les sejours
   |   
@@ -14,8 +14,7 @@ html(lang='en')
     br
     |     
     br
-    
-  body
+    |     
     // TOURISME
     #pageTourisme.container
       .row
@@ -30,7 +29,7 @@ html(lang='en')
         .col-sm-6.col-md-4
           .thumbnail
             a(href='http://www.bambouseraie.com/', target='_blank')
-              img(src='../public/img/tourisme/bambouserie.png', alt='...')
+              img(src='img/tourisme/bambouserie.png', alt='...')
               |         
               .caption
                 h3 La Bambouseraie
@@ -43,7 +42,7 @@ html(lang='en')
         .col-sm-6.col-md-4
           .thumbnail
             a(href='http://www.cevennesgrandsud.cool/', target='_blank')
-              img(src='../public/img/tourisme/Vezenobres.jpg', alt='...')
+              img(src='img/tourisme/Vezenobres.jpg', alt='...')
               |         
               .caption
                 h3 V&eacute;n&eacute;nobres
@@ -58,7 +57,7 @@ html(lang='en')
         .col-sm-6.col-md-4
           .thumbnail
             a(href='http://www.lagrandemotte.com/', target='_blank')
-              img(src='../public/img/tourisme/lagrandemotte.jpg', alt='...')
+              img(src='img/tourisme/lagrandemotte.jpg', alt='...')
               |         
               .caption
                 h3 La Grande Motte
@@ -71,7 +70,7 @@ html(lang='en')
         .col-sm-6.col-md-4
           .thumbnail
             a(href='http://www.ot-nimes.fr/', target='_blank')
-              img(src='../public/img/tourisme/nimes-photo01.jpg', alt='...')
+              img(src='img/tourisme/nimes-photo01.jpg', alt='...')
               |         
               .caption
                 h3 N&icirc;mes
@@ -85,7 +84,7 @@ html(lang='en')
         .col-sm-6.col-md-4
           .thumbnail
             a(href='http://www.grotte-de-trabuc.com/fr/', target='_blank')
-              img(src='../public/img/tourisme/grottes.png', alt='...')
+              img(src='img/tourisme/grottes.png', alt='...')
               |         
               .caption
                 h3 La Grotte de Trabuc
@@ -100,7 +99,7 @@ html(lang='en')
         .col-sm-6.col-md-4
           .thumbnail
             a(href='http://www.museeharibo.fr/fr/', target='_blank')
-              img(src='../public/img/tourisme/musee_bonbon.jpg', alt='...')
+              img(src='img/tourisme/musee_bonbon.jpg', alt='...')
               |         
               .caption
                 h3 Le mus&eacute;e du Bonbon
@@ -113,7 +112,7 @@ html(lang='en')
         .col-sm-6.col-md-4
           .thumbnail
             a(href='http://www.trainavapeur.com/', target='_blank')
-              img(src='../public/img/tourisme/train.jpg', alt='...')
+              img(src='img/tourisme/train.jpg', alt='...')
               |       
               .caption
                 h3 Le train &agrave; vapeur des C&eacute;vennes
@@ -127,7 +126,7 @@ html(lang='en')
         .col-sm-6.col-md-4
           .thumbnail
             a(href='http://www.camellia.fr/accueil-1-0-0', target='_blank')
-              img(src='../public/img/tourisme/camelia.png', alt='...')
+              img(src='img/tourisme/camelia.png', alt='...')
               |       
               .caption
                 h3 Les Camellias de la prairie
@@ -137,7 +136,7 @@ html(lang='en')
                 p
                   a.btn.btn-primary(href='#', role='button') Site officiel
       // row3
+      |     
+      include ./footer
     // FIN TOURISME
-    |     
-    include ./footer
   
