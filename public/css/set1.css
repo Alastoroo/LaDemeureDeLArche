@@ -18,77 +18,14 @@
 	padding-left: 0px;
 	}
 
-
 /* Common style */
-.b1.grid figure {
-	position: relative;
-	float: left;
+.bloc.grid figure {
 	overflow: hidden;
-	min-width: 606px;
-	max-width: 646px;
-	max-height: 298px;
-	width: 48%;
+	height: 280px;
 	background: #3085a3;
 	text-align: center;
 	cursor: pointer;
 }
-
-/* Common style */
-.b2.grid figure {
-	position: relative;
-	float: left;
-	overflow: hidden;
-	min-width: 848px;
-	max-width: 880px;
-	max-height: 298px;
-	width: 48%;
-	background: #3085a3;
-	text-align: center;
-	cursor: pointer;
-}
-
-/* Common style */
-.b3.grid figure {
-	position: relative;
-	float: left;
-	overflow: hidden;
-	min-width: 363px;
-	max-width: 400px;
-	max-height: 300px;
-	width: 48%;
-	background: #3085a3;
-	text-align: center;
-	cursor: pointer;
-}
-
-/* Common style */
-.b4.grid figure {
-	position: relative;
-	float: left;
-	overflow: hidden;
-	min-width: 604px;
-	max-width: 640px;
-	max-height: 300px;
-	width: 48%;
-	background: #3085a3;
-	text-align: center;
-	cursor: pointer;
-}
-
-/* Common style */
-.b5.grid figure {
-	position: relative;
-	float: left;
-	overflow: hidden;
-	min-width: 487px;
-	max-width: 510px;
-	max-height: 300px;
-	width: 48%;
-	background: #3085a3;
-	text-align: center;
-	cursor: pointer;
-}
-
 
 .grid figure img {
 	position: relative;
@@ -133,7 +70,7 @@
 .grid figure h2 {
 	word-spacing: 0em;
 	font-weight: 200;
-	font-size: 3em;
+	font-size: 2.8em;
 }
 
 .grid figure h2 span {
@@ -166,7 +103,7 @@ figure.effect-chico:hover img {
 }
 
 figure.effect-chico figcaption {
-	padding: 3em;
+	padding: 2.5em;
 }
 
 figure.effect-chico figcaption::before {
