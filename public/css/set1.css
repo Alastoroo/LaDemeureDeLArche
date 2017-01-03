@@ -20,6 +20,7 @@
 
 /* Common style */
 .bloc.grid figure {
+	position: relative;
 	overflow: hidden;
 	height: 280px;
 	background: #3085a3;
