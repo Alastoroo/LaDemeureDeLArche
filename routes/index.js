@@ -55,6 +55,12 @@ var ctrlUser = require('../controllers/userController.js');
                 res.render("inscription");
             });
 
+            router
+            .route("/connexion")
+            //.post(ctrlUser.register)
+            .get(function(req, res){
+                res.render("connexion");
+            });
 
 
 
