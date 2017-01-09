@@ -18,6 +18,8 @@ form.form-horizontal(action='/inscription', method='post')
     |     
     .col-sm-10
       input#inputEmail3.form-control(type="email", name="email", placeholder="Email")
+      div
+        p.has-error!= error
   |   
   .form-group
     label.col-sm-2.control-label(for="inputPassword3") Password
