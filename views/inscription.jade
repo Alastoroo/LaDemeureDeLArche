@@ -1,29 +1,29 @@
 head
   include ./head
-form.form-horizontal
+form.form-horizontal(action='/inscription', method='post')
   .form-group
     label.col-sm-2.control-label(for="inputEmail3") Prénom
     |     
     .col-sm-10
-      input.form-control(type="FirstName", placeholder="First name")
+      input.form-control(type="text", name="firstname", placeholder="First name")
   |   
   .form-group
     label.col-sm-2.control-label(for="inputEmail3") Nom
     |     
     .col-sm-10
-      input#inputEmail3.form-control(type="LastName", placeholder="Last name")
+      input#inputEmail3.form-control(type="text", name="lastname",placeholder="Last name")
   |   
   .form-group
     label.col-sm-2.control-label(for="inputEmail3") Email
     |     
     .col-sm-10
-      input#inputEmail3.form-control(type="email", placeholder="Email")
+      input#inputEmail3.form-control(type="email", name="email", placeholder="Email")
   |   
   .form-group
     label.col-sm-2.control-label(for="inputPassword3") Password
     |     
     .col-sm-10
-      input#inputPassword3.form-control(type="password", placeholder="Password")
+      input#inputPassword3.form-control(type="password", name="password", placeholder="Password")
   |   
   .form-group
     .col-sm-offset-2.col-sm-10
