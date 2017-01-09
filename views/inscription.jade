@@ -13,12 +13,13 @@ form.form-horizontal(action='/inscription', method='post')
     .col-sm-10
       input#inputEmail3.form-control(type="text", name="lastname",placeholder="Last name")
   |   
-  .form-group
+  .form-group(class=typeof error === "undefined" ? "" : "has-error has-feedback")
     label.col-sm-2.control-label(for="inputEmail3") Email
     |     
     .col-sm-10
       input#inputEmail3.form-control(type="email", name="email", placeholder="Email")
-      div
+      span.glyphicon.glyphicon-remove.form-control-feedback(aria-hidden="true")  
+      .has-error
         p.has-error!= error
   |   
   .form-group
