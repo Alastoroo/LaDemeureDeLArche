@@ -39,7 +39,11 @@ var jade = require('jade');
             .get(function(req,res){
                res.render("tourisme");
             });
-
+            router
+            .route("/inscription")
+            .get(function(req, res){
+                res.render("inscription");
+            });
 
 
 
