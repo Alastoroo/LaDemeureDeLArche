@@ -18,7 +18,7 @@ module.exports.register = function(req, res) {
 // INSCRIPTION DEBUT
   User.create({
     LastName : lastName,
-    FirstName     : firstName,
+    FirstName : firstName,
     Email: email,
     //country: country,
     Password : bcrypt.hashSync(password, bcrypt.genSaltSync(10))
@@ -31,4 +31,13 @@ module.exports.register = function(req, res) {
       res.status(201).render('reservation');
     }
   });
+
+  app.post('/connexion',
+  passport.authenticate('local', { successRedirect: '/reservation', successFlash: 'Bienvenue!', failureRedirect: '/connexion', failureFlash: 'Email ou mot de passe invalide, veuillez reesayer'}),
+  function(req, res) {
+    // If this function gets called, authentication was successful.
+    // `req.user` contains the authenticated user.
+    res.redirect('/users/' + req.user.username); // ??????? METRE req.body.lastName ??????????
+  });
+
 };

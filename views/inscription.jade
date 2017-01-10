@@ -1,6 +1,7 @@
 head
   include ./head
-h1 INSCRIPTION
+h1.col-sm-offset-5 INSCRIPTION
+hr
 form.form-horizontal(action='/inscription', method='post')
   .form-group
     label.col-sm-2.control-label(for="inputEmail3")
@@ -40,5 +41,5 @@ form.form-horizontal(action='/inscription', method='post')
     .col-sm-offset-2.col-sm-10
       button.btn.btn-default(type="submit") Inscription
 
-h5 Vous avez deja un compte ?     
-a.btn.btn-default(href="connexion", role="button") Connexion
+h4.col-sm-offset-2 Vous avez deja un compte ?     
+ a.btn.btn-default(href="connexion", role="button") Connexion
