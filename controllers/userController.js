@@ -4,6 +4,7 @@ var User     = mongoose.model('User');
 var bcrypt   = require('bcrypt-nodejs');
 //var jwt      = require('jsonwebtoken');
 
+// MODULE
 module.exports.register = function(req, res) {
   console.log("##REGISTER##");
   console.log('registering user');
@@ -31,5 +32,5 @@ module.exports.register = function(req, res) {
       res.status(201).render('reservation');
     }
   });
-
 };
+// MODULE FIN

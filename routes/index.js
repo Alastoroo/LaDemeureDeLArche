@@ -57,9 +57,12 @@ var ctrlUser = require('../controllers/userController.js');
 
             router
             .route("/connexion")
+            //.post(ctrlUser.register)
             .get(function(req, res){
                 res.render("connexion");
             });
+
+
 
       //  router
       //        .route('/users') // on declare la route
@@ -87,5 +90,7 @@ var ctrlUser = require('../controllers/userController.js');
       //   // `req.user` contains the authenticated user.
       //   res.redirect('/users/' + req.user.username); // ??????? METRE req.body.lastName ??????????
       // });
+
+
 
 module.exports = router;
