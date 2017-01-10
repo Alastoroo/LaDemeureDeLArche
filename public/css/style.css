@@ -92,6 +92,15 @@ img.img1 {
 
 
 /* FOOTER DEBUT */
+footer{
+  background-color: #eaeaea;
+
+}
+
+.footerbox{
+  width: 100%;
+}
+
 .footer-bs {
   background-color: #eaeaea;
 	padding: 5px 5px;

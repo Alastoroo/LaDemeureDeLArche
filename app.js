@@ -16,9 +16,16 @@ app.use('/home', routes);
 app.use('/demeure', routes);
 app.use('/sejours', routes);
 app.use('/tourisme', routes);
+<<<<<<< HEAD
 app.use('/livre', routes);
 app.use('/reservation', routes);
 app.use('/contact', routes);
+=======
+app.use('/demeure', routes);
+app.use('/livre', routes);
+app.use('/contact', routes);
+app.use('/reservation', routes);
+>>>>>>> 1fcdd83dd08b22cadc82220621809603bdab4ff8
 
 var server = app.listen(app.get("port"), function(){
     console.log("Le serveur tourne sur "+server.address().address+":"+server.address().port)
