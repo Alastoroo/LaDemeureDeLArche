@@ -1,34 +1,48 @@
-
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,500,500i,700,700i');
+/*************************************/
 #pageTourisme{
-  padding-top: 280px;
-}
-.thumbnail{
-
-}
-.thumbnail a img{
-  height: 150px;
-}
-
-.thumbnail h3{
-text-decoration: none;
-color: black;
-}
-.thumbnail p{
-text-decoration: none;
-color: black;
+  padding-top:280px;
 }
 #titleTourisme{
   border: none;
-  color:#9d2501;
-  font-size: 24px;
-  line-height: 26px;
+  color:#9d2501!important;
+  font-size: 28px;
+  font-weight: 300;
+  font-family: 'Fira Sans', sans-serif;
+  line-height: 32px;
 }
-/*
-.photo{
+.thumbnail{}
+.thumbnail:hover{
+  text-decoration: none;
+  }
+.thumbnail a img{
   height: 150px;
-  background-image: url("../img/tourisme/bambouserie.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
 }
-*/
-/************************************************************************/
+.thumbnail h3{
+color: #999966!important;
+font-family: 'Fira Sans', sans-serif;
+}
+.thumbnail h3:hover{
+text-decoration: none;
+}
+.thumbnail p{
+  text-decoration: none;
+color: black;
+}
+.thumbnail p:hover{
+text-decoration: none;
+}
+.btn-warning{
+background-color: #999966!important;
+border: none;
+}
+.btn-warning:hover{
+background-color: #9d2501!important;
+-webkit-transition-duration: 0.4s; /* Safari */
+ transition-duration: 0.4s;
+}
+.btn-warning:after{
+background-color: #999966!important;
+-webkit-transition-duration: 0.4s; /* Safari */
+ transition-duration: 0.4s;
+}
