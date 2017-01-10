@@ -20,8 +20,8 @@ var jade = require('jade');
          .get(function(req,res){
            res.render("sejours");
          });
+
          router
-<<<<<<< HEAD
            .route("/tourisme")
            .get(function(req,res){
              res.render("tourisme");
@@ -41,36 +41,7 @@ var jade = require('jade');
                   .get(function(req,res){
                     res.render("reservation");
                   });
-=======
-           .route("/demeure")
-           .get(function(req,res){
-             res.render("demeure");
-           });
-           router
-            .route("/livre")
-            .get(function(req,res){
-              res.render("livre");
-            });
-            router
-            .route("/contact")
-            .get(function(req,res){
-               res.render("contact");
-            });
-            router
-            .route("/reservation")
-            .get(function(req,res){
-               res.render("reservation");
-            });
-            router
-            .route("/tourisme")
-            .get(function(req,res){
-               res.render("tourisme");
-            });
 
-
-
-
->>>>>>> 1fcdd83dd08b22cadc82220621809603bdab4ff8
 
        router
              .route('/users') // on declare la route
