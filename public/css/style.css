@@ -48,13 +48,14 @@ text-align: center;
 padding-left: 100px;
 }
 
-li {
+/*li {
 display: inline-block;
 width: 200px;
 margin-left: 20px;
 vertical-align: top;
 text-align: center;
-}
+}*/
+
 #homeChambre.container-fluid {
   width: 80%;
   padding-top: 250px;
@@ -68,8 +69,6 @@ h2.explication1 {
 .description {
   padding-left: 50px;
 padding-bottom:  20px;
-
-
 }
 
 i.glyphicon {
@@ -94,13 +93,10 @@ img.img1 {
 /* FOOTER DEBUT */
 footer{
   background-color: #eaeaea;
-
 }
-
 .footerbox{
   width: 100%;
 }
-
 .footer-bs {
   background-color: #eaeaea;
 	padding: 5px 5px;
@@ -162,4 +158,3 @@ hr {
 }
 
 /* FOOTER FIN */
-/*********************************************/

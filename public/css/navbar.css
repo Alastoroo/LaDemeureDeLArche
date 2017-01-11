@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,500,500i,700,700i');
 /*********************************************************************/
 #logo{
-  background-color: white!important;
-  padding-bottom: 20px;
+  background-color:white!important;
+  padding-bottom:20px;
 }
 #logo h3{
   font-size: 18px;
@@ -29,57 +29,75 @@ background-color: #999966!important;
   vertical-align: top;
 }
 .navbar .navbar-nav li a{
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 30px;
+  padding-right: 30px;
   padding-top: 20px;
   padding-bottom: 20px;
-
   font-size: 20px;
   font-family:'Fira Sans', sans-serif;
   color:white!important;
 }
 .navbar .navbar-nav li a:hover{
     background-color: #c9ca9e!important;
-    -webkit-transition-duration: 0.4s!important; /* Safari */
+    -webkit-transition-duration: 0.4s; /* Safari */
      transition-duration: 0.4s;
      color: #999966!important;
 }
 .navbar .navbar-nav li button{
-  font-size: 20px;
+  /*font-size: 20px;
   font-family:'Fira Sans', sans-serif;
-  background-color: #c9ca9e!important;
+  background-color: #c9ca9e!important;*/
 }
 .navbar .navbar-nav li button:hover{
   background-color: #c9ca9e!important;
   -webkit-transition-duration: 0.4s; /* Safari */
    transition-duration: 0.4s;
 }
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
 .glyphicon-chevron-down{
   margin-left:20px;
   font-size:14px;
 }
+/**************************/
 #iconHome{
-    margin-right:150px;
+margin-right:120px;
 }
-.glyphicon-home{
-  padding-left:10px;
-  padding-right:10px;}
 
-.navbar .navbar-collapse {
-  text-align: center;
-}
-#btn-reservation{
+#iconHome a{
   padding-left:20px;
   padding-right:20px;
-  margin-left:140px;
+}
+#iconHome a:hover{
+}
+.glyphicon-home{
+font-size: 20px;
+}
+/**************************/
+/**************************/
+#btn-reservation{
+  margin-left:120px;
+}
+#btn-reservation li a{
+  padding-left:20px;
+  padding-right:20px;
   font-size:20px;
   color:white!important;
   font-family:'Fira Sans', sans-serif;
+}
+#btn-reservation a{
   background-color:#9d2501!important;
 }
-#btn-reservation:hover{
+#btn-reservation a:hover{
   background-color:#eea236!important;
 }
+/*.active{
+  padding: 0px;
+  margin: 0px;
+}*/
+
 /*SOUSDROPMENU*/
 #sousmenu{
   width:1980px;
@@ -129,8 +147,25 @@ position:absolute;
 /**********************************************/
 /***************************************************************************/
 @media (max-width:1280px) {
-  #iconHome{margin-right: 20px;  }
-  #btn-reservation{ margin-left: 20px;}
+
+.navbar .navbar-nav li a{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  #iconHome{
+  margin-right:100px;
+  padding: 0px;
+  }
+  #btn-reservation{
+    margin-left: 100px;
+  }
+
+#btn-reservation li a {
+  padding-left:10px;
+  padding-right:10px;
+}
+
   #sousmenu{
     width: 1280px;
     left: -360px;
@@ -204,7 +239,7 @@ position:absolute;
     padding-right: 70px;
   }
 }
-/*******/
+/******
 @media (max-width:768px;){
   #sousmenu{
     width: 768px;
@@ -214,16 +249,15 @@ position:absolute;
     padding-left: 70px;
     padding-right: 70px;
   }
-}
-/************************/
-@media (max-width:767px;){
+}*/
+/**********************
+@media (min-width:767px;){
   #sousmenu{
   position:relative;
   left: -140px;
   }
-}
+}**/
 /*****MENU et SOUS MENU BURGER**************************************************/
-@media (max-width:680px;){
-  /*SOUSDROPMENU*/
+/*@media (max-width:680px;){
 
-}
+}*/
