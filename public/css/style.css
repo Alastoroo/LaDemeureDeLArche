@@ -1,3 +1,22 @@
+/*bordeau
+#9d2501
+
+vert clair typo logo
+#999966
+
+vert fonce
+#184a2d
+
+vert bouton réservez
+#d7d7b9
+*/
+header{
+  margin-bottom: 300px;
+}
+a.vert {
+  background-color: #999966!important;
+}
+
 h1{
   font-size: 35px;
 }
@@ -9,12 +28,13 @@ body {
 
 header.carousel {
     height: 100%;
+
 }
 
 header.carousel .item,
 header.carousel .item.active,
 header.carousel .carousel-inner {
-    height: 100%;
+    height: 120%;
 }
 
 header.carousel .fill {
@@ -24,28 +44,37 @@ header.carousel .fill {
     background-size: cover;
 }
 /* partie chambres*/
+.row {
+  background-color: #fcfcfc!important;
+}
+.vert {
+color: #d7d7b9;
+}
 
-.fixtop {
-display: inline-block;
-text-align: center;
-float: left;
-padding-left: 220px;
+#intitule h4 {
+  padding-left: 80px;
+  font-size: 22px;
+
 }
-.fixtop1 {
-display: inline-block;
-text-align: center;
-float: left;
-padding-left: 250px;
+h4.fixtop1 {
+  text-align: right;
+  margin-left: 50px;
 }
-.fixtop3 {
-display: inline-block;
-text-align: center;
-padding-left: 200px;
+h4.fixtop{
+text-align: left;
+  margin-right: 30px;
 }
-.fixtop4 {
-display: inline-block;
-text-align: center;
-padding-left: 100px;
+h4.fixtop2 {
+
+  text-align: right;
+  margin-left: 60px;
+}
+#chambreDescription h1{
+  color: #9d2501;
+  text-align: left;
+}
+h2#titreSejour {
+  color: #9d2501;
 }
 
 li {
@@ -68,28 +97,61 @@ h2.explication1 {
 .description {
   padding-left: 50px;
 padding-bottom:  20px;
-
-
 }
-
+/*.prixAppart {
+  color: #9d2501;
+}*/
 i.glyphicon {
   font-size: 18px !important;
   color: #2E3438;
   padding-right: 5px;
+  color: #9d2501;
 }
 
 img.img1 {
-	max-width: 20%;
-	height: auto;
+  max-width: 20%;
+  height: auto;
+
+}
+img.img2 {
+  max-width: 7%;
+  height: auto;
+}
+#positionLogo.img2{
+ width: 5%;
+}
+#positionLogo {
+  display: inline-block;
+  float: right;
+ margin-right: 10px;
 }
 
 #carousel-example-generic {
   overflow: hidden;
-	position: relative;
+  position: relative;
   top: 20px;
-	margin:0 auto;
+  margin:0 auto;
 }
-
+.positionCarrousel {
+  position: relative;
+  top: 80px;
+  left: 25px;
+}
+.positionCarrousel2 {
+  position: relative;
+  top: 20px;
+  left: 20px;
+}
+.positionCarrousel3 {
+  position: relative;
+  top: 70px;
+  left: 25px;
+}
+.positionCarrousel4 {
+  position: relative;
+  top: 80px;
+  left: 25px;
+}
 
 /* FOOTER DEBUT */
 footer{

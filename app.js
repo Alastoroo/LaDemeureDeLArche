@@ -13,6 +13,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/sejours', routes);
+app.use('/home', routes);
 app.use('/tourisme', routes);
 app.use('/demeure', routes);
 app.use('/livre', routes);

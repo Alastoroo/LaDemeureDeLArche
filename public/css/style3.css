@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0
+}
+.titreDemeure{
+  font-size: 40px;
+  text-align: center;
+
+}
+.descriptionDemeure{
+  line-height: 1.5em;
+  font-size: 1.2em;
+  text-align: justify;
+  padding-left: 300px;
+  margin-top: 40px;
+}
+/*global*/
+
+button:focus {
+  outline: none;
+}
+button {
+  cursor: pointer;
+}
+.sync {
+  position: relative;
+}
+.sync:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.sync .sync-container > div {
+  width: 100%;
+  height: 100%;
+  color: black;
+  line-height: 50px;
+  text-align: center;
+  overflow: hidden;
+  transition: all ease 1s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+  z-index: 100;
+}
+
+.sync-container > div:first-of-type{
+  transform: translateX(0);
+  z-index: 1000
+}
+
+.sync-container > div:last-of-type {
+  transform: translateX(-100%);
+}
+
+.element {
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+
+.sync p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  background: black;
+  width: 0;
+  z-index: 10000;
+  margin: 0;
+  padding: 0;
+}
+.sync p.active {
+  width: 100%;
+  -ms-transition: all ease 3s;
+  transition: all ease 3s
+}
+
+.sync .owl {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  transition: all ease .7s
+}
+.sync .owl button {
+  background: none;
+  border: 2px solid #ff4800;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+}
+.sync .owl button.active {
+  background: #ff4800
+}
+.sync button.slide {
+    font-size: 25px;
+    color: white;
+    z-index: 1000;
+    position: absolute;
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    margin-top: -25px;
+    border: none;
+    background: transparent;
+    background: rgba(0, 0, 0, .8);
+    border-radius: 50%;
+  font-size: 16px
+
+}
+
+.sync button.next {
+    transition: all ease .7s;
+    position: absolute;
+    bottom: -100px;
+    right: 0;
+}
+.sync button.prev {
+    transition: all ease .7s;
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    bottom: 0;
+}
+.sync button.next.active {
+    transform: translateX(-20px);
+}
+.sync button.prev.active {
+    transform: translateX(20px);
+}
+.sync .edit {
+  width: 33%;
+  float: left;
+  position: relative;
+  overflow: hidden;
+  margin: .16%;
+  z-index: -1;
+}
+.sync .sync-container {
+  width: 100%;
+  padding-bottom: 75%;
+  background: black;
+}
+
+.element.one {
+  background: url('../img/demeure/piscine.jpg') ;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.element.two {
+  background: url('../img/demeure/home4.jpg') ;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.element.three {
+  background: url('../img/demeure/ARCHE.jpg') ;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.element.four {
+  background: url('../img/demeure/parc.jpg') ;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.element.five {
+  background: url('../img/demeure/Sallemanger.jpg') ;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.element.six {
+  background: url('../img/demeure/escalier2.jpg') ;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.element.seven {
+  background: url('../img/demeure/piscina-terrazza.jpg') ;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.element.eight {
+  background: url('../img/demeure/villa.jpg') ;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.element.nine {
+  background: url('../img/demeure/vueterrasse3.jpg') ;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

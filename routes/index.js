@@ -10,6 +10,11 @@ var jade = require('jade');
          res.render("index");
        });
        router
+         .route("/home")
+         .get(function(req,res){
+           res.render("home");
+         });
+       router
          .route("/sejours")
          .get(function(req,res){
            res.render("sejours");
