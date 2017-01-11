@@ -9,44 +9,39 @@ var jade = require('jade');
        .get(function(req,res){
          res.render("index");
        });
+
        router
-         .route("/home")
+         .route("/demeure")
          .get(function(req,res){
-           res.render("home");
+           res.render("demeure");
          });
+
        router
          .route("/sejours")
          .get(function(req,res){
            res.render("sejours");
          });
+
          router
-           .route("/demeure")
+           .route("/tourisme")
            .get(function(req,res){
-             res.render("demeure");
+             res.render("tourisme");
            });
            router
-            .route("/livre")
-            .get(function(req,res){
-              res.render("livre");
-            });
+             .route("/livre")
+             .get(function(req,res){
+               res.render("livre");
+             });
             router
-            .route("/contact")
-            .get(function(req,res){
-               res.render("contact");
-            });
-            router
-            .route("/reservation")
-            .get(function(req,res){
-               res.render("reservation");
-            });
-            router
-            .route("/tourisme")
-            .get(function(req,res){
-               res.render("tourisme");
-            });
-
-
-
+               .route("/contact")
+               .get(function(req,res){
+                 res.render("contact");
+               });
+               router
+                  .route("/reservation")
+                  .get(function(req,res){
+                    res.render("reservation");
+                  });
 
 
        router

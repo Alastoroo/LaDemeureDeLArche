@@ -10,9 +10,6 @@ vert fonce
 vert bouton réservez
 #d7d7b9
 */
-header{
-  margin-bottom: 300px;
-}
 a.vert {
   background-color: #999966!important;
 }
@@ -25,7 +22,9 @@ html,
 body {
     height: 100%;
 }
-
+header {
+  margin-bottom: 220px;
+}
 header.carousel {
     height: 100%;
 
@@ -69,15 +68,15 @@ h4.fixtop2 {
   text-align: right;
   margin-left: 60px;
 }
-#chambreDescription h1{
+#chambreDescription h1 {
   color: #9d2501;
   text-align: left;
+  margin-top: 30px;
 }
 h2#titreSejour {
   color: #9d2501;
 }
-
-li {
+li.booking {
 display: inline-block;
 width: 200px;
 margin-left: 20px;
@@ -152,7 +151,6 @@ img.img2 {
   top: 80px;
   left: 25px;
 }
-
 /* FOOTER DEBUT */
 footer{
   background-color: #eaeaea;
@@ -165,12 +163,12 @@ footer{
 
 .footer-bs {
   background-color: #eaeaea;
-	padding: 5px 5px;
-	color: black;
-	margin-bottom: 20px;
-	border-bottom-right-radius: 6px;
-	border-top-left-radius: 0px;
-	border-bottom-left-radius: 6px;
+  padding: 5px 5px;
+  color: black;
+  margin-bottom: 20px;
+  border-bottom-right-radius: 6px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 6px;
 }
 .footer-bs .footer-brand, .footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { padding:10px 25px; }
 .footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { border-color: transparent; }
@@ -182,10 +180,10 @@ footer{
 .footer-bs .footer-nav ul.pages a { color: #9d2501; text-decoration:none; text-transform:uppercase; }
 .footer-bs .footer-nav ul.pages a:hover { color: #999966; text-decoration:underline; }
 .footer-bs .footer-nav h4 {
-	font-size: 11px;
-	text-transform: uppercase;
-	letter-spacing: 3px;
-	margin-bottom:10px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom:10px;
 }
 
 .footer-bs .footer-nav ul.list { list-style:none; padding:0px; }
@@ -195,24 +193,24 @@ footer{
 
 .footer-bs .footer-social ul { list-style:none; padding:0px; }
 .footer-bs .footer-social h4 {
-	font-size: 11px;
-	text-transform: uppercase;
-	letter-spacing: 3px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 .footer-bs .footer-social li { padding:5px 4px;}
 .footer-bs .footer-social a { color: #9d2501;}
 .footer-bs .footer-social a:hover { color: #999966; text-decoration:none; }
 
 .footer-bs .footer-ns h4 {
-	font-size: 11px;
-	text-transform: uppercase;
-	letter-spacing: 3px;
-	margin-bottom:10px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom:10px;
 }
 .footer-bs .footer-ns p { font-size:12px; color: #9d2501; }
 
 @media (min-width: 768px) {
-	.footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { border-left:solid 1px rgba(255,255,255,0.10); }
+  .footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { border-left:solid 1px rgba(255,255,255,0.10); }
 }
 
 hr {
@@ -224,3 +222,9 @@ hr {
 }
 
 /* FOOTER FIN */
+
+@media(max-width: 1024px){
+  #intitule h4 {
+font-size: 18px;
+}
+}

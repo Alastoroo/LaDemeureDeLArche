@@ -1,0 +1,50 @@
+<form> <h1>Formulaire de paiement</h1> <p>Les champs obligatoires sont suivis d'un <strong><abbr title="obligatoire"></abbr></strong>.</p>
+
+  <section>
+    <h2>Information de contact</h2>
+
+    <fieldset>
+      <legend>Titre</legend>
+      <ul>
+        <li>
+          <label for="titre_1">
+            <input type="radio" id="titre_1" name="title" value="M." />
+            Monsieur
+          </label>
+        </li>
+        <li>
+          <label for="titre_2">
+            <input type="radio" id="titre_2" name="title" value="Mme" />
+            Madame
+          </label>
+        </li>
+      </ul>
+    </fieldset>
+
+    <p>
+      <label for="nom">
+        <span>Nom : </span>
+        <input type="text" id="nom" name="nomdutilisateur" required />
+        <strong><abbr title="obligatoire"></abbr></strong> </label> </p> <p> <label for="courriel"> <span>Courriel : </span> <input type="email" id="courriel" name="courrielutilisateur" required /> <strong><abbr title="obligatoire"></abbr></strong>
+      </label>
+    </p>
+  </section>
+
+  <section>
+    <h2>Information de paiement</h2>
+
+    <p>
+      <label for="carte">
+        <span>Type de carte :</span>
+        <select id="carte" name="carteutilisateur">
+          <option value="visa">Visa</option>
+          <option value="mc">Mastercard</option>
+          <option value="amex">American Express</option>
+        </select>
+      </label>
+    </p>
+    <p>
+      <label for="numero">
+        <span>Numéro de la carte :</span>
+        <input type="text" id="numero" name="numerocarte" required />
+        <strong><abbr title="obligatoire"></abbr></strong> </label> </p> <p> <label for="date"> <span>Date d'expiration :</span> <input type="text" id="date" name="expiration" required /> <strong><abbr title="obligatoire">*</abbr></strong> <em>formatté comme mm/aa</em> </label> </p> </section> <section> <p> <button>Valider le paiement</button> </p> </section> </form>
