@@ -1,16 +1,18 @@
 head
   include ./head
-h1 Connexion
-  form.form-inline.col-sm-offset-4
-    .form-group
-      label.sr-only(for="exampleInputEmail3") Email 
-      |     
-      input#exampleInputEmail3.form-control(type="email", placeholder="Email")
-    |  
-    .form-group
-      label.sr-only(for="exampleInputPassword3") Mot de passe
-      |     
-      input#exampleInputPassword3.form-control(type="password", placeholder="Mot de passe")
-    |   
-  button.col-sm-offset-5.btn.btn-default(type="sumit") Connexion
+h1.col-sm-offset-5 Connexion
+hr
+form.form-inline.col-sm-offset-4
+  .form-group
+    label.sr-only(for="exampleInputEmail3") Email 
+    |     
+    input#exampleInputEmail3.form-control(type="email", placeholder="Email")
+  |  
+  .form-group
+    label.sr-only(for="exampleInputPassword3") Mot de passe
+    |     
+    input#exampleInputPassword3.form-control(type="password", placeholder="Mot de passe")
+  |   
+button.col-sm-offset-5.btn.btn-primary.btn-lg(type="sumit") Connexion
+a.btn.btn-danger.btn-lg(href="index.jade", role="button") Retour
 include ./footer
