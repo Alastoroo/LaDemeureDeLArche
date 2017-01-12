@@ -1,105 +1,3 @@
-//- 
-//- doctype html
-//- 
-//- html(lang='en')
-//-   head
-//-     include ./head
-//- reservation
-//-   |     
-//-   title Les sejours
-//-   |   
-//-   body
-//-   
-//-     include ./header
-//- 
-//-     br
-//-     |     
-//-     br
-//-     |     
-//-     form
-//-       h1 Formulaire de paiement
-//-       |  
-//-       p
-//-         | Les champs obligatoires sont suivis d&apos;un 
-//-         strong
-//-           abbr(title='obligatoire')
-//-         | .
-//-       |   
-//-       section
-//-         h2 Information de contact
-//-         |     
-//-         fieldset
-//-           legend Titre
-//-           |       
-//-           ul
-//-             li
-//-               label(for='titre_1')
-//-                 input#titre_1(type='radio', name='title', value='M.')
-//-                 |             Monsieur
-//-             |         
-//-             li
-//-               label(for='titre_2')
-//-                 input#titre_2(type='radio', name='title', value='Mme')
-//-                 |             Madame
-//-         |     
-//-         p
-//-           label(for='nom')
-//-             span Nom : 
-//-             |         
-//-             input#nom(type='text', name='nomdutilisateur', required='')
-//-             |         
-//-             strong
-//-               abbr(title='obligatoire')
-//-         |  
-//-         p
-//-           label(for='courriel')
-//-             span Courriel : 
-//-             |  
-//-             input#courriel(type='email', name='courrielutilisateur', required='')
-//-             |  
-//-             strong
-//-               abbr(title='obligatoire')
-//-       |   
-//-       section
-//-         h2 Information de paiement
-//-         |     
-//-         p
-//-           label(for='carte')
-//-             span Type de carte :
-//-             |         
-//-             select#carte(name='carteutilisateur')
-//-               option(value='visa') Visa
-//-               |           
-//-               option(value='mc') Mastercard
-//-               |           
-//-               option(value='amex') American Express
-//-         |     
-//-         p
-//-           label(for='numero')
-//-             span Num&eacute;ro de la carte :
-//-             |         
-//-             input#numero(type='text', name='numerocarte', required='')
-//-             |         
-//-             strong
-//-               abbr(title='obligatoire')
-//-         |  
-//-         p
-//-           label(for='date')
-//-             span Date d&apos;expiration :
-//-             |  
-//-             input#date(type='text', name='expiration', required='')
-//-             |  
-//-             strong
-//-               abbr(title='obligatoire') *
-//-             |  
-//-             em formatt&eacute; comme mm/aa
-//-       |  
-//-       section
-//-         p
-//-           button Valider le paiement
-//-  
-//-     include ./footer
-
 head
   include ./head
   include ./header
@@ -185,7 +83,7 @@ head
               |                         
               ul.list-inline.pull-right
                 li
-                  button.btn.btn-primary.next-step(type="button") Suivant
+                  button.btn.btn-primary.btn-lg.next-step(type="button") Suivant
             //- RECAPITULATIF COMMANDE DEBUT
             #step2.tab-pane(role="tabpanel")
               h3 Recapitulatif
