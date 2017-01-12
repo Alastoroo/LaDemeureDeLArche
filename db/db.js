@@ -42,4 +42,4 @@ process.on('SIGTERM', function() {
   });
 });
 // BRING IN YOUR SCHEMAS & MODELS
-//require('./users.model.js');
+require('./models/users.model.js');
