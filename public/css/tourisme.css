@@ -3,35 +3,54 @@
 #pageTourisme{
   padding-top:280px;
 }
-#titleTourisme{
-  background-color: transparent;
-box-shadow: none;
+#titleTourisme {
+  background-color:transparent;
+  box-shadow: none;
   border: none;
+}
+#titleTourisme h3 {
   color:#9d2501!important;
   font-size: 28px;
   font-weight: 300;
   font-family: 'Fira Sans', sans-serif;
   line-height: 32px;
 }
-.thumbnail{}
-.thumbnail:hover{
+#lieuxTourisme {
+  padding: 10px;
+  background-color:white;
+  box-shadow: none;
+  border:none;
+  border-color: #999966;
+  color:#9d2501;
+  font-size: 24px;
+  font-weight: 300;
+  font-family: 'Fira Sans', sans-serif;
+  line-height: 32px;
+}
+
+#lieuxTourisme:hover{
   text-decoration: none;
   }
-.thumbnail a img{
+
+#lieuxTourisme a img{
   height: 150px;
 }
-.thumbnail h3{
+#lieuxTourisme h3{
+font-size: 24px;
+line-height: 20px;
 color: #999966!important;
 font-family: 'Fira Sans', sans-serif;
 }
-.thumbnail h3:hover{
+#lieuxTourisme h3:hover{
 text-decoration: none;
 }
-.thumbnail p{
+#lieuxTourisme p{
   text-decoration: none;
 color: black;
+font-size: 18px;
+line-height: 20px;
 }
-.thumbnail p:hover{
+#lieuxTourisme p:hover{
 text-decoration: none;
 }
 .btn-warning{
