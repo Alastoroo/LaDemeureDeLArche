@@ -1,63 +1,59 @@
-//- header
-//-     nav.navbar.navbar-default.navbar-fixed-top
-//-       #menu.container-fluid
-//-         #logo.row
-//-           .col-lg-12
-//-             img.img-responsive.center-block(src='img/HEADER-HOME4.png')
-//-             |               
-//-             h3 Chambres d&apos;h&ocirc;tes et g&icirc;te aux portes des C&eacute;vennes
-//-         |       
-//-         .navbar-header
-//-           button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
-//-             span.sr-only Toggle navigation
-//-             |           
-//-             span.icon-bar
-//-             |           
-//-             span.icon-bar
-//-             |           
-//-             span.icon-bar
-//-         // Collect the nav links, forms, and other content for toggling
-//-         #bs-example-navbar-collapse-1.collapse.navbar-collapse
-//-           ul.nav.navbar-nav
-//-             li
-//-               a(href='home')
-//-                 i.glyphicon.glyphicon-home
-//-                 span.sr-only (current)
-//-             |           
-//-             li
-//-               a(href='demeure') La Demeure
-//-             |           
-//-             li.dropdown
-//-               a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
-//-                 | S&eacute;jours
-//-                 i.glyphicon.glyphicon-chevron-down
-//-               |             
-//-               ul.dropdown-menu
-//-                 li
-//-                   a(href='sejours#chambres') Chambres
-//-                 |               
-//-                 li
-//-                   a(href='sejours#suites') Suites
-//-                 |               
-//-                 li
-//-                   a(href='sejours#appart') L&apos;Appart
-//-             |               
-//-             li
-//-               a(href='tourisme') Aux alentours
-//-             |                   
-//-             li
-//-               a(href='livre') Livre d&apos;Or
-//-             |                       
-//-             li
-//-               a(href='contact') Nous contacter
-//-             |                             
-//-             li
-//-               a.btn.btn-default.btn-reservation(href='reservation.jade', type='submit') R&eacute;server
-//-         // /.navbar-collapse
-//-       // /.container-fluid
-//-     script(src='../public/js/jquery.min.js')
-//-     script(src='../public/js/bootstrap.min.js')
-//-     script.
-//-       jQuery(document).ready(function() {
-//-       $('.collapse').collapse();
-//-       });
+header
+    nav.navbar.navbar-fixed-top
+      #menu.container-fluid
+        #logo.row
+          .col-md-12.col-lg-12
+            img.img-responsive.center-block(src='img/HEADER-HOME4.png')
+            |                 
+            h3 Chambres d&apos;h&ocirc;tes et g&icirc;te aux portes des C&eacute;vennes
+        |         
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+            span.sr-only Toggle navigation
+            |             
+            span.icon-bar
+            |             
+            span.icon-bar
+            |             
+            span.icon-bar
+        // Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li#iconHome
+              a(href='home')
+                span.glyphicon.glyphicon-home
+            |             
+            li
+              a(href='demeure') La Demeure
+            |             
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='true')
+                | S&eacute;jours
+                span.glyphicon.glyphicon-chevron-down
+              |               
+              #sousmenu.dropdown-tabs
+                p
+                  a(href='sejours#chambres') Chambres
+                |                 
+                p
+                  a(href='sejours#suites') Suites
+                |                 
+                p
+                  a(href='sejours#appart') L&apos;Appart
+            |                 
+            li
+              a(href='tourisme') Aux alentours
+            |                     
+            li
+              a(href='livre') Livre d&apos;Or
+            |                         
+            li
+              a(href='contact') Nous contacter
+            |                               
+            li#btn-reservation.active
+              a(href='reservation', type='submit') R&eacute;server
+    |   
+    script.
+      jQuery(document).ready(function() {
+      $('.collapse').collapse();
+      });

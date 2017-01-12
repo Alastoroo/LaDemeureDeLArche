@@ -1,53 +1,56 @@
-//- extends index
-//- //block content
 home
 
-	// SLIDE HOME
-	#homeDemeure.container-fluid
-		.row
-			.col-lg-12.text-justify
-				.col-lg-9
-					h3#title La Demeure de l&apos;Arche
-					|     
-					p(style='font-size:16px;')
-						| Situ&eacute;e dans le Gard, tout pr&egrave;s d&rsquo;Ales &laquo; la porte des C&eacute;vennes &raquo;, la Demeure de l&rsquo;Arche vous accueille dans ses chambres d&rsquo;h&ocirc;tes et ses suites de charme uniques. Sa d&eacute;coration soign&eacute;e est un savant m&eacute;lange d&rsquo;inspirations &agrave; la fois modernes et traditionnelles. Chaque habitation poss&egrave;de une terrasse priv&eacute;e avec vue sur le parc, les C&eacute;vennes ou le ch&acirc;teau de Montmoirac.
-						br
-						| Vous pourrez nager (piscine exceptionnelle de 25mX10m avec cuisine d&rsquo;&eacute;t&eacute;, salle de bain et WC), jouer au tennis, au ping-pong ou &agrave; la p&eacute;tanque et profiter d&rsquo;autres activit&eacute;s au milieu de son parc arbor&eacute; de deux hectares.
-				#homeGeographie.col-lg-3
-		|     
-		.row
-			.col-sm-6.col-md-3
-				.thumbnail
-					.caption
-						h3 Chambres &agrave; la Nuit
-						|             
-						p
-							| .Toute l&rsquo;ann&eacute;e, profitez de nos chambres d&rsquo;h&ocirc;tes pour une ou plusieurs nuits dans le meilleur confort, et un service de qualit&eacute;
-			|       
-			.col-sm-6.col-md-3
-				.thumbnail
-					.caption
-						h3 Forfait Week-end
-						|             
-						p
-							| Vous pouvez louer votre chambre ou votre suite le temps d&rsquo;un agr&eacute;able week-end, qui vous permettra de d&eacute;couvrir une r&eacute;gion touristique riche en surprises.
-			|       
-			.col-sm-6.col-md-3
-				.thumbnail
-					.caption
-						h3 Longs s&eacute;jours
-						|             
-						p
-							| Nous proposons &eacute;galement des tarifs pr&eacute;f&eacute;rentiels pour vos longs s&eacute;jours, afin d&rsquo;appr&eacute;cier au mieux la Demeure de l&rsquo;Arche, un lieu id&eacute;al pour vos vacances.
-			|       
-			.col-sm-6.col-md-3
-				.thumbnail
-					.caption
-						h3 Ev&eacute;nements familiaux ou d&rsquo;entreprise:
-						|             
-						p
-							| Mariages, anniversaires, f&ecirc;tes priv&eacute;es: r&eacute;unissez vos proches dans un lieu rien qu&rsquo;&agrave; vous le temps d&rsquo;une soir&eacute;e ou d&rsquo;un week-end.
-
-		
-		
-			
+    #homeDemeure.container
+      #infohomeDemeure.row
+        .col-lg-12
+          #txthomeDemeure.col-lg-9
+            h3 La Demeure de l&apos;Arche
+            |               
+            p
+              | Situ&eacute;e dans le Gard, tout pr&egrave;s d&rsquo;Ales &laquo; la porte des C&eacute;vennes &raquo;, la Demeure de l&rsquo;Arche vous accueille dans ses chambres d&rsquo;h&ocirc;tes et ses suites de charme uniques. 
+              br
+              | Sa d&eacute;coration soign&eacute;e est un savant m&eacute;lange d&rsquo;inspirations &agrave; la fois modernes et traditionnelles. 
+              br
+              | Chaque habitation poss&egrave;de une terrasse priv&eacute;e avec vue sur le parc, les C&eacute;vennes ou le ch&acirc;teau de Montmoirac.
+              |               
+              br
+              | Vous pourrez nager (piscine exceptionnelle de 25mX10m avec cuisine d&rsquo;&eacute;t&eacute;, salle de bain et WC), jouer au tennis, au ping-pong ou &agrave; la p&eacute;tanque et profiter d&rsquo;autres activit&eacute;s au milieu de son parc arbor&eacute; de deux hectares.
+          |             
+          #homeGeographie.col-lg-3
+      |       
+      #infohomeDemeure.row
+        #infoBlock.col-sm-6.col-md-3
+          #pictohomeDemeure
+            span.glyphicon.glyphicon-bed
+          |               
+          h3 Chambres &agrave; la Nuit
+          |               
+          p
+            | Toute l&rsquo;ann&eacute;e, profitez de nos chambres d&rsquo;h&ocirc;tes pour une ou plusieurs nuits dans le meilleur confort, et un service de qualit&eacute;
+        |         
+        #infoBlock.col-sm-6.col-md-3
+          #pictohomeDemeure
+            span.glyphicon.glyphicon-lamp
+          |               
+          h3 Forfait Week-end
+          |               
+          p
+            | Vous pouvez louer votre chambre ou votre suite le temps d&rsquo;un agr&eacute;able week-end, qui vous permettra de d&eacute;couvrir une r&eacute;gion touristique riche en surprises.
+        |         
+        #infoBlock.col-sm-6.col-md-3
+          #pictohomeDemeure
+            span.glyphicon.glyphicon-calendar
+          |               
+          h3 Longs s&eacute;jours
+          |               
+          p
+            | Nous proposons &eacute;galement des tarifs pr&eacute;f&eacute;rentiels pour vos longs s&eacute;jours, afin d&rsquo;appr&eacute;cier au mieux la Demeure de l&rsquo;Arche, un lieu id&eacute;al pour vos vacances.
+        |         
+        #infoBlock.col-sm-6.col-md-3
+          #pictohomeDemeure
+            span.glyphicon.glyphicon-camera
+          |           
+          h3 Ev&eacute;nements familiaux ou d&rsquo;entreprise
+          |               
+          p
+            | Mariages, anniversaires, f&ecirc;tes priv&eacute;es : r&eacute;unissez vos proches dans un lieu rien qu&rsquo;&agrave; vous le temps d&rsquo;une soir&eacute;e ou d&rsquo;un week-end.
