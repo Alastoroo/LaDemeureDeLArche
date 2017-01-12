@@ -15,6 +15,7 @@ var jade = require('jade');
          .get(function(req,res){
            res.render("demeure");
          });
+
        router
          .route("/sejours")
          .get(function(req,res){
