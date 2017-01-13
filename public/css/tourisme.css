@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,500,500i,700,700i');
 /*************************************/
 #pageTourisme{
-  padding-top:90px;
+  padding-top:280px;
 }
 #titleTourisme {
   background-color:transparent;
@@ -18,7 +18,7 @@
 #lieuxTourisme {
   padding: 10px;
   background-color:white;
-  box-shadow: none;
+  box-shadow:0,8;
   border:none;
   border-color: #999966;
   color:#9d2501;
@@ -26,6 +26,7 @@
   font-weight: 300;
   font-family: 'Fira Sans', sans-serif;
   line-height: 32px;
+  height: 350px;
 }
 
 #lieuxTourisme:hover{
@@ -45,15 +46,22 @@ font-family: 'Fira Sans', sans-serif;
 text-decoration: none;
 }
 #lieuxTourisme p{
-  text-decoration: none;
+text-decoration: none;
 color: black;
 font-size: 18px;
 line-height: 20px;
+margin-bottom: 15px;
 }
 #lieuxTourisme p:hover{
 text-decoration: none;
 }
+#lieuxTourisme span{
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
 .btn-warning{
+  float:right;
 background-color: #999966!important;
 border: none;
 }
