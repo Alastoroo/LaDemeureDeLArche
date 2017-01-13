@@ -6,7 +6,9 @@ html(lang='en')
 demeure
   |     
   title Demeure
-  body
+
+  body(style='background-color:#fcfcfc;!important;')
+
     include ./header
     br
     |   
@@ -16,13 +18,14 @@ demeure
       h2.titreDemeure NOTRE DEMEURE
       | &#x9;
       p.descriptionDemeure
-        strong Eliane et Louis
+      
+        strong Françoise et Louis
+
         |  vous accueille chaleureusement dans leur somptueuse demeure situ&eacute;e &agrave; peine &agrave; 5 km d&apos;Al&egrave;s dans le sud de la France.
         br
         | Notre demeure dispose d&apos;une piscine de 25 m&egrave;tres dans un somptueux parc ombrag&eacute; de 2 hectares. 
         br
-        | Nos chambres,d&eacute;cor&eacute;es avec go&ucirc;t et raffinement, sont dot&eacute;es chacune d&apos;une terrasse privative ainsi qu&apos;une t&eacute;l&eacute;vision &agrave; &eacute;cran plat,
-        br
+        | Nos chambres,d&eacute;cor&eacute;es avec go&ucirc;t et raffinement, sont dot&eacute;es chacune d&apos;une terrasse privative ainsi qu&apos;une t&eacute;l&eacute;vision &agrave; &eacute;cran plat,s
         |  une bouilloire &eacute;lectrique et 
         strong une connexion Wi-Fi gratuite
         | .
@@ -151,58 +154,65 @@ demeure
             </div>
         // sync
     // header
-      
-    .container
-            #moduleEquip.row
-                #equipement.col-md-12.col-lg-12
-                    h1 Equipements et loisirs
-                |   
-                #moduleEquip.row
-                    #equipement.col-sm-6.col-md-6.col-lg-6
-                        img.img-responsive(src='img/demeure/piscine.jpg')
-                    |   
-                    #equipement.col-sm-6.col-md-6.col-lg-6
-                        h2 La Piscine
-                        |   
-                        p
-                            | Dimension de 25&times;10 m.
-                            br
-                            |       Enti&egrave;rement refaite aux&nbsp;normes de s&eacute;curit&eacute;.
-                            br
-                            |       Cl&ocirc;tur&eacute;e, elle poss&egrave;de une&nbsp;salle de bain privative, ainsi qu&rsquo;une&nbsp;cuisine d&rsquo;ext&eacute;rieur.&nbsp;
-                            br
-                            |       Jeux nautiques et bou&eacute;es sont &eacute;galement &agrave; votre disposition. 
-                            br
-                            |       L&rsquo;&eacute;t&eacute;, un&nbsp;&eacute;clairage nocturne&nbsp;permet &eacute;galement d&rsquo;en profiter &agrave; tout moment.
-            #moduleEquip.row
-                #equipement.col-sm-6.col-md-6.col-lg-6
-                    h2 Le Jardin
-                    |     
-                    p Parc arbor&eacute; de deux hectares &eacute;quip&eacute; pour de nombreux&nbsp;jeux d&rsquo;ext&eacute;rieur.
-                |     
-                #equipement.col-sm-6.col-md-6.col-lg-6
-                    img.img-responsive(src='img/demeure/coinpiscine.jpg')
-            #moduleEquip.row
-                #equipement.col-sm-6.col-md-6.col-lg-6
-                    img.img-responsive(src='img/demeure/tennis.jpg')
-                |     
-                #equipement.col-sm-6.col-md-6.col-lg-6
-                    h2 Jeux d&apos;ext&eacute;rieur
-                    |     
-                    p
-                        | Court de tennis&nbsp;ferm&eacute;, d&rsquo;un filet de&nbsp;badminton, d&rsquo;une table de ping-pong, ou encore d&rsquo;un&nbsp;boulodrome et des cages de buts pour le&nbsp;football.
-            #moduleEquip.row
-                #equipement.col-sm-6.col-md-6.col-lg-6
-                    h2 Salle de Jeux
-                    |     
-                    p
-                        | La salle de r&eacute;ception peut accueillir une vingtaine de personnes pour&nbsp;vos soir&eacute;es.
-                        | Elle dispose d&rsquo;une&nbsp;table de billard&nbsp;fran&ccedil;ais pour les amateurs, et d&rsquo;un&nbsp;babyfoot.&nbsp;
-                        br
-                        | Vous trouverez &eacute;galement sur place des&nbsp;jeux de soci&eacute;t&eacute;&nbsp;pour toute la famille.
-                |     
-                #equipement.col-sm-6.col-md-6.col-lg-6
-                    img.img-responsive(src='img/demeure/billard2.jpg')
+    //- br
+    //- br
+    //- br      
+    section#demeureEquipements.container-fluid
+      .row
+        #Equip.container
+          .row
+            #titreEquipement.col-md-12.col-lg-12
+              h1 Equipements et loisirs
+          |           
+          #moduleEquip.row
+            #equipement.col-sm-6.col-md-6.col-lg-6
+              img(src='img/demeure/piscine.jpg')
+            |           
+            #equipement.col-sm-6.col-md-6.col-lg-6
+              h2 La Piscine
+              |           
+              p
+                | Dimension de 25&times;10 m.
+                br
+                |             Enti&egrave;rement refaite aux&nbsp;normes de s&eacute;curit&eacute;.
+                br
+                |             Cl&ocirc;tur&eacute;e, elle poss&egrave;de une&nbsp;salle de bain privative, ainsi qu&rsquo;une&nbsp;cuisine d&rsquo;ext&eacute;rieur.&nbsp;
+                br
+                |             Jeux nautiques et bou&eacute;es sont &eacute;galement &agrave; votre disposition. 
+                br
+                |             L&rsquo;&eacute;t&eacute;, un&nbsp;&eacute;clairage nocturne&nbsp;permet &eacute;galement d&rsquo;en profiter &agrave; tout moment.
+          |   
+          #moduleEquip.row
+            #equipement.col-sm-6.col-md-6.col-lg-6
+              h2 Le Jardin
+              |       
+              p Parc arbor&eacute; de deux hectares &eacute;quip&eacute; pour de nombreux&nbsp;jeux d&rsquo;ext&eacute;rieur.
+            |       
+            #equipement.col-sm-6.col-md-6.col-lg-6
+              img(src='img/demeure/jardinhiver.jpg')
+          |   
+          #moduleEquip.row
+            #equipement.col-sm-6.col-md-6.col-lg-6
+              img(src='img/demeure/tennis.jpg')
+            |       
+            #equipement.col-sm-6.col-md-6.col-lg-6
+              h2 Jeux d&apos;ext&eacute;rieur
+              |       
+              p
+                | Court de tennis&nbsp;ferm&eacute;, d&rsquo;un filet de&nbsp;badminton, d&rsquo;une table de ping-pong, ou encore d&rsquo;un&nbsp;boulodrome et des cages de buts pour le&nbsp;football.
+          |   
+          #moduleEquip.row
+            #equipement.col-sm-6.col-md-6.col-lg-6
+              h2 Salle de Jeux
+              |       
+              p
+                | La salle de r&eacute;ception peut accueillir une vingtaine de personnes pour&nbsp;vos soir&eacute;es.
+                | Elle dispose d&rsquo;une&nbsp;table de billard&nbsp;fran&ccedil;ais pour les amateurs, et d&rsquo;un&nbsp;babyfoot.&nbsp;
+                br
+                | Vous trouverez &eacute;galement sur place des&nbsp;jeux de soci&eacute;t&eacute;&nbsp;pour toute la famille.
+            |       
+            #equipement.col-sm-6.col-md-6.col-lg-6
+              img(src='img/demeure/Sallebillard.png')
 
 |   
 include ./footer

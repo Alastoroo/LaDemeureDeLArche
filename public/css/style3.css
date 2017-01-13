@@ -2,9 +2,14 @@
   margin: 0;
   padding: 0
 }
+
 .titreDemeure{
-  font-size: 40px;
+  padding-top: 220px;
+  font-size: 46px;
   text-align: center;
+  color: #999966!important;
+  font-weight: 300;
+  font-family: 'Fira Sans', sans-serif;
 
 }
 
@@ -13,6 +18,8 @@
   font-size: 1.2em;
   text-align: justify;
   margin-top: 40px;
+  font-weight: 300;
+  font-family: 'Fira Sans', sans-serif;
 }
 /*global*/
 
@@ -189,4 +196,38 @@ button {
   background: url('../img/demeure/vueterrasse3.jpg') ;
   background-size: cover;
   background-repeat: no-repeat;
+}
+/*****EQUIPEMENTS LOISIRS********************************************************************/
+#demeureEquipements{
+  padding-top: 50px;
+}
+#Equip{
+}
+#moduleEquip{
+  background-color:white;
+  margin-top: 50px;
+  padding:20px;
+  margin-bottom: 50px;
+}
+#titreEquipement h1{
+  font-weight: 300;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 48px;
+  color: #9d2501;
+  margin-bottom: 30px;
+}
+#equipement img{
+  height: 300px;
+}
+#equipement h2{
+  font-weight: 300;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 36px;
+  color: #9d2501;
+}
+#equipement p{
+  font-weight: 300;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 18px;
+  color: black;
 }
