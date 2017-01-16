@@ -22,7 +22,7 @@ html,
 body {
     height: 100%;
 }
-
+header{padding-bottom: 180px;}
 header.carousel {
     height: 100%;
 }
