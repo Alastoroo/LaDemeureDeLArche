@@ -1,0 +1,811 @@
+doctype html
+
+html(lang='en')
+  head
+    include ./head
+sejours
+  |     
+  title Les sejours
+  |   
+  body(style='background-color:#f0f0f0;')
+  
+    include ./header
+
+  br
+  |   
+  br
+  | 
+  br
+  |  
+  .container
+    .row.centered.text-justify
+      .col-md-4.positionCarrousel
+        #carousel-example-generic1.carousel.slide(data-ride='carousel')
+          ol.carousel-indicators
+            li.active(data-target='#carousel-example-generic', data-slide-to='0')
+            |             
+            li(data-target='#carousel-example-generic', data-slide-to='1')
+            |             
+            li(data-target='#carousel-example-generic', data-slide-to='2')
+            |             
+            li(data-target='#carousel-example-generic', data-slide-to='3')
+            |             
+            li(data-target='#carousel-example-generic', data-slide-to='4')
+            |             
+            li(data-target='#carousel-example-generic', data-slide-to='5')
+          |           
+          .carousel-inner
+            .item.active
+              img#appart.img-responsive(src='img/appart/appart.jpg', alt='photo salon')
+              |               
+              .carousel-caption
+            |             
+            .item
+              img#appart.img-responsive(src='img/appart/appart-cuisine.jpg', alt='photo de la cuisine')
+              |               
+              .carousel-caption
+            |             
+            .item
+              img#appart.img-responsive(src='img/appart/appart-terrasse1.jpg', alt='photo de la terrasse')
+              |               
+              .carousel-caption
+            |             
+            .item
+              img#appart.img-responsive(src='img/appart/appart3.jpg', alt='photo du salon')
+              |               
+              .carousel-caption
+            |             
+            .item
+              img#appart.img-responsive(src='img/appart/appart6.jpg', alt='photo du salon')
+              |               
+              .carousel-caption
+            |             
+            .item
+              img.img-responsive(src='img/appart/chb-appart1.jpg', alt='photo du salon')
+              |               
+              .carousel-caption
+          |           
+          a.left.carousel-control(href='#carousel-example-generic1', data-slide='prev')
+            span.glyphicon.glyphicon-chevron-left
+          |           
+          a.right.carousel-control(href='#carousel-example-generic1', data-slide='next')
+            span.glyphicon.glyphicon-chevron-right
+      |       
+      .col-md-8.description
+        #chambreDescription
+          h1 L&apos;appartement
+          |           
+          p
+            | L&rsquo;appartement de 65m2 situ&eacute; en RDC pouvant accueillir de deux &agrave; quatre personnes, est compos&eacute; de deux chambres, d&rsquo;une cuisine salon avec TV grand &eacute;cran plat, WiFi, salle de bain et de deux terrasses Nord et Sud avec possibilit&eacute; de faire un barbecue l&apos;&eacute;t&eacute;. Un parking gratuit et priv&eacute; est disponible sur place.
+          |           
+          h2#titreSejour Descriptif
+          |           
+          p
+            strong Chambre parentale
+            | :&nbsp;Un lit deux personnes 160&times;200 cm avec des rangements, des fauteuils et un acc&egrave;s privatif par grande baie vitr&eacute;e &agrave; la terrasse Nord avec coin farniente au frais pour l&rsquo;&eacute;t&eacute;.
+            br
+            |             
+            strong Chambre secondaire
+            | :&nbsp;Deux lits de 90 cm avec des rangements.
+          |             
+          h2#titreSejour Equipements 
+          |             
+          p
+            strong Cuisine
+            | : r&eacute;frig&eacute;rateur | lave vaisselle | four | plaques halog&egrave;nes | micro-ondes |cafeti&egrave;re | bouilloire | grille pain.
+            br
+            |               
+            strong Salon
+            | : table ronde | canap&eacute; | table basse | TV grand &eacute;cran plat.
+            br
+            |               
+            strong Salle de bain
+            | : douche | toilettes | s&egrave;che-cheveux.
+          |               
+          img#positionLogo.img2(src='img/logo/parking.png', alt='logo parking')
+          | &nbsp;
+          img#positionLogo.img2(src='img/logo/wifi.png', alt='logo wifi')
+          | &nbsp;
+          img#positionLogo.img2(src='img/logo/no-smoking.png', alt='idée cadeau')
+          | &nbsp;
+          img#positionLogo.img2(src='img/logo/notanimal.png', alt='idée cadeau')
+      |           
+      section#reservation.container
+        #intitule.row.lead
+          .col-xs-2
+            h4 NOMBRE
+          |               
+          .col-xs-2
+            h4.fixtop3 DESCRIPTION
+          |               
+          .col-xs-2
+            h4.fixtop2 TOTAL
+          |               
+          .col-xs-3
+            h4.fixtop1 RESERVATION
+          |               
+          .col-xs-3
+            h4.fixtop OFFRIR
+        |             
+        hr
+        |             
+        ul#menu.list-unstyled.list-inline
+          li.booking
+            i.glyphicon.glyphicon-user
+            i.glyphicon.glyphicon-user
+            i.glyphicon.glyphicon-user
+            i.glyphicon.glyphicon-user
+            br
+          li.booking Location appartement de 2 &agrave; 4 personnes &agrave; la semaine
+          |               
+          li.booking
+            strong &euro;980.00
+            br
+            | Prix pour 7 nuits
+          |               
+          li.booking
+            a.btn.btn-lg.vert(href='reservation', type='button') R&eacute;servez
+          |               
+          li.booking
+            a(href='reservation')
+              img.img1(src='img/logo/kdo2.gif', alt='idée cadeau')
+        |             
+        hr
+        |             
+        ul#menu.list-unstyled.list-inline
+          li.booking
+            i.glyphicon.glyphicon-user
+            i.glyphicon.glyphicon-user
+            i.glyphicon.glyphicon-user
+            i.glyphicon.glyphicon-user
+            br
+          li.booking Location appartement de 2 &agrave; 4 personnes pour le week-end
+          |                
+          li.booking
+            strong &euro;280.00
+            br
+            | Prix pour 2 nuits
+          |               
+          li.booking
+            a.btn.btn-lg.vert(href='reservation', type='button') R&eacute;servez
+          |                
+          li.booking
+            a(href='reservation')
+              img.img1(src='img/logo/kdo2.gif', alt='idée cadeau')
+        |              
+        hr
+    // fin partie appart
+    // début chambre azur
+    br
+    br
+    |          
+    .row.centered.text-justify
+      .col-md-4.positionCarrousel2
+        #carousel-example-generic2.carousel.slide(data-ride='carousel')
+          ol.carousel-indicators
+            li.active(data-target='#carousel-example-generic', data-slide-to='0')
+            |                 
+            li(data-target='#carousel-example-generic', data-slide-to='1')
+            |                 
+            li(data-target='#carousel-example-generic', data-slide-to='2')
+            |                 
+            li(data-target='#carousel-example-generic', data-slide-to='3')
+            |                 
+            li(data-target='#carousel-example-generic', data-slide-to='4')
+            |                 
+            li(data-target='#carousel-example-generic', data-slide-to='5')
+          |               
+          .carousel-inner
+            .item.active
+              img#appart.img-responsive(src='img/chambre-azur/chb-azur10.jpg', alt='plan large chambre')
+              |                   
+              .carousel-caption
+            |                 
+            .item
+              img#appart.img-responsive(src='img/chambre-azur/chb-azur.jpg', alt='photo des fauteuils')
+              |                   
+              .carousel-caption
+            |                 
+            .item
+              img#appart.img-responsive(src='img/chambre-azur/chb-azur9.jpg', alt='lampe chambre')
+              |                   
+              .carousel-caption
+            |                 
+            .item
+              img#appart.img-responsive(src='img/chambre-azur/chb-azur.jpg', alt='photo du salon')
+              |                   
+              .carousel-caption
+            |                 
+            .item
+              img#appart.img-responsive(src='img/chambre-azur/chb-azur6.jpg', alt='photo de la salle de bain')
+              |                   
+              .carousel-caption
+            |                 
+            .item
+              img.img-responsive(src='img/chambre-azur/terrasse.jpg', alt='photo du salon')
+              |                   
+              .carousel-caption
+          |               
+          a.left.carousel-control(href='#carousel-example-generic2', data-slide='prev')
+            span.glyphicon.glyphicon-chevron-left
+          |               
+          a.right.carousel-control(href='#carousel-example-generic2', data-slide='next')
+            span.glyphicon.glyphicon-chevron-right
+      |           
+      .col-md-8.description
+        #chambreDescription
+          h1 La chambre Azur
+          |               
+          p
+            | La chambre 
+            strong Azur
+            |  vous invite au voyage, par son caract&egrave;re m&eacute;diterran&eacute;en et ses tons clairs.
+            |                 Ses fauteuils luminaires accompagnent un coin lecture original, o&ugrave; vous pourrez prendre le th&eacute;. Un confortable lit deux personnes, et une salle de bain moderne enjoliveront votre s&eacute;jour ..
+          |                 
+          h2#titreSejour Descriptif
+          |                 
+          p
+            strong Chambre
+            |  : Un lit deux personnes de 160&times;200 | TV &eacute;cran plat | deux fauteuils | un rocking chair |un banc bout de lit | rangements | terrasse priv&eacute;e avec vue sur le parc et la piscine.
+            br
+            |                   
+            strong Salle de bain
+            |  : Douche | lavabo | s&egrave;che cheveux | toilettes | Serviettes fournies..
+          |                   
+          img#positionLogo.img2(src='img/logo/parking.png', alt='logo parking')
+          | &nbsp;
+          img#positionLogo.img2(src='img/logo/wifi.png', alt='logo wifi')
+          | &nbsp;
+          img#positionLogo.img2(src='img/logo/no-smoking.png', alt='idée cadeau')
+          | &nbsp;
+          img#positionLogo.img2(src='img/logo/notanimal.png', alt='idée cadeau')
+      |               
+      section#reservation.container
+        #intitule.row.lead
+          .col-xs-2
+            h4 NOMBRE
+          |                   
+          .col-xs-2
+            h4.fixtop3 DESCRIPTION
+          |                   
+          .col-xs-2
+            h4.fixtop2 TOTAL
+          |                   
+          .col-xs-3
+            h4.fixtop1 RESERVATION
+          |                   
+          .col-xs-3
+            h4.fixtop OFFRIR
+        |                 
+        hr
+        |                 
+        ul#menu.list-unstyled.list-inline
+          li.booking
+            i.glyphicon.glyphicon-user
+            i.glyphicon.glyphicon-user
+            br
+          li.booking
+            | Chambre double  saison haute
+            br
+            | d&apos; Avril &agrave; Octobre
+          |                   
+          li.booking
+            strong &euro;110.00
+            br
+            | Prix pour 1 nuit
+          |                 
+          li.booking
+            a.btn.btn-lg.vert(href='reservation', type='button') R&eacute;servez
+          |                   
+          li.booking
+            a(href='reservation')
+              img.img1(src='img/logo/kdo2.gif', alt='idée cadeau')
+        |                 
+        hr
+        |                 
+        ul#menu.list-unstyled.list-inline
+          li.booking
+            i.glyphicon.glyphicon-user
+            i.glyphicon.glyphicon-user
+            br
+          li.booking
+            | Chambre double saison basse
+            br
+            | de Novembre &agrave; Mars
+          |                    
+          li.booking
+            strong &euro;90.00
+            br
+            | Prix pour 1 nuit
+          |                    
+          li.booking
+            a.btn.btn-lg.vert(href='reservation', type='button') R&eacute;servez
+          |                    
+          li.booking
+            a(href='reservation')
+              img.img1(src='img/logo/kdo2.gif', alt='idée cadeau')
+        |                  
+        hr
+    // fin partie chambre Azur
+    br
+    br
+    |          
+    .row.centered.text-justify
+      .col-md-4.positionCarrousel2
+        #carousel-example-generic3.carousel.slide(data-ride='carousel')
+          ol.carousel-indicators
+            li.active(data-target='#carousel-example-generic', data-slide-to='0')
+            |                 
+            li(data-target='#carousel-example-generic', data-slide-to='1')
+            |                 
+            li(data-target='#carousel-example-generic', data-slide-to='2')
+            |                 
+            li(data-target='#carousel-example-generic', data-slide-to='3')
+            |                 
+            li(data-target='#carousel-example-generic', data-slide-to='4')
+          |               
+          .carousel-inner
+            .item.active
+              img#appart.img-responsive(src='img/chambre-romance/chbre-romance7.jpg', alt='plan large chambre')
+              |                   
+              .carousel-caption
+            |                 
+            .item
+              img#appart.img-responsive(src='img/chambre-romance/chbr-romence5.jpg', alt='photo des fauteuils')
+              |                   
+              .carousel-caption
+            |                 
+            .item
+              img#appart.img-responsive(src='img/chambre-romance/chbre-romanc.jpg', alt='photo salle de douche')
+              |                   
+              .carousel-caption
+            |                 
+            .item
+              img#appart.img-responsive(src='img/chambre-romance/chb-romance12.jpg', alt='plan large chambre')
+              |                   
+              .carousel-caption
+            |                 
+            .item
+              img#appart.img-responsive(src='img/chambre-romance/sdb-romance.jpg', alt='photo chambre')
+              |                   
+              .carousel-caption
+          |               
+          a.left.carousel-control(href='#carousel-example-generic3', data-slide='prev')
+            span.glyphicon.glyphicon-chevron-left
+          |               
+          a.right.carousel-control(href='#carousel-example-generic3', data-slide='next')
+            span.glyphicon.glyphicon-chevron-right
+      |           
+      .col-md-8.description
+        #chambreDescription
+          h1 La chambre Romance
+          |               
+          p
+            | La chambre
+            strong  Romance
+            |  vous re&ccedil;oit dans un cadre romantique chaleureux, dans un style inspir&eacute; du 19&egrave;me si&egrave;cle. Le charme de son lit en fer forg&eacute; s&rsquo;allie &agrave; des fauteuils et une table de lecture, pour une chambre de caract&egrave;re. Celle-ci est &eacute;galement reli&eacute;e par un acc&egrave;s priv&eacute; &agrave; la terrasse ensoleill&eacute;e.
+          |                 
+          h2#titreSejour Descriptif
+          |                 
+          p
+            strong Chambre
+            |  : &nbsp;Un lit 160&times;200 &agrave; baldaquin | des meubles de rangement | fauteuils |
+            br
+            |  terrasse priv&eacute;e avec vue sur le parc.
+            br
+            |                   
+            strong Salle de bain
+            |  : Douche | lavabo | s&egrave;che cheveux | toilettes | Serviettes fournies.
+          |                 
+          img#positionLogo.img2(src='img/logo/parking.png', alt='logo parking')
+          | &nbsp;
+          img#positionLogo.img2(src='img/logo/wifi.png', alt='logo wifi')
+          | &nbsp;
+          img#positionLogo.img2(src='img/logo/no-smoking.png', alt='idée cadeau')
+          | &nbsp;
+          img#positionLogo.img2(src='img/logo/notanimal.png', alt='idée cadeau')
+      br
+      br
+      br
+      br
+      br
+      br
+      |               
+      section#reservation.container
+        #intitule.row.lead
+          .col-xs-2
+            h4 NOMBRE
+          |                   
+          .col-xs-2
+            h4.fixtop3 DESCRIPTION
+          |                   
+          .col-xs-2
+            h4.fixtop2 TOTAL
+          |                   
+          .col-xs-3
+            h4.fixtop1 RESERVATION
+          |                   
+          .col-xs-3
+            h4.fixtop OFFRIR
+        |                 
+        hr
+        |                 
+        ul#menu.list-unstyled.list-inline
+          li.booking
+            i.glyphicon.glyphicon-user
+            i.glyphicon.glyphicon-user
+            br
+          li.booking
+            | Chambre double  saison haute
+            br
+            | d&apos; Avril &agrave; Octobre
+          |                   
+          li.booking
+            strong &euro;110.00
+            br
+            | Prix pour 1 nuit
+          |                   
+          li.booking
+            a.btn.btn-lg.vert(href='reservation', type='button') R&eacute;servez
+          |                   
+          li.booking
+            a(href='reservation')
+              img.img1(src='img/logo/kdo2.gif', alt='idée cadeau')
+        |                 
+        hr
+        |                 
+        ul#menu.list-unstyled.list-inline
+          li.booking
+            i.glyphicon.glyphicon-user
+            i.glyphicon.glyphicon-user
+            br
+          li.booking
+            | Chambre double saison basse
+            br
+            | de Novembre &agrave; Mars
+          |                    
+          li.booking
+            strong &euro;90.00
+            br
+            | Prix pour 1 nuit
+          |                   
+          li.booking
+            a.btn.btn-lg.vert(href='reservation', type='button') R&eacute;servez
+          |                    
+          li.booking
+            a(href='reservation')
+              img.img1(src='img/logo/kdo2.gif', alt='idée cadeau')
+        |                  
+        hr
+    // fin partie chambre Romance
+    br
+    br
+    |          
+    .row.centered.text-justify
+      .col-md-4.positionCarrousel3
+        #carousel-example-generic4.carousel.slide(data-ride='carousel')
+          ol.carousel-indicators
+            li.active(data-target='#carousel-example-generic', data-slide-to='0')
+            |                 
+            li(data-target='#carousel-example-generic', data-slide-to='1')
+            |                 
+            li(data-target='#carousel-example-generic', data-slide-to='2')
+            |                 
+            li(data-target='#carousel-example-generic', data-slide-to='3')
+            |                 
+            li(data-target='#carousel-example-generic', data-slide-to='4')
+            |                 
+            li(data-target='#carousel-example-generic', data-slide-to='5')
+          |               
+          .carousel-inner
+            .item.active
+              img#appart.img-responsive(src='img/suite-renoir/suite-renoir2.jpg', alt='plan large chambre')
+              |                   
+              .carousel-caption
+            |                 
+            .item
+              img#appart.img-responsive(src='img/suite-renoir/suite-renoir3.jpg', alt='photo des fauteuils')
+              |                   
+              .carousel-caption
+            |                 
+            .item
+              img#appart.img-responsive(src='img/suite-renoir/suite-renoir5.jpg', alt='lampe chambre')
+              |                   
+              .carousel-caption
+            |                 
+            .item
+              img#appart.img-responsive(src='img/suite-renoir/suite-renoir2.jpg', alt='photo du salon')
+              |                   
+              .carousel-caption
+            |                 
+            .item
+              img#appart.img-responsive(src='img/suite-renoir/suite-renoir7.jpg', alt='photo de la salle de bain')
+              |                   
+              .carousel-caption
+            |                 
+            .item
+              img.img-responsive(src='img/suite-renoir/terrasse-renoir.jpg', alt='photo du salon')
+              |                   
+              .carousel-caption
+          |               
+          a.left.carousel-control(href='#carousel-example-generic4', data-slide='prev')
+            span.glyphicon.glyphicon-chevron-left
+          |               
+          a.right.carousel-control(href='#carousel-example-generic4', data-slide='next')
+            span.glyphicon.glyphicon-chevron-right
+      |           
+      .col-md-8.description
+        #chambreDescription
+          h1 La suite Renoir
+          |               
+          p
+            | La 
+            strong suite Renoir
+            |  vous invite &agrave; un s&eacute;jour romantique, dans une d&eacute;coration choisie pour ses tons doux et son charme &agrave; la fran&ccedil;aise.
+            |               La suite b&eacute;n&eacute;ficie &eacute;galement d&rsquo;un salon privatif&nbsp; confortable, assorti de fauteuils &eacute;l&eacute;gants et d&rsquo;une table de salon avec un charmant coin lecture. Sa terrasse privative offre une agr&eacute;able vue sur le parc, les C&eacute;vennes et le ch&acirc;teau de Montmoirac.
+          |                 
+          h2#titreSejour Descriptif
+          |                 
+          p
+            strong Chambre principale
+            |  : Un lit &agrave; baldaquin 2 personnes 160&times;200 | un canap&eacute; | des meubles de rangement | TV grand &eacute;cran |  coffre s&eacute;curis&eacute; | r&eacute;frigerateur. Deux WC priv&eacute;s et acc&egrave;s privatif &agrave; la terrasse.
+            br
+            |                 
+            strong Salon privatif
+            | :&nbsp; Un canap&eacute; | des fauteuils clubs |  TV grand &eacute;cran | un frigidaire | Grande terrasse priv&eacute;e.
+          |                 
+          strong Salle de bain
+          |  : Douche | lavabo | s&egrave;che cheveux | toilettes s&eacute;par&eacute;s | peignoirs et serviettes fournies.
+          p
+          |  
+          |                  
+          img#positionLogo.img2(src='img/logo/parking.png', alt='logo parking')
+          | &nbsp;
+          img#positionLogo.img2(src='img/logo/wifi.png', alt='logo wifi')
+          | &nbsp;
+          img#positionLogo.img2(src='img/logo/no-smoking.png', alt='idée cadeau')
+          | &nbsp;
+          img#positionLogo.img2(src='img/logo/notanimal.png', alt='idée cadeau')
+      |               
+      section#reservation.container
+        #intitule.row.lead
+          .col-xs-2
+            h4 NOMBRE
+          |                   
+          .col-xs-2
+            h4.fixtop3 DESCRIPTION
+          |                   
+          .col-xs-2
+            h4.fixtop2 TOTAL
+          |                   
+          .col-xs-3
+            h4.fixtop1 RESERVATION
+          |                   
+          .col-xs-3
+            h4.fixtop OFFRIR
+        |                 
+        hr
+        |                 
+        ul#menu.list-unstyled.list-inline
+          li.booking
+            i.glyphicon.glyphicon-user
+            i.glyphicon.glyphicon-user
+            br
+          li.booking
+            | Chambre double  saison haute
+            br
+            | d&apos; Avril &agrave; Octobre
+          |                   
+          li.booking
+            strong &euro;110.00
+            br
+            | Prix pour 1 nuit
+          |                   
+          li.booking
+            a.btn.btn-lg.vert(href='reservation', type='button') R&eacute;servez
+          |                   
+          li.booking
+            a(href='reservation')
+              img.img1(src='img/logo/kdo2.gif', alt='idée cadeau')
+        |                 
+        hr
+        |                 
+        ul#menu.list-unstyled.list-inline
+          li.booking
+            i.glyphicon.glyphicon-user
+            i.glyphicon.glyphicon-user
+            br
+          li.booking
+            | Chambre double saison basse
+            br
+            | de Novembre &agrave; Mars
+          |                    
+          li.booking
+            strong &euro;90.00
+            br
+            | Prix pour 1 nuit
+          |                    
+          li.booking
+            a.btn.btn-lg.vert(href='reservation', type='button') R&eacute;servez
+          |                    
+          li.booking
+            a(href='reservation')
+              img.img1(src='img/logo/kdo2.gif', alt='idée cadeau')
+        |                  
+        hr
+    // fin partie suite renoir
+    br
+    br
+    |          
+    .row.centered.text-justify
+      .col-md-4.positionCarrousel4
+        #carousel-example-generic5.carousel.slide(data-ride='carousel')
+          ol.carousel-indicators
+            li.active(data-target='#carousel-example-generic', data-slide-to='0')
+            |                 
+            li(data-target='#carousel-example-generic', data-slide-to='1')
+            |                 
+            li(data-target='#carousel-example-generic', data-slide-to='2')
+            |                 
+            li(data-target='#carousel-example-generic', data-slide-to='3')
+            |                 
+            li(data-target='#carousel-example-generic', data-slide-to='4')
+            |                 
+            li(data-target='#carousel-example-generic', data-slide-to='5')
+          |               
+          .carousel-inner
+            .item.active
+              img#appart.img-responsive(src='img/suite-zen/suite-zen-entree.jpg', alt='plan large chambre')
+              |                   
+              .carousel-caption
+            |                 
+            .item
+              img#appart.img-responsive(src='img/suite-zen/suite-zen.jpg', alt='chambre avec lit')
+              |                   
+              .carousel-caption
+            |                 
+            .item
+              img#appart.img-responsive(src='img/suite-zen/diaporama-zen.jpg', alt='espace lecture')
+              |                   
+              .carousel-caption
+            |                 
+            .item
+              img#appart.img-responsive(src='img/suite-zen/suite-zen7.jpg', alt='photo du salon')
+              |                   
+              .carousel-caption
+            |                 
+            .item
+              img#appart.img-responsive(src='img/suite-zen/suite-zen5.jpg', alt='photo de la salle de bain')
+              |                   
+              .carousel-caption
+            |                 
+            .item
+              img.img-responsive(src='img/suite-zen/suite-zen-terrasse.jpg', alt='photo du salon')
+              |                   
+              .carousel-caption
+          |               
+          a.left.carousel-control(href='#carousel-example-generic5', data-slide='prev')
+            span.glyphicon.glyphicon-chevron-left
+          |               
+          a.right.carousel-control(href='#carousel-example-generic5', data-slide='next')
+            span.glyphicon.glyphicon-chevron-right
+      |           
+      .col-md-8.description
+        #chambreDescription
+          h1 La suite Zen
+          |               
+          p
+            | La suite familiale 
+            strong Zen
+            |  poss&egrave;de 2 chambres spacieuses pour un s&eacute;jour d&rsquo;exception dans une atmosph&egrave;re relaxante, aux inspirations asiatiques. Sa grande chambre, meubl&eacute;e d&rsquo;un lit baldaquin en bambou poss&egrave;de une immense terrasse privative avec vue sur le parc et la piscine.
+            |               Le bonus &eacute;tant la grande  salle de bain, spacieuse avec sa baignoire ronde pour se relaxer au maximum.
+          |                 
+          h2#titreSejour Descriptif
+          |                 
+          p
+            strong Chambre principale
+            |  : Un lit &agrave; baldaquin 2 personnes 160&times;200 | un canap&eacute; | des meubles de rangement | une TV grand &eacute;cran | un coffre s&eacute;curis&eacute; | un r&eacute;frigerateur | acc&egrave;s privatif &agrave; la terrasse.
+            br
+            |                 
+            strong Chambre secondaire
+            | :&nbsp; Deux lits une personne 90 cm | deux placards |un bureau | acc&egrave;s privatif &agrave; la terrasse.
+          |                 
+          strong Grande Salle de Bain (20m&sup2;)
+          |  : Une baignoire ronde | une douche | deux lavabos | deux WC priv&eacute;s | 
+          br
+          | s&egrave;che-cheveux |&nbsp;peignoirs et serviettes fournis.
+          p
+          |                 
+          img#positionLogo.img2(src='img/logo/parking.png', alt='logo parking')
+          | &nbsp;
+          img#positionLogo.img2(src='img/logo/wifi.png', alt='logo wifi')
+          | &nbsp;
+          img#positionLogo.img2(src='img/logo/no-smoking.png', alt='idée cadeau')
+          | &nbsp;
+          img#positionLogo.img2(src='img/logo/notanimal.png', alt='idée cadeau')
+      |               
+      section#reservation.container
+        #intitule.row.lead
+          .col-xs-2
+            h4 NOMBRE
+          |                   
+          .col-xs-2
+            h4.fixtop3 DESCRIPTION
+          |                   
+          .col-xs-2
+            h4.fixtop2 TOTAL
+          |                   
+          .col-xs-3
+            h4.fixtop1 RESERVATION
+          |                   
+          .col-xs-3
+            h4.fixtop OFFRIR
+        |                 
+        hr
+        |                 
+        ul#menu.list-unstyled.list-inline
+          li.booking
+            i.glyphicon.glyphicon-user
+            i.glyphicon.glyphicon-user
+            i.glyphicon.glyphicon-user
+            i.glyphicon.glyphicon-user
+            br
+          li.booking
+            | Chambre double  saison haute
+            br
+            | d&apos; Avril &agrave; Octobre
+          |                   
+          li.booking
+            strong &euro;110.00
+            br
+            | Prix pour 1 nuit
+          |                   
+          li.booking
+            a.btn.btn-lg.vert(href='reservation', type='button') R&eacute;servez
+          |                   
+          li.booking
+            a(href='reservation')
+              img.img1(src='img/logo/kdo2.gif', alt='idée cadeau')
+        |                 
+        hr
+        |                 
+        ul#menu.list-unstyled.list-inline
+          li.booking
+            i.glyphicon.glyphicon-user
+            i.glyphicon.glyphicon-user
+            i.glyphicon.glyphicon-user
+            i.glyphicon.glyphicon-user
+            br
+          li.booking
+            | Chambre double saison basse
+            br
+            | de Novembre &agrave; Mars
+          |                    
+          li.booking
+            strong &euro;90.00
+            br
+            | Prix pour 1 nuit
+          |                    
+          li.booking
+            a.btn.btn-lg.vert(href='reservation', type='button') R&eacute;servez
+          |                    
+          li.booking
+            a(href='reservation')
+              img.img1(src='img/logo/kdo2.gif', alt='idée cadeau')
+        |                  
+        hr
+    // fin partie suite zen
+    script.
+      $('.carousel').carousel('cycle')({
+      interval: 2000
+      })
+    |             
+
+
+|     
+include ./footer
+script.
+  $('.carousel').carousel('cycle')({
+  interval: 3000
+  })
+    

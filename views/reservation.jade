@@ -1,0 +1,123 @@
+head
+  include ./head
+  include ./header
+.container
+  .row
+    section
+      .wizard
+        .wizard-inner
+          .connecting-line
+          |                 
+          ul.nav.nav-tabs(role="tablist")
+            li.active(role="presentation")
+              a(href="#step1", data-toggle="tab", aria-controls="step1", role="tab", title="Step 1")
+                span.round-tab
+                  i.glyphicon.glyphicon-folder-open
+            |                     
+            li.disabled(role="presentation")
+              a(href="#step2", data-toggle="tab", aria-controls="step2", role="tab", title="Step 2")
+                span.round-tab
+                  i.glyphicon.glyphicon-pencil
+            |                     
+            li.disabled(role="presentation")
+              a(href="#step3", data-toggle="tab", aria-controls="step3", role="tab", title="Step 3")
+                span.round-tab
+                  i.glyphicon.glyphicon-picture
+            |                     
+            li.disabled(role="presentation")
+              a(href="#complete", data-toggle="tab", aria-controls="complete", role="tab", title="Complete")
+                span.round-tab
+                  i.glyphicon.glyphicon-ok
+        |             
+        form(role="form")
+          .tab-content
+            #step1.tab-pane.active(role="tabpanel")
+              h3 Formulaire
+              |                         
+              p Etape 1 entrer des coordonnée pour validé 
+              |                         
+              form.form-horizontal
+                .form-group
+                  label#inputSuccess2.col-sm-2.control-label(for="inputEmail3") Prénom
+                  |                         
+                  .col-sm-10
+                    input.form-control(type="FirstName", placeholder="First name")
+                |                       
+                .form-group
+                  label#inputSuccess2.col-sm-2.control-label(for="inputEmail3") Nom
+                  |                         
+                  .col-sm-10
+                    input#inputEmail3.form-control(type="LastName", placeholder="Last name")
+                |                       
+                .form-group
+                  label#inputSuccess2.col-sm-2.control-label(for="inputEmail3") Email
+                  |                         
+                  .col-sm-10
+                    input#inputEmail3.form-control(type="email", placeholder="Email")
+                //- ADRESSSE DEBUT
+                .form-group
+                  label#inputSuccess2.col-sm-2.control-label(for="inputEmail3") ADRESSE
+                  |                         
+                  .col-sm-10
+                    input#inputEmail3.form-control(type="email", placeholder="Email")
+                |                       
+                .form-group
+                  label#inputSuccess2.col-sm-2.control-label(for="inputEmail3") Code Postal
+                  |                         
+                  .col-sm-10
+                    input#inputEmail3.form-control(type="LastName", placeholder="Last name")
+                |                       
+                .form-group
+                  label#inputSuccess2.col-sm-2.control-label(for="inputEmail3") Ville
+                  |                         
+                  .col-sm-10
+                    input#inputEmail3.form-control(type="LastName", placeholder="Last name")
+                |                       
+                |                       
+                .form-group
+                  label#inputSuccess2.col-sm-2.control-label(for="inputEmail3") Tel
+                  |                         
+                  .col-sm-10
+                    input#inputEmail3.form-control(type="email", placeholder="Email")
+                //-  ADRESSE FIN
+              |                         
+              ul.list-inline.pull-right
+                li
+                  button.btn.btn-primary.btn-lg.next-step(type="button") Suivant
+            //- RECAPITULATIF COMMANDE DEBUT
+            #step2.tab-pane(role="tabpanel")
+              h3 Recapitulatif
+              |                         
+              p Votre reservation et dates selectionner
+              |                         
+              ul.list-inline.pull-right
+                li
+                  button.btn.btn-default.prev-step(type="button") Retour
+                |                             
+                li
+                  button.btn.btn-primary.next-step(type="button") Suivant
+            //- RECAPITULATIF COMMANDE FIN
+            //- PAIMENT DEBUT
+            #step3.tab-pane(role="tabpanel")
+              h3 Paiement
+              |                         
+              p Veuillez choisir l'un des moyen de piment suivant.
+              |                         
+              ul.list-inline.pull-right
+                li
+                  button.btn.btn-default.prev-step(type="button") Retour
+                //-  <li><button type="button" class="btn btn-default next-step"></button></li>
+                li
+                  button.btn.btn-primary.btn-info-full.next-step(type="button") Suivant
+            //- PAIMENT FIN
+            #complete.tab-pane(role="tabpanel")
+              center
+                h3 Merci !
+                |                         
+                p
+                  | Votre reservation a bien été pris en compte,
+                  br
+                  | vous allez etre rediriger vers le site de la Demeure de l'Arche.
+            |                     
+            .clearfix
+include ./footer

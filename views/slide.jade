@@ -1,0 +1,36 @@
+slide
+header#myCarousel.carousel.slide
+   ol.carousel-indicators
+     li.active(data-target='#myCarousel', data-slide-to='0')
+     |             
+     li(data-target='#myCarousel', data-slide-to='1')
+     |             
+     li(data-target='#myCarousel', data-slide-to='2')
+     |             
+     li(data-target='#myCarousel', data-slide-to='3')
+   |         
+   .carousel-inner
+     .item.active
+       .fill(style="background-image:url('img/demeure/home.jpg');")
+       |                 
+       .carousel-caption
+     |             
+     .item
+       .fill(style="background-image:url('img/demeure/piscine.jpg');")
+       |                 
+       .carousel-caption
+     |             
+     .item
+       .fill(style="background-image:url('img/demeure/entree.jpg');")
+       |                 
+       .carousel-caption
+     |             
+     .item
+       .fill(style="background-image:url('img/demeure/home4.jpg');")
+       |                 
+       .carousel-caption
+      
+   //     script.
+   //- $('.carousel').carousel({
+   //- interval: 5000
+   //- })

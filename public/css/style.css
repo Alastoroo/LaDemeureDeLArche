@@ -1,3 +1,231 @@
+
+/*bordeau
+#9d2501
+
+vert clair typo logo
+#999966
+
+vert fonce
+#184a2d
+
+vert bouton réservez
+#d7d7b9
+*/
+a.vert {
+  background-color: #999966!important;
+}
+
 h1{
   font-size: 35px;
+}
+/*Home Page Carousel */
+html,
+body {
+    height: 100%;
+}
+header {
+  margin-bottom: 220px;
+}
+header.carousel {
+    height: 100%;
+
+}
+
+header.carousel .item,
+header.carousel .item.active,
+header.carousel .carousel-inner {
+    height: 120%;
+}
+
+header.carousel .fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+/* partie chambres*/
+.row {
+  background-color: #fcfcfc!important;
+}
+.vert {
+color: #d7d7b9;
+}
+
+#intitule h4 {
+  padding-left: 80px;
+  font-size: 22px;
+
+}
+h4.fixtop1 {
+  text-align: right;
+  margin-left: 50px;
+}
+h4.fixtop{
+text-align: left;
+  margin-right: 30px;
+}
+h4.fixtop2 {
+
+  text-align: right;
+  margin-left: 60px;
+}
+#chambreDescription h1 {
+  color: #9d2501;
+  text-align: left;
+  margin-top: 30px;
+}
+h2#titreSejour {
+  color: #9d2501;
+}
+li.booking {
+display: inline-block;
+width: 200px;
+margin-left: 20px;
+vertical-align: top;
+text-align: center;
+}
+#homeChambre.container-fluid {
+  width: 80%;
+  padding-top: 250px;
+}
+h2.explication1 {
+  margin-bottom: 10px;
+  font-size: 22px;
+  line-height: 0.5;
+  letter-spacing: -1px;
+}
+.description {
+  padding-left: 50px;
+padding-bottom:  20px;
+}
+/*.prixAppart {
+  color: #9d2501;
+}*/
+i.glyphicon {
+  font-size: 18px !important;
+  color: #2E3438;
+  padding-right: 5px;
+  color: #9d2501;
+}
+
+img.img1 {
+  max-width: 20%;
+  height: auto;
+
+}
+img.img2 {
+  max-width: 7%;
+  height: auto;
+}
+#positionLogo.img2{
+ width: 5%;
+}
+#positionLogo {
+  display: inline-block;
+  float: right;
+ margin-right: 10px;
+}
+
+#carousel-example-generic {
+  overflow: hidden;
+  position: relative;
+  top: 20px;
+  margin:0 auto;
+}
+.positionCarrousel {
+  position: relative;
+  top: 80px;
+  left: 25px;
+}
+.positionCarrousel2 {
+  position: relative;
+  top: 20px;
+  left: 20px;
+}
+.positionCarrousel3 {
+  position: relative;
+  top: 70px;
+  left: 25px;
+}
+.positionCarrousel4 {
+  position: relative;
+  top: 80px;
+  left: 25px;
+}
+/* FOOTER DEBUT */
+footer{
+  background-color: #eaeaea;
+
+}
+
+.footerbox{
+  width: 100%;
+}
+
+.footer-bs {
+  background-color: #eaeaea;
+  padding: 5px 5px;
+  color: black;
+  margin-bottom: 20px;
+  border-bottom-right-radius: 6px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 6px;
+}
+.footer-bs .footer-brand, .footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { padding:10px 25px; }
+.footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { border-color: transparent; }
+.footer-bs .footer-brand h2 { margin:0px 0px 10px; }
+.footer-bs .footer-brand p { font-size:15px; color: #9d2501; }
+
+.footer-bs .footer-nav ul.pages { list-style:none; padding:0px; }
+.footer-bs .footer-nav ul.pages li { padding:5px 0px;}
+.footer-bs .footer-nav ul.pages a { color: #9d2501; text-decoration:none; text-transform:uppercase; }
+.footer-bs .footer-nav ul.pages a:hover { color: #999966; text-decoration:underline; }
+.footer-bs .footer-nav h4 {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom:10px;
+}
+
+.footer-bs .footer-nav ul.list { list-style:none; padding:0px; }
+.footer-bs .footer-nav ul.list li { padding:5px 0px;}
+.footer-bs .footer-nav ul.list a { color: #9d2501; }
+.footer-bs .footer-nav ul.list a:hover { color: #999966; text-decoration:none; }
+
+.footer-bs .footer-social ul { list-style:none; padding:0px; }
+.footer-bs .footer-social h4 {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.footer-bs .footer-social li { padding:5px 4px;}
+.footer-bs .footer-social a { color: #9d2501;}
+.footer-bs .footer-social a:hover { color: #999966; text-decoration:none; }
+
+.footer-bs .footer-ns h4 {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom:10px;
+}
+.footer-bs .footer-ns p { font-size:12px; color: #9d2501; }
+
+@media (min-width: 768px) {
+  .footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { border-left:solid 1px rgba(255,255,255,0.10); }
+}
+
+hr {
+    border-color: #999966;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #999966;
+}
+
+/* FOOTER FIN */
+
+@media(max-width: 1024px){
+  #intitule h4 {
+font-size: 18px;
+}
 }

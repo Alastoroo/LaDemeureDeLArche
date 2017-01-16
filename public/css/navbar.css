@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,500,500i,700,700i');
+/*********************************************************************/
+#logo{
+  background-color:white!important;
+  padding-bottom:20px;
+}
+#logo h3{
+  font-size: 18px;
+  font-family: 'Fira Sans',300, sans-serif;
+  margin-top: 0px;
+  text-align: center;
+  color:#999966!important;
+}
+/**********************************************/
+#menu{
+  padding: 0px;
+  margin: 0px;
+  height: auto;
+}
+.navbar{
+border: none;
+margin: 0px;
+padding: 0px;
+background-color: #999966!important;
+}
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+.navbar .navbar-nav li a{
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 20px;
+  font-family:'Fira Sans', sans-serif;
+  color:white!important;
+}
+.navbar .navbar-nav li a:hover{
+    background-color: #c9ca9e!important;
+    -webkit-transition-duration: 0.4s; /* Safari */
+     transition-duration: 0.4s;
+     color: #999966!important;
+}
+.navbar .navbar-nav li button{
+  /*font-size: 20px;
+  font-family:'Fira Sans', sans-serif;
+  background-color: #c9ca9e!important;*/
+}
+.navbar .navbar-nav li button:hover{
+  background-color: #c9ca9e!important;
+  -webkit-transition-duration: 0.4s; /* Safari */
+   transition-duration: 0.4s;
+}
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+.glyphicon-chevron-down{
+  margin-left:20px;
+  font-size:14px;
+}
+/**************************/
+#iconHome{
+margin-right:120px;
+}
+
+#iconHome a{
+  padding-left:20px;
+  padding-right:20px;
+}
+#iconHome a:hover{
+}
+.glyphicon-home{
+font-size: 20px;
+}
+/**************************/
+/**************************/
+#btn-reservation{
+  margin-left:120px;
+}
+#btn-reservation li a{
+  padding-left:20px;
+  padding-right:20px;
+  font-size:20px;
+  color:white!important;
+  font-family:'Fira Sans', sans-serif;
+}
+#btn-reservation a{
+  background-color:#9d2501!important;
+}
+#btn-reservation a:hover{
+  background-color:#eea236!important;
+}
+/*.active{
+  padding: 0px;
+  margin: 0px;
+}*/
+
+/*SOUSDROPMENU*/
+#sousmenu{
+  width:1980px;
+  position:absolute;
+  background-color:white!important;
+  margin:0px;
+  padding:0px;
+  left:-740px;
+}
+#sousmenu  p {
+  margin:0px;
+  padding:0px;
+  display:inline-block;
+  float:center;
+}
+#sousmenu a {
+  padding-top:20px;
+  padding-bottom:20px;
+  padding-left:140px;
+  padding-right:140px;
+  color: #999966!important;
+}
+#sousmenu a:hover{
+  background-color:#c9ca9e!important;
+}
+.dropdown {
+    position:relative;
+    display:inline-block;
+}
+.dropdown:hover .dropdown-tabs {
+  margin:0px;
+  padding:0px;
+  display:block;
+position:absolute;
+}
+.dropdown-tabs{
+  display: none;
+}
+.dropdown-tabs p a{
+  display:inline-block;
+  position:relative;
+  text-decoration:none;
+  list-style:none;
+}
+.dropdown-toggle{
+}
+/**********************************************/
+/***************************************************************************/
+@media (max-width:1280px) {
+
+.navbar .navbar-nav li a{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  #iconHome{
+  margin-right:100px;
+  padding: 0px;
+  }
+  #btn-reservation{
+    margin-left: 100px;
+  }
+
+#btn-reservation li a {
+  padding-left:10px;
+  padding-right:10px;
+}
+
+  #sousmenu{
+    width: 1280px;
+    left: -360px;
+  }
+  #sousmenu a {
+    padding-left: 140px;
+    padding-right: 140px;
+  }
+}
+/**********************************************/
+@media (max-width: 1024px) {
+  .navbar .navbar-nav {font-size: 16px;}
+.navbar .navbar-nav li a{
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 16px;
+}
+#btn-reservation{
+  margin-left: 30px;
+  font-size: 16px;
+}
+#iconHome{margin-right: 30px;}
+#sousmenu{
+  width: 1280px;
+  left: -420px;
+}
+#sousmenu a {
+  padding-left: 120px;
+  padding-right: 120px;
+}
+}
+/**********************************************/
+@media (max-width: 980px) {
+#btn-reservation{margin-left: 25px;}
+#iconHome{margin-right: 25px;}
+#sousmenu{
+  width: 1280px;
+  left: -420px;
+}
+#sousmenu a {
+  padding-left: 110px;
+  padding-right: 110px;
+}
+}
+/*****************************************************************************************************/
+@media (max-width: 800px) {
+.navbar .navbar-nav {font-size: 16px;}
+.navbar .navbar-nav li a{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+#btn-reservation{
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 10px;
+  font-size: 16px;
+}
+#iconHome{
+    margin-right: 0px;
+}
+.glyphicon-home{
+  padding-left: 5px;
+  padding-right: 5px;
+}
+  #sousmenu{
+    width: 820px;
+    left: -200px;
+  }
+  #sousmenu a {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+/******
+@media (max-width:768px;){
+  #sousmenu{
+    width: 768px;
+    left: -180px;
+  }
+  #sousmenu a {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}*/
+/**********************
+@media (min-width:767px;){
+  #sousmenu{
+  position:relative;
+  left: -140px;
+  }
+}**/
+/*****MENU et SOUS MENU BURGER**************************************************/
+/*@media (max-width:680px;){
+
+}*/
