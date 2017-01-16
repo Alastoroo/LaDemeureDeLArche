@@ -1,74 +1,78 @@
 footer
-  .container
-    #box.row
-      .col-md-5.footer-brand
-        h3 Transports
-        |           
-        hr
-        |           
-        p
-          b A&eacute;roports
-          |  N&icirc;mes (38 km) Montpellier (75 km)
-          br
-          b Trains
-          |  Gare de N&icirc;mes, Gare d&rsquo; Al&egrave;s
-          br
-          b Voiture
-          |  Parking priv&eacute; s&eacute;curis&eacute; sur place
-          br
-          b Commerces
-          |  2 km
-          br
-          b Restaurants
-          |  2 km
-          br
-          b Mer
-          |  70 Km
-          br
-        |           
-        p &copy; 2016 Wild Code School, All rights reserved
-        |           
-        hr
-        p
-        a(href='https://www.facebook.com/techinchartres/?fref=ts', target='_blank')
-          img.socialIcon(src='img/logo/facebook-logo-button.png')
-        p
-        a.socialIconMail(href='#', target='_blank')
-          span.glyphicon.glyphicon-envelope
-          | reservation@lademeuredelarche.com
-        p
-        a(href='https://www.tripadvisor.fr/', target='_blank')
-          img.socialIconPartenaire(src='img/logo/tripadvisor.jpg')
-        | 
-      .col-md-3.footer-nav
-        h3 Menu
-        |           
-        hr
-        |           
-        .col-md-8
-          ul.pages
-            li
-              a(href='demeure') La Demeure
+  #footer.container-fluid
+    .row-fluid
+      .container
+        #box.row
+          .col-xs-12.col-sm-12.col-md-5.footer-brand
+            h3 Transports et services
             |               
-            li
-              a(href='sejours') S&eacute;jours
+            .col-xs-12.col-sm-12.col-md-12.footer-brand
+              hr
+              p
+                b A&eacute;roports :
+                |  N&icirc;mes (38 km) Montpellier (75 km).
+              p                     
+                b Trains :
+                |  Gare de N&icirc;mes, Gare d&rsquo; Al&egrave;s.
+              p                     
+                b Voiture :
+                |  Parking priv&eacute; s&eacute;curis&eacute; sur place.
+              p                  
+                b Commerces et Restaurants :
+                |  2 km
+              p                    
+                b Mer :
+                |  70 Km.                      
+              hr
             |               
-            li
-              a(href='tourisme') Au alentours
+            .col-xs-12.col-sm-12.col-md-12.footer-reseaux
+              ul                
+                li
+                  a(href='https://www.facebook.com/techinchartres/?fref=ts', target='_blank')
+                    img.socialIcon(src='img/logo/facebook.png')
+                |                 
+                li
+                  a(href='https://www.tripadvisor.fr/', target='_blank')
+                    img.socialIcon(src='img/logo/tripadvisor.jpg')
             |               
-            li
-              a(href='livre') Livre d&apos;Or
+            .col-xs-12.col-sm-12.col-md-12.footer-reseaux
+              p#glyphpicto
+                a(href='#', target='_blank')
+                  span.glyphicon.glyphicon-envelope.glyphpicto
+                  |    reservation@lademeuredelarche.com
+              hr    
+          |            
+          .col-xs-12.col-sm-12.col-md-3.footer-nav
+            h3 Menu
             |               
-            li
-              a(href='contact') Nous Contacter
+            .col-xs-12.col-sm-12.col-md-12
+              hr
+              ul.pages
+                li
+                  a(href='demeure') La Demeure
+                |                   
+                li
+                  a(href='sejours') S&eacute;jours
+                |                   
+                li
+                  a(href='tourisme') Au alentours
+                |                   
+                li
+                  a(href='livre') Livre d&apos;Or
+                |                   
+                li
+                  a(href='contact') Nous Contacter
+                |                   
+                li
+                  a(href='reservation') Reservation
+          |             
+          .col-xs-12.col-sm-12.col-md-4.footer-social
+            h3 Infos
             |               
-            li
-              a(href='reservation') Reservation
-      |         
-      .col-md-4.footer-social
-        h3 Infos
-        |           
-        hr
-        |           
-        .googleMap
-          iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11462.599877848186!2d4.084496980414146!3d44.09057888849195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b441922353a783%3A0x3205bbe07d198b45!2s779+Chemin+de+la+Prairie%2C+30380+Saint-Christol-l%C3%A8s-Al%C3%A8s!5e0!3m2!1sfr!2sfr!4v1480501637633', width='100%', height='250', frameborder='0', style='border:0', allowfullscreen='')
+            #googleMap.col-xs-12.col-sm-12.col-md-12
+              hr
+              iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11462.599877848186!2d4.084496980414146!3d44.09057888849195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b441922353a783%3A0x3205bbe07d198b45!2s779+Chemin+de+la+Prairie%2C+30380+Saint-Christol-l%C3%A8s-Al%C3%A8s!5e0!3m2!1sfr!2sfr!4v1480501637633', width='100%', height='250', frameborder='0', style='border:0', allowfullscreen='')
+        |         
+        .row.footer-mention
+          .col-xs-12.col-sm-12.col-md-12
+            p &copy; 2016 Wild Code School, All rights reserved

@@ -6,13 +6,23 @@ background-color:#fcfcfc!important;
 margin-bottom: 80px;
 }
 #homeDemeure{
-padding-top: 180px;
+padding-top: 0px;
 
 }
 #txthomeDemeure{
       padding-bottom: 20px;
+      padding-left: 0px;
 }
-
+/*****GLIPH***********************/
+#pictohomeDemeure{
+text-align:center!important;
+}
+/*#pictohomeDemeure span{
+color: #999966!important;
+font-size: 50px!important;
+text-align:center!important;
+}*/
+/****************************/
 #txthomeDemeure h3{
   padding-top: 0px;
   margin-top: 0px;
@@ -26,11 +36,8 @@ padding-top: 180px;
     font-weight: 300;
     font-family: 'Fira Sans', sans-serif;
   }
-#pictohomeDemeure{
-color: #999966!important;
-font-size: 50px;
-text-align: center;
-}
+/****************************/
+
 #infohomeDemeure{
   padding-top: 20px;
 }
