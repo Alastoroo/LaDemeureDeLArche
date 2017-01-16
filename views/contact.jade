@@ -14,87 +14,143 @@ contact
     br
     |     
     br
-    |     
-    form
-      h1 Formulaire de paiement
-      |  
-      p
-        | Les champs obligatoires sont suivis d&apos;un 
-        strong
-          abbr(title='obligatoire')
-        | .
-      |   
-      section
-        h2 Information de contact
-        |     
-        fieldset
-          legend Titre
-          |       
-          ul
-            li
-              label(for='titre_1')
-                input#titre_1(type='radio', name='title', value='M.')
-                |             Monsieur
-            |         
-            li
-              label(for='titre_2')
-                input#titre_2(type='radio', name='title', value='Mme')
-                |             Madame
-        |     
-        p
-          label(for='nom')
-            span Nom : 
-            |         
-            input#nom(type='text', name='nomdutilisateur', required='')
-            |         
-            strong
-              abbr(title='obligatoire')
-        |  
-        p
-          label(for='courriel')
-            span Courriel : 
-            |  
-            input#courriel(type='email', name='courrielutilisateur', required='')
-            |  
-            strong
-              abbr(title='obligatoire')
-      |   
-      section
-        h2 Information de paiement
-        |     
-        p
-          label(for='carte')
-            span Type de carte :
-            |         
-            select#carte(name='carteutilisateur')
-              option(value='visa') Visa
-              |           
-              option(value='mc') Mastercard
-              |           
-              option(value='amex') American Express
-        |     
-        p
-          label(for='numero')
-            span Num&eacute;ro de la carte :
-            |         
-            input#numero(type='text', name='numerocarte', required='')
-            |         
-            strong
-              abbr(title='obligatoire')
-        |  
-        p
-          label(for='date')
-            span Date d&apos;expiration :
-            |  
-            input#date(type='text', name='expiration', required='')
-            |  
-            strong
-              abbr(title='obligatoire') *
-            |  
-            em formatt&eacute; comme mm/aa
-      |  
-      section
-        p
-          button Valider le paiement
+    .container(style='margin-top: 250px')
+      .row.well
+        .col-md-5.contact
+          h1.fondVert Contactez-nous
+          h2.titreContact La Demeure de l'Arche
+          p
+            span.glyphicon.glyphicon-home
+            |       779 Chemin de la Prairie,
+            br
+            |     30380 Saint-Christol-lès-Alès - France
+          p
+            span.glyphicon.glyphicon-send
+            |   Coordonnées GPS: 44.08715, 4.09465
+          p
+            span.glyphicon.glyphicon-phone-alt
+            |   04 66 56 58 18
+          p
+            span.glyphicon.glyphicon-envelope
+            a.mail(href=' reservation@lademeuredelarche.com')  reservation@lademeuredelarche.com
+          p
+            span.glyphicon.glyphicon-globe
+              a.mail(href='http://www.lademeuredelarche.com/') www.lademeuredelarche.com
+          .googleMap
+            iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11462.599877848186!2d4.084496980414146!3d44.09057888849195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b441922353a783%3A0x3205bbe07d198b45!2s779+Chemin+de+la+Prairie%2C+30380+Saint-Christol-l%C3%A8s-Al%C3%A8s!5e0!3m2!1sfr!2sfr!4v1480501637633', width='400', height='280', frameborder='0', style='border:0', allowfullscreen='')
+        .col-md-6.col-md-offset-1.conditionReservation
+          h2 Transports
+          hr
+          p
+            b Aéroports:
+            |  Nîmes (38 km) Montpellier (75 km).
+            br
+            b Trains:
+            |  Gare de Nîmes, Gare d’ Alès.
+            br
+            b Voiture:
+            |  Parking privé sécurisé sur place.
+            br
+            b Commerces:
+            |  2 km.
+            br
+            b Restaurants:
+            |  2 km
+            br
+            b Mer:
+            |  70 Km
+            br
+          h2 Conditions de réservations
+          p
+            | Arrivées de 16h à 20h. Départs jusqu’à 11h.
+            br
+            | Le petit-déjeuner est prévu de 8h30 à 10h et selon la saison, en terrasse ou dans la pièce commune.
+            br
+            | Toutes les chambres de la demeure de l’Arche sont non-fumeur.
+          h3 Moyens de paiement
+          p
+            | Paiement sécurisé via Paypal (Carte Bleue (Visa, MasterCard, EuroCard) Espèces et Chèques. Chèques vacances acceptés (ANCV)
+     
+    //- form
+    //-   h1 Formulaire de paiement
+    //-   |  
+    //-   p
+    //-     | Les champs obligatoires sont suivis d&apos;un 
+    //-     strong
+    //-       abbr(title='obligatoire')
+    //-     | .
+    //-   |   
+    //-   section
+    //-     h2 Information de contact
+    //-     |     
+    //-     fieldset
+    //-       legend Titre
+    //-       |       
+    //-       ul
+    //-         li
+    //-           label(for='titre_1')
+    //-             input#titre_1(type='radio', name='title', value='M.')
+    //-             |             Monsieur
+    //-         |         
+    //-         li
+    //-           label(for='titre_2')
+    //-             input#titre_2(type='radio', name='title', value='Mme')
+    //-             |             Madame
+    //-     |     
+    //-     p
+    //-       label(for='nom')
+    //-         span Nom : 
+    //-         |         
+    //-         input#nom(type='text', name='nomdutilisateur', required='')
+    //-         |         
+    //-         strong
+    //-           abbr(title='obligatoire')
+    //-     |  
+    //-     p
+    //-       label(for='courriel')
+    //-         span Courriel : 
+    //-         |  
+    //-         input#courriel(type='email', name='courrielutilisateur', required='')
+    //-         |  
+    //-         strong
+    //-           abbr(title='obligatoire')
+    //-   |   
+    //-   section
+    //-     h2 Information de paiement
+    //-     |     
+    //-     p
+    //-       label(for='carte')
+    //-         span Type de carte :
+    //-         |         
+    //-         select#carte(name='carteutilisateur')
+    //-           option(value='visa') Visa
+    //-           |           
+    //-           option(value='mc') Mastercard
+    //-           |           
+    //-           option(value='amex') American Express
+    //-     |     
+    //-     p
+    //-       label(for='numero')
+    //-         span Num&eacute;ro de la carte :
+    //-         |         
+    //-         input#numero(type='text', name='numerocarte', required='')
+    //-         |         
+    //-         strong
+    //-           abbr(title='obligatoire')
+    //-     |  
+    //-     p
+    //-       label(for='date')
+    //-         span Date d&apos;expiration :
+    //-         |  
+    //-         input#date(type='text', name='expiration', required='')
+    //-         |  
+    //-         strong
+    //-           abbr(title='obligatoire') *
+    //-         |  
+    //-         em formatt&eacute; comme mm/aa
+    //-   |  
+    //-   section
+    //-     p
+    //-       button Valider le paiement
 
     include ./footer
