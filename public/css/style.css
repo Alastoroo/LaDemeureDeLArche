@@ -255,3 +255,29 @@ hr {
 font-size: 18px;
 }
 }
+/* partie contact*/
+.fondVert  {
+	background-color: #999966;
+	width: 100%;
+	height: 75px;
+}
+h1.fondVert {
+	text-align: center;
+	padding-top: 20px;
+}
+span.glyphicon {
+  font-size: 18px !important;
+  color: #9d2501;
+}
+h2.titreContact {
+	text-align: center;
+}
+a.mail {
+	text-decoration: none;
+	color: black!important;
+
+}
+.contact p{
+	color: black!important;
+}
+.conditionReservation h2
