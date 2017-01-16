@@ -10,6 +10,9 @@ vert fonce
 vert bouton réservez
 #d7d7b9
 */
+body {
+  margin-top: 150px;
+}
 a.vert {
   background-color: #999966!important;
 }
@@ -30,15 +33,20 @@ header.carousel {
 header.carousel .item,
 header.carousel .item.active,
 header.carousel .carousel-inner {
-    height: 120%;
+    height: 100%;
+
 }
 
 header.carousel .fill {
     width: 100%;
     height: 100%;
-    background-position: center;
+    background-position: bottom;
     background-size: cover;
 }
+header.carousel .carousel {
+    height: 70%;
+}
+
 /* partie chambres*/
 .row {
   background-color: #fcfcfc!important;
@@ -155,6 +163,7 @@ footer{
   padding-bottom: 50px;
   font-weight: 300;
   font-family: 'Fira Sans', sans-serif;
+
 }
 #box{
   background-color: #c9ca9e!important;
@@ -167,6 +176,9 @@ footer{
   color:white!important;
   background-color: #c9ca9e!important;
 
+}
+.footer-brand p, a {
+  color: black !important;
 }
 .footer-nav, .footer-social,.footer-ns { border-color: transparent; }
 .footer-brand h2 { margin:0px 0px 20px; color:white!important; }
@@ -280,4 +292,3 @@ a.mail {
 .contact p{
 	color: black!important;
 }
-.conditionReservation h2
