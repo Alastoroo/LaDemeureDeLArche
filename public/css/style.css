@@ -1,15 +1,19 @@
-/*bordeau
-#9d2501
+.bordeau{
+		background-color: #9d2501 !important;
+	}
+	.vert-clair-logo{
+		background-color: #999966 !important;
+	}
 
-vert clair typo logo
-#999966
+	.vert-foncé{
+		background-color: #184a2d!important;
 
-vert fonce
-#184a2d
+	}
+	.reserver-button{
 
-vert bouton réservez
-#d7d7b9
-*/
+		background-color: #d7d7b9 !important;
+
+	}
 body {
   margin-top: 150px;
 }
@@ -25,7 +29,7 @@ html,
 body {
     height: 100%;
 }
-header{padding-bottom: 180px;}
+/*header{padding-bottom: 180px;}*/
 header.carousel {
     height: 100%;
 }
@@ -87,6 +91,10 @@ width: 200px;
 margin-left: 20px;
 vertical-align: top;
 text-align: center;
+}
+li.chambre {
+	font-size: 17px;
+  text-align: center;
 }
 #homeChambre.container-fluid {
   width: 80%;
