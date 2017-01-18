@@ -1,6 +1,7 @@
 require('./db/db.js');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
+
 var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
@@ -21,8 +22,6 @@ app.use(require('express-session')({
 
 }));
 
-app.use(passport.initialize());
-app.use(passport.session());
 
 app.use('/', routes);
 app.use('/home', routes);

@@ -3,6 +3,7 @@ var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var User     = mongoose.model('User');
 var bcrypt   = require('bcrypt-nodejs');
+
 //var jwt      = require('jsonwebtoken');
 
 // MODULE
