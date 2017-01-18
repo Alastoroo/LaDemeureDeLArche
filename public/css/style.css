@@ -25,7 +25,7 @@ html,
 body {
     height: 100%;
 }
-header{padding-bottom: 180px;}
+header{}
 header.carousel {
     height: 100%;
 }
@@ -163,14 +163,13 @@ img.img2 {
   margin-top: 70px;
   background-color: #c9ca9e!important;
   padding-top: 20px;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
 }
 #box{
   background-color: #c9ca9e!important;
 }
 /**********col transport et services*********************************/
 .footer-brand {
-  color:white!important;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -185,46 +184,67 @@ img.img2 {
   font-size:16px;
   color: black!important;
 }
+/***********************/
+.footer-reseaux{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.footer-reseaux ul{
+padding-left: 0px;
+}
 .footer-reseaux ul li {
 display: inline-block;
+position: relative;
 }
-.socialIcon{
-  float: left;
-  padding-top: 0px;
-  width: 30px;
+.footer-reseaux a{
+font-size: 16px;
+font-weight: 300;
+font-family: 'Fira Sans', sans-serif;
+text-decoration: none;
+color: black!important;
+}
+.footer-reseaux a:hover{
+  color: #999966!important;
+}
+/********************************************/
+#socialFacebook{
+  border-radius: 5px;
+  background-color: white!important;
+  padding-left: 5px;
+  padding-right: 10px;
   margin-right: 20px;
 }
-.socialIconMail{
-  font-size: 18px;
-  color:white;
-  text-decoration: none;
-  list-style-type: none;
+#socialFacebook a img {
+  margin:7px;
+  width: 35px;
 }
-.socialIconMail a{
-  color:white;
-  text-decoration: none;
-  list-style-type: none;
-}
- #glyphpicto {
-   padding-top: 10px;
- }
- #glyphpicto a{
-  font-size: 16px;
-    color:black!important;
- }
-
-.glyphpicto{
- color:white!important;
- margin-right: 15px;
- font-size: 18px;
+#socialFacebook img{
+padding-right: 10px;
+border-right: 1px solid  #999966!important;;
 }
 
-.socialIconPartenaire{
-  width: 60px;
+/********************************************/
+#socialMail{
+  margin-top: 0px;
+  padding-top:0px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+#socialMail a img {
+  width: 40px;
+  margin-right: 20px;
+  margin-left: 0px;
+}
+#IconPartenaire{
+  border-radius: 5px;
+  background-color: white!important;
+  width: 180px;
+  padding: 5px;
   margin-right: 20px;
 }
 /*********col menu************************/
-.footer-nav{background-color: #c9ca9e!important;
+.footer-nav{
+  background-color: #c9ca9e!important;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -238,15 +258,10 @@ display: inline-block;
 .footer-nav ul.pages {list-style:none;}
 .footer-nav ul.pages li { padding:5px 0px;}
 .footer-nav ul.pages a { color:black; text-decoration:none; text-transform:uppercase; }
-.footer-nav ul.pages a:hover { color: #999966;  }
-.footer-reseaux{
-    color:white!important;
-    padding-left: 10px;
-    padding-right: 10px;
-}
+.footer-nav ul.pages a:hover { color: #999966; }
+
 
 hr {
-    border-color: #999966!important;
     margin-top: 10px;
     margin-bottom: 15px;
     border-top: 1px solid #999966!important;
@@ -268,14 +283,34 @@ hr {
   margin: 0px;
   padding: 0px;
 }
+#googleMap p{
+  padding-top: 10px;
+  padding-bottom: 20px;
+  color:black!important;
+  font-weight: 300!important;
+  font-family: 'Fira Sans', sans-serif;
+}
 /***************************************/
 .footer-mention{
-  padding-left: 10px;
-  padding-right: 10px;
   background-color: #c9ca9e!important;
-  padding-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
-#reseauSociaux{
+.footer-mention ul{
+text-align: center;
+}
+.footer-mention ul li{
+display: inline-block;
+position: relative;
+}
+.footer-mention li a{
+text-decoration: none;
+list-style: none;
+margin-left: 10px;
+margin-right: 10px;
+color:black!important;
+font-weight: 300!important;
+font-family: 'Fira Sans', sans-serif;
 }
 
 /* FOOTER FIN */
