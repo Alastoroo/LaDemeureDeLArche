@@ -29,10 +29,6 @@ html,
 body {
     height: 100%;
 }
-/*header{padding-bottom: 180px;}*/
-header.carousel {
-    height: 100%;
-}
 
 header.carousel .item,
 header.carousel .item.active,
@@ -165,116 +161,174 @@ img.img2 {
   left: 25px;
 }
 /* FOOTER DEBUT */
-footer{
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,500,500i,700,700i');
+/*******************************/
+#footer{
   margin-top: 70px;
   background-color: #c9ca9e!important;
-  padding-bottom: 50px;
-  font-weight: 300;
-  font-family: 'Fira Sans', sans-serif;
-
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 #box{
   background-color: #c9ca9e!important;
 }
-
-
-.footer-brand, .footer-nav, .footer-social, .footer-ns {
+/**********col transport et services*********************************/
+.footer-brand {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.footer-brand h3 {
   padding-left: 10px;
   padding-right: 10px;
   color:white!important;
+  font-weight: 400;
+  font-family: 'Fira Sans', sans-serif;
+}
+.footer-brand p {
+  font-size:16px;
+  color: black!important;
+}
+/***********************/
+.footer-reseaux{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.footer-reseaux ul{
+padding-left: 0px;
+}
+.footer-reseaux ul li {
+display: inline-block;
+position: relative;
+}
+.footer-reseaux a{
+font-size: 16px;
+font-weight: 300;
+font-family: 'Fira Sans', sans-serif;
+text-decoration: none;
+color: black!important;
+}
+.footer-reseaux a:hover{
+  color: #999966!important;
+}
+/********************************************/
+#socialFacebook{
+  border-radius: 5px;
+  background-color: white!important;
+  padding-left: 5px;
+  padding-right: 10px;
+  margin-right: 20px;
+}
+#socialFacebook a img {
+  margin:7px;
+  width: 35px;
+}
+#socialFacebook img{
+padding-right: 10px;
+border-right: 1px solid  #999966!important;;
+}
+
+/********************************************/
+#socialMail{
+  margin-top: 0px;
+  padding-top:0px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+#socialMail a img {
+  width: 40px;
+  margin-right: 20px;
+  margin-left: 0px;
+}
+#IconPartenaire{
+  border-radius: 5px;
+  background-color: white!important;
+  width: 180px;
+  padding: 5px;
+  margin-right: 20px;
+}
+/*********col menu************************/
+.footer-nav{
   background-color: #c9ca9e!important;
-
+  padding-left: 10px;
+  padding-right: 10px;
 }
-.footer-brand p, a {
-  color: black !important;
-}
-.footer-nav, .footer-social,.footer-ns { border-color: transparent; }
-.footer-brand h2 { margin:0px 0px 20px; color:white!important; }
-.footer-brand p { font-size:15px; color: #9d2501; }
+.footer-nav h3{
+  padding-left: 10px;
+  padding-right: 10px;
+  color:white!important;
+  font-weight: 400;
+  font-family: 'Fira Sans', sans-serif; }
 
-.footer-nav ul.pages {list-style:none; padding:0px; }
+.footer-nav ul.pages {list-style:none;}
 .footer-nav ul.pages li { padding:5px 0px;}
-.footer-nav ul.pages a { color: #9d2501; text-decoration:none; text-transform:uppercase; }
-.footer-nav ul.pages a:hover { color: #999966; text-decoration:underline; }
-.footer-nav h4 {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  margin-bottom:10px;
-}
+.footer-nav ul.pages a { color:black; text-decoration:none; text-transform:uppercase; }
+.footer-nav ul.pages a:hover { color: #999966; }
 
-.footer-nav ul.list { list-style:none; padding:0px; }
-.footer-nav ul.list li { padding:5px 0px;}
-.footer-nav ul.list a { color: #9d2501; }
-.footer-nav ul.list a:hover { color: #999966; text-decoration:none; }
-
-.socialIcon{
-  float: left;
-  padding-top: 0px;
-  width: 30px;
-  margin-right: 20px;
-}
-.socialIconMail{
-  font-size: 18px;
-  color:white;
-  text-decoration: none;
-    list-style-type: none;
-}
-.socialIconMail a{
-  color:white;
-  text-decoration: none;
-  list-style-type: none;
-}
-
-.glyphicon-envelope{
-  margin-right: 10px;
-    margin-left: 10px;
-  font-size: 32px;
-  color:white;
-}
-.socialIconPartenaire{
-  width: 60px;
-  margin-right: 20px;
-padding-top: 10px;
-}
-
-.footer-social ul { list-style:none; padding:0px; }
-.footer-social h4 {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
-.footer-social li { padding:5px 4px;}
-.footer-social a { color: #9d2501;}
-.footer-social a:hover { color: #999966; text-decoration:none; }
-
-.footer-ns h4 {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  margin-bottom:10px;
-}
-.footer-ns p { font-size:12px; color: #9d2501; }
-
-@media (min-width: 768px) {
-.footer-nav, .footer-social,.footer-ns { border-left:solid 1px rgba(255,255,255,0.10); }
-}
 
 hr {
-    border-color: #999966;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border: 0;
-    border-top: 1px solid #999966;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border-top: 1px solid #999966!important;
+}
+/*************footer-social****************************/
+.footer-social{
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #c9ca9e!important;
+  font-weight: 300;
+  font-family: 'Fira Sans', sans-serif;
+}
+.footer-social h3{
+  color:white!important;
+  font-weight: 400!important;
+  font-family: 'Fira Sans', sans-serif;
+}
+#googleMap{
+  margin: 0px;
+  padding: 0px;
+}
+#googleMap p{
+  padding-top: 10px;
+  padding-bottom: 20px;
+  color:black!important;
+  font-weight: 300!important;
+  font-family: 'Fira Sans', sans-serif;
+}
+/***************************************/
+.footer-mention{
+  background-color: #c9ca9e!important;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer-mention ul{
+text-align: center;
+}
+.footer-mention ul li{
+display: inline-block;
+position: relative;
+}
+.footer-mention li a{
+text-decoration: none;
+list-style: none;
+margin-left: 10px;
+margin-right: 10px;
+color:black!important;
+font-weight: 300!important;
+font-family: 'Fira Sans', sans-serif;
 }
 
 /* FOOTER FIN */
-
+/*******************************/
 @media(max-width: 1024px){
   #intitule h4 {
 font-size: 18px;
 }
+/*******************************/
 }
+@media (min-width: 768px) {
+/*.footer-nav, .footer-social,.footer-ns { border-left:solid 1px rgba(255,255,255,0.10); }
+}*/
+/*******************************/
 /* partie contact*/
 .fondVert  {
 	background-color: #999966;

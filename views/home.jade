@@ -5,7 +5,7 @@ section#BGHomeDemeure.container-fluid
     #homeDemeure.container
       #infohomeDemeure.row
         .col-lg-12
-          #txthomeDemeure.col-lg-9
+          #txthomeDemeure.col-xs-12.col-sm-12.col-md-9.col-lg-9
             h3 La Demeure de l&apos;Arche
             |               
             p
@@ -18,12 +18,19 @@ section#BGHomeDemeure.container-fluid
               br
               | Vous pourrez nager (piscine exceptionnelle de 25mX10m avec cuisine d&rsquo;&eacute;t&eacute;, salle de bain et WC), jouer au tennis, au ping-pong ou &agrave; la p&eacute;tanque et profiter d&rsquo;autres activit&eacute;s au milieu de son parc arbor&eacute; de deux hectares.
           |             
-          #homeGeographie.col-lg-3
-      |       
+          #homeGeographie.col-xs-12.col-sm-12.col-md-3.col-lg-3
+            .col-xs-6.col-sm-6.col-md-12.col-lg-12
+              img.img-responsive(src='img/montage_illustration_cevennes.png')
+            |               
+            .col-xs-6.col-sm-6.col-md-12.col-lg-12
+              p
+                | Entre nature et histoire, visitez les plus beaux lieux autour de la Demeure de l&rsquo;Arche
+      |         
       #infohomeDemeure.row
-        #infoBlock.col-sm-6.col-md-3
+        #infoBlock.col-xs-6.col-sm-6.col-md-3
+          // <div id="pictohomeDemeure"><span class="glyphicon glyphicon-bed"></span></div>
           #pictohomeDemeure
-            span.glyphicon.glyphicon-lamp
+            img(src='img/logo/picto_lamp.png')
           |               
           h3 Chambres &agrave; la Nuit
           |               
@@ -32,7 +39,7 @@ section#BGHomeDemeure.container-fluid
         |         
         #infoBlock.col-sm-6.col-md-3
           #pictohomeDemeure
-            span.glyphicon.glyphicon-bed
+            img(src='img/logo/picto_lit.png')
           |               
           h3 Forfait Week-end
           |               
@@ -41,7 +48,7 @@ section#BGHomeDemeure.container-fluid
         |         
         #infoBlock.col-sm-6.col-md-3
           #pictohomeDemeure
-            span.glyphicon.glyphicon-calendar
+            img(src='img/logo/picto_calendar.png')
           |               
           h3 Longs s&eacute;jours
           |               
@@ -50,9 +57,10 @@ section#BGHomeDemeure.container-fluid
         |         
         #infoBlock.col-sm-6.col-md-3
           #pictohomeDemeure
-            span.glyphicon.glyphicon-camera
+            img(src='img/logo/picto_photo.png')
           |           
           h3 Ev&eacute;nements
           |               
           p
             | Mariages, anniversaires, f&ecirc;tes priv&eacute;es : r&eacute;unissez vos proches dans un lieu rien qu&rsquo;&agrave; vous le temps d&rsquo;une soir&eacute;e ou d&rsquo;un week-end.
+|   
