@@ -43,10 +43,28 @@ var jade = require('jade');
                   .get(function(req,res){
                     res.render("reservation");
                   });
-                  
 
 //partis ADMIN
+              router
+               .route("/connexion")
+               .get(function(req,res){
+                 res.render("connexion");
+               });
 
+               router
+                 .route("/inscription")
+                 .get(function(req, res){
+                   res.render("inscription", { message: req.flash('signupMessage') });
+                 });
+
+                //  app.get('/signup', function(req, res) {
+                //    // render the page and pass in any flash data if it exists
+                //    res.render('signup.ejs', { message: req.flash('signupMessage') });
+                //  });
+                //  app.get('/home', isLoggedIn, function(req, res) {
+                //    res.render('home', {
+                //      user : req.user // get the user out of session and pass to template
+                //    });
 
 
        router
