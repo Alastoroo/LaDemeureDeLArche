@@ -3,7 +3,7 @@ var router = express.Router();
 var path = require('path');
 var jade = require('jade');
 
-
+// Partis Vue utilisateur
      router
        .route("/")
        .get(function(req,res){
@@ -42,6 +42,9 @@ var jade = require('jade');
                   .get(function(req,res){
                     res.render("reservation");
                   });
+
+//partis ADMIN
+
 
 
        router
