@@ -23,7 +23,7 @@ var jade = require('jade');
            res.render("sejours");
          });
 
-         router
+       router
            .route("/tourisme")
            .get(function(req,res){
              res.render("tourisme");
