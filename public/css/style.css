@@ -44,9 +44,7 @@ header.carousel .carousel {
 }
 
 /* partie chambres*/
-.vert {
-color: #d7d7b9!important;
-}
+
 /*******TABLEAU reservation************************************/
 #tableau{
 margin-left: auto;
@@ -74,6 +72,12 @@ margin-right: auto;
 #colTabMarges{
 	padding-left: 10px;
 	padding-right: 10px;
+	padding-top: 10px;
+}
+#colTabMarges2{
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 20px;
 }
 .booking{
 		text-decoration: none;
@@ -108,9 +112,14 @@ margin-right: auto;
     margin-bottom: 15px;
     border-top: 1px solid #999966!important;
 }
-
-
 /**********************************************************/
+.vert {
+color: #d7d7b9;
+}
+section#reserver {
+  background-color: #fcfcfc!important;
+}
+
 #chambreDescription h1 {
   color: #9d2501!important;
   text-align: left;
@@ -134,9 +143,7 @@ h2.explication1 {
   padding-left: 50px;
   padding-bottom:  20px;
 }
-/*.prixAppart {
-  color: #9d2501;
-}*/
+
 img.img2 {
   max-width: 7%;
   height: auto;
@@ -206,8 +213,8 @@ img.img2 {
 }
 /***********************/
 .footer-reseaux{
-    padding-left: 10px;
-    padding-right: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .footer-reseaux ul{
 padding-left: 0px;
@@ -351,28 +358,3 @@ font-family: 'Fira Sans', sans-serif;
 	}
 }
 /*******************************/
-/* partie contact*/
-.fondVert  {
-	background-color: #999966;
-	width: 100%;
-	height: 75px;
-}
-h1.fondVert {
-	text-align: center;
-	padding-top: 20px;
-}
-span.glyphicon {
-  font-size: 18px !important;
-  color: #9d2501;
-}
-h2.titreContact {
-	text-align: center;
-}
-a.mail {
-	text-decoration: none;
-	color: black!important;
-
-}
-.contact p{
-	color: black!important;
-}

@@ -105,76 +105,85 @@ sejours
           | &nbsp;
           img#positionLogo.img2(src='img/logo/notanimal.png', alt='idée cadeau')
       |               
-      section#reservation.container
-        #intitule.row.lead
-          .col-xs-2
-            h4 NOMBRE
-          |                   
-          .col-xs-2
-            h4.fixtop3 DESCRIPTION
-          |                   
-          .col-xs-2
-            h4.fixtop2 TOTAL
-          |                   
-          .col-xs-3
-            h4.fixtop1 RESERVATION
-          |                   
-          .col-xs-3
-            h4.fixtop OFFRIR
-        |                 
+      section#tableau.container
+      #intitule.row.lead
         hr
-        |                 
-        ul#menu.list-unstyled.list-inline
-          li.booking
-            i.glyphicon.glyphicon-user
-            i.glyphicon.glyphicon-user
-            br
-          li.chambre
-            | Chambre double  saison haute
-            br
-            br
-            | Petit-déjeuner compris
-          |                   
-          li.booking
-            font(size='5px',color='#9d2501')
-              strong 110 &euro;
-            br
-            | Prix pour 1 nuit
-          |                 
-          li.booking
-            a.btn.btn-lg.vert(href='reservation', type='button') R&eacute;servez
-          |                   
-          li.booking
-            a(href='reservation')
-              img.img1(src='img/logo/kdo2.gif', alt='idée cadeau')
-        |                 
-        hr
-        |                 
-        ul#menu.list-unstyled.list-inline
-          li.booking
-            i.glyphicon.glyphicon-user
-            i.glyphicon.glyphicon-user
-            br
-          li.chambre        
-            | Chambre double saison basse
-            br
-            br
-            | Petit-déjeuner compris
-          |                    
-          li.booking
-            font(size='5px',color='#9d2501')
-              strong 90 &euro;
-            br
-            | Prix pour 1 nuit
-          |                    
-          li.booking
-            a.btn.btn-lg.vert(href='reservation', type='button') R&eacute;servez
-          |                    
-          li.booking
-            a(href='reservation')
-              img.img1(src='img/logo/kdo2.gif', alt='idée cadeau')
-        |                  
-        hr
+        #colTab.col-xs-12.col-sm-6.col-md-2
+          h4 NOMBRE
+          #colTabMarges.col-xs-12.col-sm-12.col-md-12
+            ul.booking
+              li
+                i.glyphicon.glyphicon-user
+                i.glyphicon.glyphicon-user
+                i.glyphicon.glyphicon-user
+                i.glyphicon.glyphicon-user
+        #colTab.col-xs-12.col-sm-6.col-md-3
+          h4 DESCRIPTION
+          #colTabMarges.col-xs-12.col-sm-12.col-md-12
+            p.booking
+              | Chambre double saison haute
+              br
+              |                 Petit-déjeuner compris
+        #colTab.col-xs-12.col-sm-6.col-md-2
+          h4 TOTAL
+          #colTabMarges.col-xs-12.col-sm-12.col-md-12
+            p.booking
+              span 110 €
+              br
+              small Prix pour 1 nuit
+        #colTab.col-xs-12.col-sm-6.col-md-3
+          h4 RESERVATION
+          #colTabMarges.col-xs-12.col-sm-12.col-md-12
+            p.booking
+              a.btn.btn-lg.vert(href='reservation', type='button') Réservez
+        #colTab.col-xs-12.col-sm-12.col-md-2
+          h4 OFFRIR
+          #colTabMarges.col-xs-12.col-sm-12.col-md-12
+            p.booking
+              a(href='reservation')
+                img.img1(src='img/logo/kdo2.gif', alt='idée cadeau')
+      // FIN ROW 1
+      hr
+      // FILET DE SEPARATION
+      // DEBUT ROW 2
+      #intitule.row.lead
+        #colTab.col-xs-12.col-sm-6.col-md-2
+          
+          #colTabMarges.col-xs-12.col-sm-12.col-md-12
+            ul.booking
+              li
+                i.glyphicon.glyphicon-user
+                i.glyphicon.glyphicon-user
+                i.glyphicon.glyphicon-user
+                i.glyphicon.glyphicon-user
+        #colTab.col-xs-12.col-sm-6.col-md-3
+        
+          #colTabMarges.col-xs-12.col-sm-12.col-md-12
+            p.booking
+              | Chambre double saison basse
+              br
+              | Week-end
+        #colTab.col-xs-12.col-sm-6.col-md-2
+        
+          #colTabMarges.col-xs-12.col-sm-12.col-md-12
+            p.booking
+              span 90 €
+              br
+              small Prix pour 1 nuit
+        #colTab.col-xs-12.col-sm-6.col-md-3
+        
+          #colTabMarges.col-xs-12.col-sm-12.col-md-12
+            p.booking
+              a.btn.btn-lg.vert(href='reservation', type='button') Réservez
+        #colTab.col-xs-12.col-sm-12.col-md-2
+        
+          #colTabMarges.col-xs-12.col-sm-12.col-md-12
+            p.booking
+              a(href='reservation')
+                img.img1(src='img/logo/kdo2.gif', alt='idée cadeau')
+      // FIN ROW 2
+      hr
+      // FILET
     // fin partie chambre Azur
     br
     br
@@ -261,76 +270,84 @@ sejours
       br
       br
       |               
-      section#reservation.container
-        #intitule.row.lead
-          .col-xs-2
-            h4 NOMBRE
-          |                   
-          .col-xs-2
-            h4.fixtop3 DESCRIPTION
-          |                   
-          .col-xs-2
-            h4.fixtop2 TOTAL
-          |                   
-          .col-xs-3
-            h4.fixtop1 RESERVATION
-          |                   
-          .col-xs-3
-            h4.fixtop OFFRIR
-        |                 
+      section#tableau.container
+      #intitule.row.lead
         hr
-        |                 
-        ul#menu.list-unstyled.list-inline
-          li.booking
-            i.glyphicon.glyphicon-user
-            i.glyphicon.glyphicon-user
-            br
-          li.chambre
-            | Chambre double  saison haute
-            br
-            br
-            | Petit-déjeuner compris
-          |                   
-          li.booking
-            font(size='5px',color='#9d2501')
-              strong 110 &euro;
-            br
-            | Prix pour 1 nuit
-          |                                  
-          li.booking
-            a.btn.btn-lg.vert(href='reservation', type='button') R&eacute;servez
-          |                   
-          li.booking
-            a(href='reservation')
-              img.img1(src='img/logo/kdo2.gif', alt='idée cadeau')
-        |                 
-        hr
-        |                 
-        ul#menu.list-unstyled.list-inline
-          li.booking
-            i.glyphicon.glyphicon-user
-            i.glyphicon.glyphicon-user
-            br
-          li.chambre
-            | Chambre double saison basse            
-            br
-            br
-            | Petit-déjeuner compris
-          |                    
-          li.booking
-            font(size='5px',color='#9d2501')
-              strong 90 &euro;
-            br
-            | Prix pour 1 nuit
-          |                   
-          li.booking
-            a.btn.btn-lg.vert(href='reservation', type='button') R&eacute;servez
-          |                    
-          li.booking
-            a(href='reservation')
-              img.img1(src='img/logo/kdo2.gif', alt='idée cadeau')
-        |                  
-        hr
+        #colTab.col-xs-12.col-sm-6.col-md-2
+          h4 NOMBRE
+          #colTabMarges.col-xs-12.col-sm-12.col-md-12
+            ul.booking
+              li
+                i.glyphicon.glyphicon-user
+                i.glyphicon.glyphicon-user
+                i.glyphicon.glyphicon-user
+                i.glyphicon.glyphicon-user
+        #colTab.col-xs-12.col-sm-6.col-md-3
+          h4 DESCRIPTION
+          #colTabMarges.col-xs-12.col-sm-12.col-md-12
+            p.booking
+              | Chambre double saison haute
+              br
+              |                 Petit-déjeuner compris
+        #colTab.col-xs-12.col-sm-6.col-md-2
+          h4 TOTAL
+          #colTabMarges.col-xs-12.col-sm-12.col-md-12
+            p.booking
+              span 110 €
+              br
+              small Prix pour 1 nuit
+        #colTab.col-xs-12.col-sm-6.col-md-3
+          h4 RESERVATION
+          #colTabMarges.col-xs-12.col-sm-12.col-md-12
+            p.booking
+              a.btn.btn-lg.vert(href='reservation', type='button') Réservez
+        #colTab.col-xs-12.col-sm-12.col-md-2
+          h4 OFFRIR
+          #colTabMarges.col-xs-12.col-sm-12.col-md-12
+            p.booking
+              a(href='reservation')
+                img.img1(src='img/logo/kdo2.gif', alt='idée cadeau')
+      // FIN ROW 1
+      hr
+      // FILET DE SEPARATION
+      // DEBUT ROW 2
+      #intitule.row.lead
+        #colTab.col-xs-12.col-sm-6.col-md-2
+          
+          #colTabMarges.col-xs-12.col-sm-12.col-md-12
+            ul.booking
+              li
+                i.glyphicon.glyphicon-user
+                i.glyphicon.glyphicon-user
+                i.glyphicon.glyphicon-user
+                i.glyphicon.glyphicon-user
+        #colTab.col-xs-12.col-sm-6.col-md-3
+        
+          #colTabMarges.col-xs-12.col-sm-12.col-md-12
+            p.booking
+              | Chambre double saison basse
+            
+        #colTab.col-xs-12.col-sm-6.col-md-2
+        
+          #colTabMarges.col-xs-12.col-sm-12.col-md-12
+            p.booking
+              span 90 €
+              br
+              small Prix pour 1 nuit
+        #colTab.col-xs-12.col-sm-6.col-md-3
+        
+          #colTabMarges.col-xs-12.col-sm-12.col-md-12
+            p.booking
+              a.btn.btn-lg.vert(href='reservation', type='button') Réservez
+        #colTab.col-xs-12.col-sm-12.col-md-2
+        
+          #colTabMarges.col-xs-12.col-sm-12.col-md-12
+            p.booking
+              a(href='reservation')
+                img.img1(src='img/logo/kdo2.gif', alt='idée cadeau')
+      // FIN ROW 2
+      hr
+      // FILET
     // fin partie chambre Romance
     br
     br
@@ -421,80 +438,87 @@ sejours
           | &nbsp;
           img#positionLogo.img2(src='img/logo/notanimal.png', alt='idée cadeau')
       |               
-      section#reservation.container
-        #intitule.row.lead
-          .col-xs-2
-            h4 NOMBRE
-          |                   
-          .col-xs-2
-            h4.fixtop3 DESCRIPTION
-          |                   
-          .col-xs-2
-            h4.fixtop2 TOTAL
-          |                   
-          .col-xs-3
-            h4.fixtop1 RESERVATION
-          |                   
-          .col-xs-3
-            h4.fixtop OFFRIR
-        |                 
+      section#tableau.container
+      #intitule.row.lead
         hr
-        |                 
-        ul#menu.list-unstyled.list-inline
-          li.booking
-            i.glyphicon.glyphicon-user
-            i.glyphicon.glyphicon-user
-            br
-          li.chambre
-            | Suite saison haute
+        #colTab.col-xs-12.col-sm-6.col-md-2
+          h4 NOMBRE
+          #colTabMarges.col-xs-12.col-sm-12.col-md-12
+            ul.booking
+              li
+                i.glyphicon.glyphicon-user
+                i.glyphicon.glyphicon-user
+                i.glyphicon.glyphicon-user
+                i.glyphicon.glyphicon-user
+        #colTab.col-xs-12.col-sm-6.col-md-3
+          h4 DESCRIPTION
+          #colTabMarges.col-xs-12.col-sm-12.col-md-12
+            p.booking
+              | Suite  double saison haute
+              br
+              br
+              |                 Petit-déjeuner compris
+        #colTab.col-xs-12.col-sm-6.col-md-2
+          h4 TOTAL
+          #colTabMarges.col-xs-12.col-sm-12.col-md-12
+            p.booking
+              span 115 €
+              br
+              small Prix pour 1 nuit
+        #colTab.col-xs-12.col-sm-6.col-md-3
+          h4 RESERVATION
+          #colTabMarges.col-xs-12.col-sm-12.col-md-12
+            p.booking
+              a.btn.btn-lg.vert(href='reservation', type='button') Réservez
+        #colTab.col-xs-12.col-sm-12.col-md-2
+          h4 OFFRIR
+          #colTabMarges.col-xs-12.col-sm-12.col-md-12
+            p.booking
+              a(href='reservation')
+                img.img1(src='img/logo/kdo2.gif', alt='idée cadeau')
+      // FIN ROW 1
+      hr
+      // FILET DE SEPARATION
+      // DEBUT ROW 2
+      #intitule.row.lead
+        #colTab.col-xs-12.col-sm-6.col-md-2
           
-            br
-            br
-            | Petit-déjeuner compris
-          |                 
-          li.booking
-            font(size='5px',color='#9d2501')
-              strong 115 &euro;
-            br
-            | Prix pour 1 nuit
-          |                   
-          li.booking
-            a.btn.btn-lg.vert(href='reservation', type='button') R&eacute;servez
-          |                   
-          li.booking
-            a(href='reservation')
-              img.img1(src='img/logo/kdo2.gif', alt='idée cadeau')
-        |                 
-        hr
-        |                 
-        ul#menu.list-unstyled.list-inline
-          li.booking
-            i.glyphicon.glyphicon-user
-            i.glyphicon.glyphicon-user
-            br
-          li.chambre
-            
-            |  Suite saison basse
-            
-            br
-            br
-            | Petit-déjeuner compris
-          |                    
-          li.booking
-            font(size='5px',color='#9d2501')
-              strong 95 &euro;
-            br
-          
-            | Prix pour 1 nuit
-          |                    
-          li.booking
-            a.btn.btn-lg.vert(href='reservation', type='button') R&eacute;servez
-          |                    
-          li.booking
-            a(href='reservation')
-              img.img1(src='img/logo/kdo2.gif', alt='idée cadeau')
-        |                  
-        hr
+          #colTabMarges.col-xs-12.col-sm-12.col-md-12
+            ul.booking
+              li
+                i.glyphicon.glyphicon-user
+                i.glyphicon.glyphicon-user
+                i.glyphicon.glyphicon-user
+                i.glyphicon.glyphicon-user
+        #colTab.col-xs-12.col-sm-6.col-md-3
+        
+          #colTabMarges.col-xs-12.col-sm-12.col-md-12
+            p.booking
+              | Suite double saison basse
+              br
+              br
+              |                 Petit-déjeuner compris
+        #colTab.col-xs-12.col-sm-6.col-md-2
+        
+          #colTabMarges.col-xs-12.col-sm-12.col-md-12
+            p.booking
+              span 90 €
+              br
+              small Prix pour 1 nuit
+        #colTab.col-xs-12.col-sm-6.col-md-3
+        
+          #colTabMarges.col-xs-12.col-sm-12.col-md-12
+            p.booking
+              a.btn.btn-lg.vert(href='reservation', type='button') Réservez
+        #colTab.col-xs-12.col-sm-12.col-md-2
+        
+          #colTabMarges.col-xs-12.col-sm-12.col-md-12
+            p.booking
+              a(href='reservation')
+                img.img1(src='img/logo/kdo2.gif', alt='idée cadeau')
+      // FIN ROW 2
+      hr
+      // FILET
     // fin partie suite renoir
     br
     br
@@ -612,10 +636,10 @@ sejours
           
             br
           li.chambre
-            | Suite saison haute
+            | Suite Zen saison haute
             br
             br
-            |Suite saison basse
+            |Suite Zen saison basse
             br
             br
         
@@ -788,7 +812,7 @@ sejours
           |             
           p
             strong Cuisine
-            | : r&eacute;frig&eacute;rateur | lave vaisselle | four | plaques halog&egrave;nes | micro-ondes |cafeti&egrave;re | bouilloire | grille pain.
+            | : r&eacute;frig&eacute;rateur | lave vaisselle | four | plaques halog&egrave;nes | micro-ondes | cafeti&egrave;re | bouilloire | grille pain.
             br
             |               
             strong Salon
@@ -806,72 +830,84 @@ sejours
           | &nbsp;
           img#positionLogo.img2(src='img/logo/notanimal.png', alt='idée cadeau')
       | 
-      section#reservation.container
-        #intitule.row.lead
-          .col-xs-2
-            h4 NOMBRE
-          |               
-          .col-xs-2
-            h4.fixtop3 DESCRIPTION
-          |               
-          .col-xs-2
-            h4.fixtop2 TOTAL
-          |               
-          .col-xs-3
-            h4.fixtop1 RESERVATION
-          |               
-          .col-xs-3
-            h4.fixtop OFFRIR
-        |             
+      section#tableau.container
+      #intitule.row.lead
         hr
-        |             
-        ul#menu.list-unstyled.list-inline
-          li.booking
-            i.glyphicon.glyphicon-user
-            i.glyphicon.glyphicon-user
-            i.glyphicon.glyphicon-user
-            i.glyphicon.glyphicon-user
-            br
-          li.booking Location appartement 2 &agrave; 4 personnes &agrave; la semaine
-          |               
-          li.booking
-            font(size='5px',color='#9d2501')
-              strong 980&euro;
-            br
-            | Prix pour 7 nuits
-          |               
-          li.booking
-            a.btn.btn-lg.vert(href='reservation', type='button') R&eacute;servez
-          |               
-          li.booking
-            a(href='reservation')
-              img.img1(src='img/logo/kdo2.gif', alt='idée cadeau')
-        |             
-        hr
-        |             
-        ul#menu.list-unstyled.list-inline
-          li.booking
-            i.glyphicon.glyphicon-user
-            i.glyphicon.glyphicon-user
-            i.glyphicon.glyphicon-user
-            i.glyphicon.glyphicon-user
-            br
-          li.booking Location appartement 2 &agrave; 4 personnes &agrave; la semaine
-          |                
-          li.booking
-            font(size='5px',color='#9d2501')
-              strong 280&euro;
-            br
-            | Prix pour 2 nuits 
-          |               
-          li.booking
-            a.btn.btn-lg.vert(href='reservation', type='button') R&eacute;servez
-          |                
-          li.booking
-            a(href='reservation')
-              img.img1(src='img/logo/kdo2.gif', alt='idée cadeau')
-        |              
-        hr
+        #colTab.col-xs-12.col-sm-6.col-md-2
+          h4 NOMBRE
+          #colTabMarges.col-xs-12.col-sm-12.col-md-12
+            ul.booking
+              li
+                i.glyphicon.glyphicon-user
+                i.glyphicon.glyphicon-user
+                i.glyphicon.glyphicon-user
+                i.glyphicon.glyphicon-user
+        #colTab.col-xs-12.col-sm-6.col-md-3
+          h4 DESCRIPTION
+          #colTabMarges.col-xs-12.col-sm-12.col-md-12
+            p.booking
+              | Appartement de 2 à 4 personnes à la semaine
+            
+        #colTab.col-xs-12.col-sm-6.col-md-2
+          h4 TOTAL
+          #colTabMarges.col-xs-12.col-sm-12.col-md-12
+            p.booking
+              span 980 €
+              br
+              small Prix pour 2 nuits
+        #colTab.col-xs-12.col-sm-6.col-md-3
+          h4 RESERVATION
+          #colTabMarges.col-xs-12.col-sm-12.col-md-12
+            p.booking
+              a.btn.btn-lg.vert(href='reservation', type='button') Réservez
+        #colTab.col-xs-12.col-sm-12.col-md-2
+          h4 OFFRIR
+          #colTabMarges.col-xs-12.col-sm-12.col-md-12
+            p.booking
+              a(href='reservation')
+                img.img1(src='img/logo/kdo2.gif', alt='idée cadeau')
+      // FIN ROW 1
+      hr
+      // FILET DE SEPARATION
+      // DEBUT ROW 2
+      #intitule.row.lead
+        #colTab.col-xs-12.col-sm-6.col-md-2
+        
+          #colTabMarges2.col-xs-12.col-sm-12.col-md-12
+            ul.booking
+              li
+                i.glyphicon.glyphicon-user
+                i.glyphicon.glyphicon-user
+                i.glyphicon.glyphicon-user
+                i.glyphicon.glyphicon-user
+        #colTab.col-xs-12.col-sm-6.col-md-3
+        
+          #colTabMarges2.col-xs-12.col-sm-12.col-md-12
+            p.booking
+              | Appartement de 2 à 4 personnes 
+              br
+              | Week-end
+        #colTab.col-xs-12.col-sm-6.col-md-2
+        
+          #colTabMarges2.col-xs-12.col-sm-12.col-md-12
+            p.booking
+              span 280 €
+              br
+              small Prix pour 2 nuits
+        #colTab.col-xs-12.col-sm-6.col-md-3
+          
+          #colTabMarges2.col-xs-12.col-sm-12.col-md-12
+            p.booking
+              a.btn.btn-lg.vert(href='reservation', type='button') Réservez
+        #colTab.col-xs-12.col-sm-12.col-md-2
+        
+          #colTabMarges2.col-xs-12.col-sm-12.col-md-12
+            p.booking
+              a(href='reservation')
+                img.img1(src='img/logo/kdo2.gif', alt='idée cadeau')
+      // FIN ROW 2
+      hr
+      // FILET
       
       
     // fin partie appart
