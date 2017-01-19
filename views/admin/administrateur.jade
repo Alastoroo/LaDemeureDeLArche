@@ -1,22 +1,63 @@
 doctype html
-// views/login.ejs
 html
   head
     meta(charset='utf-8')
-    title Node Authentification
-    link(rel='stylesheet', href='//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css')
-    // load bootstrap css
-    link(rel='stylesheet', href='//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css')
-    // load fontawesome  
-
-    h1 Menu administrateur.
-    br
-    button.btn.btn-primary.btn-lg(type='button') Modifier la "Home"
-    br
-    button.btn.btn-primary.btn-lg(type='button') Modifier la "Demeure"
-    br
-    button.btn.btn-primary.btn-lg(type='button') Modifier les "séjours" 
-    br
-    button.btn.btn-primary.btn-lg(type='button') Modifier "aux alentours"
-    br
-    button.btn.btn-primary.btn-lg(type='button') Modifier "nous contacter"
+    title
+    link(rel='stylesheet', href='style.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/lumen/bootstrap.min.css')
+    link(rel='stylesheet', href='https://daneden.github.io/animate.css/animate.min.css')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js')
+  body
+    center
+      h1 Menu modification
+    .container
+      .row
+        .col-sm-6.col-md-4
+          .thumbnail
+            .caption
+              h3 Modification home
+              p ...
+              p
+                a.btn.btn-primary(href='#', role='button') Modifier
+        .col-sm-6.col-md-4
+          .thumbnail
+            .caption
+              h3 Modification Demeure
+              p ...
+              p
+                a.btn.btn-primary(href='#', role='button') Modifier
+    .container
+      .row
+        .col-sm-6.col-md-4
+          .thumbnail
+            .caption
+              h3 Modification Séjour
+              p ...
+              p
+                a.btn.btn-primary(href='#', role='button') Modifier
+        .col-sm-6.col-md-4
+          .thumbnail
+            .caption
+              h3 Modification Aux alentours
+              p ...
+              p
+                a.btn.btn-primary(href='#', role='button') Modifier
+    .container
+      .row
+        .col-sm-6.col-md-4
+          .thumbnail
+            .caption
+              h3 modification Livre d'or
+              p ...
+              p
+                a.btn.btn-primary(href='#', role='button') Modifier
+        .col-sm-6.col-md-4
+          .thumbnail
+            .caption
+              h3 modification Nous contacter
+              p ...
+              p
+                a.btn.btn-primary(href='#', role='button') Modifier
