@@ -48,31 +48,71 @@ header.carousel .carousel {
 }
 
 /* partie chambres*/
-.row {
-  background-color: #fcfcfc!important;
+/*******TABLEAU reservation************************************/
+#tableau{
+margin-left: auto;
+margin-right: auto;
+}
+#intitule {
+	margin-left:0px;
+	margin-right:0px;
+}
+#colTab h4 {
+	margin-left:0px;
+	margin-right:0px;
+	text-align: center;
+	font-weight: 400;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 22px;
+	padding-bottom: 10px;
+}
+#colTab{
+	margin-left:0px;
+	margin-right:0px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+#colTabMarges{
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+}
+#colTabMarges2{
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 20px;
+}
+.booking{
+		text-decoration: none;
+		font-size: 18px;
+		list-style: none;
+		padding-left: 0px;
+		padding-right: 0px;
+		text-align: center;
+		font-weight: 300;
+		font-family: 'Fira Sans', sans-serif;
+}
+.booking li i{
+}
+.booking i{
+	list-style: none;
+	text-decoration: none;
+	font-size: 18px !important;
+  padding-right: 5px;
+  color: #9d2501 !important;
+}
+.booking span{
+	font-weight: 500;
+	color:#9d2501;
+	font-size: 24px;
 }
 .vert {
 color: #d7d7b9;
 }
+section#reserver {
+  background-color: #fcfcfc!important;
+}
 
-#intitule h4 {
-  padding-left: 80px;
-  font-size: 22px;
-
-}
-h4.fixtop1 {
-  text-align: right;
-  margin-left: 50px;
-}
-h4.fixtop{
-text-align: left;
-  margin-right: 30px;
-}
-h4.fixtop2 {
-
-  text-align: right;
-  margin-left: 60px;
-}
 #chambreDescription h1 {
   color: #9d2501;
   text-align: left;
@@ -81,17 +121,7 @@ h4.fixtop2 {
 h2#titreSejour {
   color: #9d2501;
 }
-li.booking {
-display: inline-block;
-width: 200px;
-margin-left: 20px;
-vertical-align: top;
-text-align: center;
-}
-li.chambre {
-	font-size: 17px;
-  text-align: center;
-}
+
 #homeChambre.container-fluid {
   width: 80%;
   padding-top: 250px;
@@ -106,20 +136,10 @@ h2.explication1 {
   padding-left: 50px;
   padding-bottom:  20px;
 }
-/*.prixAppart {
-  color: #9d2501;
-}*/
-i.glyphicon {
-  font-size: 18px !important;
-  color: #2E3438;
-  padding-right: 5px;
-  color: #9d2501;
-}
 
 img.img1 {
   max-width: 20%;
   height: auto;
-
 }
 img.img2 {
   max-width: 7%;
@@ -190,8 +210,8 @@ img.img2 {
 }
 /***********************/
 .footer-reseaux{
-    padding-left: 10px;
-    padding-right: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .footer-reseaux ul{
 padding-left: 0px;
@@ -329,28 +349,3 @@ font-size: 18px;
 /*.footer-nav, .footer-social,.footer-ns { border-left:solid 1px rgba(255,255,255,0.10); }
 }*/
 /*******************************/
-/* partie contact*/
-.fondVert  {
-	background-color: #999966;
-	width: 100%;
-	height: 75px;
-}
-h1.fondVert {
-	text-align: center;
-	padding-top: 20px;
-}
-span.glyphicon {
-  font-size: 18px !important;
-  color: #9d2501;
-}
-h2.titreContact {
-	text-align: center;
-}
-a.mail {
-	text-decoration: none;
-	color: black!important;
-
-}
-.contact p{
-	color: black!important;
-}
