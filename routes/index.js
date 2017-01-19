@@ -2,11 +2,14 @@ module.exports = function (app, passport){
   app.get('/', function(req,res){
     res.render("index");
   });
+  app.get('/home', function(req, res){
+    res.render("home");
+  });
   app.get('/demeure',function(req,res){
     res.render("demeure");
   });
   app.get('/sejours',function(req,res){
-    res.render("demeure");
+    res.render("sejours");
   });
   app.get('/tourisme',function(req,res){
     res.render("tourisme");
@@ -18,7 +21,7 @@ module.exports = function (app, passport){
     res.render("contact");
   });
   app.get('/reservation',function(req,res){
-    res.render("contact");
+    res.render("reservation");
   });
   app.get('/admin/connexion', function(req,res){
     res.render("admin/connexion");
