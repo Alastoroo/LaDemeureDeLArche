@@ -24,6 +24,9 @@ a.vert {
 h1{
   font-size: 35px;
 }
+#bgChambre {
+	padding-top: 90px;
+}
 /*Home Page Carousel */
 html,
 body {
@@ -82,6 +85,11 @@ margin-right: auto;
 	padding-right: 10px;
 	padding-top: 20px;
 }
+.filet {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	border-top: 1px solid #999966 !important;
+}
 .booking{
 		text-decoration: none;
 		font-size: 18px;
@@ -92,6 +100,7 @@ margin-right: auto;
 		font-weight: 300;
 		font-family: 'Fira Sans', sans-serif;
 }
+
 .booking li i{
 }
 .booking i{
@@ -106,8 +115,15 @@ margin-right: auto;
 	color:#9d2501;
 	font-size: 24px;
 }
+.booking a img{
+	max-width: 20%;
+	height: auto;
+}
 .vert {
 color: #d7d7b9;
+}
+.contourBlanc{
+	background-color: white;
 }
 section#reserver {
   background-color: #fcfcfc!important;
@@ -135,12 +151,11 @@ h2.explication1 {
 .description {
   padding-left: 50px;
   padding-bottom:  20px;
+	font-weight: 300;
+	font-family: 'Fira Sans', sans-serif;
+	font-size: 16px;
 }
 
-img.img1 {
-  max-width: 20%;
-  height: auto;
-}
 img.img2 {
   max-width: 7%;
   height: auto;
@@ -343,9 +358,19 @@ font-family: 'Fira Sans', sans-serif;
   #intitule h4 {
 font-size: 18px;
 }
-/*******************************/
+
 }
-@media (min-width: 768px) {
-/*.footer-nav, .footer-social,.footer-ns { border-left:solid 1px rgba(255,255,255,0.10); }
-}*/
+/*******************************/
+
+@media (max-width: 768px) {
+	.booking span {
+		font-size: 32px;
+	}
+	.filet {
+		margin-top: 20px;
+		margin-bottom: 30px;
+		border-top: 14px solid #999966 !important;
+		opacity:0.5;
+	}
+}
 /*******************************/
