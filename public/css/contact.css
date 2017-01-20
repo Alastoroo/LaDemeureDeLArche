@@ -213,3 +213,8 @@ input:focus + label {
 textarea:focus + label, input:valid + label {
   transform: translateY(-40px) translateX(-10px) scale(0.7);
 }
+@media (max-width: 768px) {
+	#menu-contact {
+		width: 60%;
+	}
+}
