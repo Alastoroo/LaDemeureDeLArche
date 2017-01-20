@@ -9,16 +9,16 @@ tourisme
   body(style='background-color:#fcfcfc!important;')
     include ./header
     #pageTourisme.container
-      .row
-        .col-sm-6.col-md-4
-          #titleTourisme.thumbnail
+      #rowTourisme.row
+        #block.col-xs-12.col-sm-6.col-md-4.col-lg-4
+          #titleTourisme
             h3
               | Al&egrave;s et sa r&eacute;gion sont riches de sites &agrave; d&eacute;couvrir.
               br
               | Entre nature et histoire, visitez les plus beaux lieux autour de la Demeure de l&rsquo;Arche.
         |       
-        .col-sm-6.col-md-4
-          #lieuxTourisme.thumbnail
+        #block.col-xs-12.col-sm-6.col-md-4.col-lg-4
+          #lieuxTourisme
             a(href='http://www.bambouseraie.com/', target='_blank')
               img.img-responsive(src='img/tourisme/bambouserie.png', alt='...')
             |             
@@ -31,8 +31,8 @@ tourisme
             span
               a.btn(href='http://www.bambouseraie.com/', target='_blank', role='button') Acc&egrave;s au site
         |       
-        .col-sm-6.col-md-4
-          #lieuxTourisme.thumbnail
+        #block.col-xs-12.col-sm-6.col-md-4.col-lg-4
+          #lieuxTourisme
             a(href='http://www.cevennesgrandsud.cool/', target='_blank')
               img.img-responsive(src='img/tourisme/Vezenobres.jpg', alt='...')
             |             
@@ -48,11 +48,9 @@ tourisme
             |             
             span
               a.btn(href='http://www.cevennesgrandsud.cool/', target='_blank', role='button') Acc&egrave;s au site
-      // row1
-      .row
-        // row2
-        .col-sm-6.col-md-4
-          #lieuxTourisme.thumbnail
+        |       
+        #block.col-xs-12.col-sm-6.col-md-4.col-lg-4
+          #lieuxTourisme
             a(href='http://www.lagrandemotte.com/', target='_blank')
               img(src='img/tourisme/lagrandemotte.jpg', alt='...')
             |             
@@ -63,14 +61,14 @@ tourisme
             p
               | Admirez les plus belles plages du Languedoc-Roussillon!  
               br
-              |   
+              |  
               br
             |             
             span
               a.btn(href='http://www.lagrandemotte.com/', target='_blank', role='button') Acc&egrave;s au site
         |       
-        .col-sm-6.col-md-4
-          #lieuxTourisme.thumbnail
+        #block.col-xs-12.col-sm-6.col-md-4.col-lg-4
+          #lieuxTourisme
             a(href='http://www.ot-nimes.fr/', target='_blank')
               img.img-responsive(src='img/tourisme/nimes-photo01.jpg', alt='...')
             |             
@@ -84,28 +82,25 @@ tourisme
             span
               a.btn(href='http://www.ot-nimes.fr/', target='_blank', role='button') Acc&egrave;s au site
         |       
-        .col-sm-6.col-md-4
-          #lieuxTourisme.thumbnail
+        #block.col-xs-12.col-sm-6.col-md-4.col-lg-4
+          #lieuxTourisme
             a(href='http://www.grotte-de-trabuc.com/fr/', target='_blank')
               img.img-responsive(src='img/tourisme/grottes.png', alt='...')
             |             
             h3 La Grotte de Trabuc
-            |                     
+            |             
             h5 Distance 12 km
             |             
             p
-              | Une des plus belles cavit&eacute;s des C&eacute;vennes, dans les pas de la Pr&eacute;histoire.  
+              | Une des plus belles cavit&eacute;s des C&eacute;vennes, dans les pas de la Pr&eacute;histoire.
               br
-              |   
               br
             |             
             span
               a.btn(href='http://www.grotte-de-trabuc.com/fr/', target='_blank', role='button') Acc&egrave;s au site
-      // row2
-      .row
-        // row3
-        .col-sm-6.col-md-4
-          #lieuxTourisme.thumbnail
+        |       
+        #block.col-xs-12.col-sm-6.col-md-4.col-lg-4
+          #lieuxTourisme
             a(href='http://www.museeharibo.fr/fr/', target='_blank')
               img.img-responsive(src='img/tourisme/musee_bonbon.jpg', alt='...')
             |             
@@ -123,9 +118,9 @@ tourisme
             |             
             span
               a.btn(href='http://www.museeharibo.fr/fr/', target='_blank', role='button') Acc&egrave;s au site
-        // row
-        .col-sm-6.col-md-4
-          #lieuxTourisme.thumbnail
+        |       
+        #block.col-xs-12.col-sm-6.col-md-4.col-lg-4
+          #lieuxTourisme
             a(href='http://www.trainavapeur.com/', target='_blank')
               img.img-responsive(src='img/tourisme/train.jpg', alt='...')
             |           
@@ -138,9 +133,9 @@ tourisme
             |           
             span
               a.btn(href='http://www.trainavapeur.com/', target='_blank', role='button') Acc&egrave;s au site
-        // row
-        .col-sm-6.col-md-4
-          #lieuxTourisme.thumbnail
+        |       
+        #block.col-xs-12.col-sm-6.col-md-4.col-lg-4
+          #lieuxTourisme
             a(href='http://www.camellia.fr/accueil-1-0-0', target='_blank')
               img.img-responsive(src='img/tourisme/camelia.png', alt='...')
             |           
@@ -151,12 +146,12 @@ tourisme
             p
               | Un magnifique parc consacr&eacute; aux Camellias, qui comprend plus de 200 vari&eacute;t&eacute;s.
               br
-              |   
+              |  
               br
             |           
             span
               a.btn(href='http://www.camellia.fr/accueil-1-0-0', target='_blank', role='button') Acc&egrave;s au site
-
+      // row1
                 
 include ./footer
     // FIN TOURISME
