@@ -13,7 +13,7 @@
   color:#999966!important;
 }
 /**********************************************/
-#menu{
+#menuNav{
   padding: 0px;
   margin: 0px;
   height: auto;
@@ -113,7 +113,7 @@ font-weight: 300;
   padding-bottom:17px;
   padding-left:140px;
   padding-right:140px;
-  color: #999966!important;
+  color: #63642b!important;
 }
 #sousmenu a:hover{
   background-color:#d8d8b5!important;
@@ -183,7 +183,7 @@ color: #999966!important;
 
   #sousmenu{
     width: 1280px;
-    left: -360px;
+    left: -380px;
   }
   #sousmenu a {
     padding-left: 140px;
