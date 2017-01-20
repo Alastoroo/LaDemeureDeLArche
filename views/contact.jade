@@ -69,36 +69,36 @@ contact
               #form_contact
                 form#contact(action='#', method='POST')
                   #field-name.transform-field.row
-                    input#nom(name='nom', type='text', required='')
+                    input#nom(class="inputContact",name='nom', type='text', required='')
                     |                       
                     label
                       | Nom
                   |                 
                   #field-name.transform-field.row
-                    input#nom(name='nom', type='text', required='')
+                    input#nom(class="inputContact",name='nom', type='text', required='')
                     |                   
                     label
                       | Pr&eacute;nom
                   |              
                   #field-subject.transform-field.row
-                    input#sujet(name='sujet', type='text', required='')
+                    input#sujet(class="inputContact",name='sujet', type='text', required='')
                     |               
                     label
                       | Sujet
                   |         
                   #field-email.transform-field.row
-                    input#email(name='email', type='text', required='')
+                    input#email(class="inputContact",name='email', type='text', required='')
                     |           
                     label
                       | Email
                   |     
                   #field-message.transform-field-textarea.row
-                    textarea#message(name='message', type='text', required='')
+                    textarea.textareaContact#message(name='message', type='text', required='')
                     |       
                     label
                       | Message
                   #field-submit.row.transform-field
-                    input(type='submit', value='Envoyer')
+                    input(class="inputContact",type='submit', value='Envoyer')
               // end of #form_contact
         br
         br

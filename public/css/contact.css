@@ -153,7 +153,7 @@ label {
   transition-duration: 0.2s;
   transition-property: transform;
 }
-textarea, input {
+.textareaContact, .inputContact {
   position: relative;
   float: left;
   border: none;
@@ -168,10 +168,10 @@ textarea, input {
   transition-property: transform;
   font-size: 26px;
 }
-input {
+.inputContact {
   height: 35px;
 }
-input:focus + label {
+.inputContact:focus + label {
   transform: translateY(-40px) translateX(-10px) scale(0.7);
 }
 #section-menu-contact input[type="submit"]{
@@ -206,11 +206,11 @@ input:focus + label {
     position: relative;
     width: 100%;
 }
-#field-submit input{
+#field-submit .inputContact{
     margin-top: 45px;
     margin-bottom: 50px;
 }
-textarea:focus + label, input:valid + label {
+.textareaContact:focus + label, .inputContact:valid + label {
   transform: translateY(-40px) translateX(-10px) scale(0.7);
 }
 @media (max-width: 768px) {

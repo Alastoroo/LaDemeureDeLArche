@@ -2,9 +2,13 @@
 /*************************************/
 #pageTourisme{
   padding-top:150px;
+    font-family: 'Fira Sans', sans-serif;
 }
+#rowTourisme{}
 /**********STYLE_texte********************/
 #titleTourisme {
+  margin-top: 10px;
+  margin-bottom: 10px;
   background-color:transparent;
   box-shadow: none;
   border: none;
@@ -13,17 +17,18 @@
   color:#9d2501!important;
   font-size: 28px;
   font-weight: 300;
-  font-family: 'Fira Sans', sans-serif;
+
 }
 /******STYLE**PAVE**********************/
 #lieuxTourisme {
-
-  padding: 10px;
   background-color:white;
-  box-shadow:0,8;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow:0.8;
   border:none;
   padding-bottom: 20px;
-  /*height: 370px;*/
+  margin-top:20px;
+  margin-bottom: 20px;
 }
 #lieuxTourisme a img{
   height: 150px;
@@ -34,25 +39,21 @@ font-size: 24px;
 line-height: 26px;
 font-weight: 400;
 color: #999966!important;
-font-family: 'Fira Sans', sans-serif;
 }
 #lieuxTourisme h5 {
   color:#9d2501!important;
   font-size: 16px;
   font-weight: 300;
   font-style: italic;
-  font-family: 'Fira Sans', sans-serif;
 }
 #lieuxTourisme p{
 font-weight: 300;
-font-family: 'Fira Sans', sans-serif;
 color: black;
 font-size: 18px;
 line-height: 20px;
 margin-bottom: 15px;
 text-align: left;
 }
-
 /****button acces site**********/
 #lieuxTourisme span {
 }
@@ -68,11 +69,15 @@ text-align: left;
   background-color: #999966!important;
   border: none;
   font-weight: 300;
-  font-family: 'Fira Sans', sans-serif;
-
 }
 #lieuxTourisme span a:hover{
   background-color: #eea236!important;
   -webkit-transition-duration: 0.4s; /* Safari */
    transition-duration: 0.4s;
+}
+/**************************************************/
+@media (max-width:767px){
+  #lieuxTourisme a img{
+    height: 200px;
+  }
 }
