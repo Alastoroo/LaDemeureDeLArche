@@ -1,50 +1,78 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,500,500i,700,700i');
 /*************************************/
 #pageTourisme{
-  padding-top:90px;
+  padding-top:150px;
 }
-#titleTourisme{
-  background-color: transparent;
-box-shadow: none;
+/**********STYLE_texte********************/
+#titleTourisme {
+  background-color:transparent;
+  box-shadow: none;
   border: none;
+}
+#titleTourisme h3 {
   color:#9d2501!important;
   font-size: 28px;
   font-weight: 300;
   font-family: 'Fira Sans', sans-serif;
-  line-height: 32px;
 }
-.thumbnail{}
-.thumbnail:hover{
-  text-decoration: none;
-  }
-.thumbnail a img{
+/******STYLE**PAVE**********************/
+#lieuxTourisme {
+
+  padding: 10px;
+  background-color:white;
+  box-shadow:0,8;
+  border:none;
+  padding-bottom: 20px;
+  /*height: 370px;*/
+}
+#lieuxTourisme a img{
   height: 150px;
+  width:100%;
 }
-.thumbnail h3{
+#lieuxTourisme h3{
+font-size: 24px;
+line-height: 26px;
+font-weight: 400;
 color: #999966!important;
 font-family: 'Fira Sans', sans-serif;
 }
-.thumbnail h3:hover{
-text-decoration: none;
+#lieuxTourisme h5 {
+  color:#9d2501!important;
+  font-size: 16px;
+  font-weight: 300;
+  font-style: italic;
+  font-family: 'Fira Sans', sans-serif;
 }
-.thumbnail p{
-  text-decoration: none;
+#lieuxTourisme p{
+font-weight: 300;
+font-family: 'Fira Sans', sans-serif;
 color: black;
+font-size: 18px;
+line-height: 20px;
+margin-bottom: 15px;
+text-align: left;
 }
-.thumbnail p:hover{
-text-decoration: none;
+
+/****button acces site**********/
+#lieuxTourisme span {
 }
-.btn-warning{
-background-color: #999966!important;
-border: none;
+#lieuxTourisme span a {
+  margin-left: auto;
+  margin-right: auto;
+  width: 120px;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  background-color: #999966!important;
+  border: none;
+  font-weight: 300;
+  font-family: 'Fira Sans', sans-serif;
+
 }
-.btn-warning:hover{
-background-color: #9d2501!important;
--webkit-transition-duration: 0.4s; /* Safari */
- transition-duration: 0.4s;
-}
-.btn-warning:after{
-background-color: #999966!important;
--webkit-transition-duration: 0.4s; /* Safari */
- transition-duration: 0.4s;
+#lieuxTourisme span a:hover{
+  background-color: #eea236!important;
+  -webkit-transition-duration: 0.4s; /* Safari */
+   transition-duration: 0.4s;
 }

@@ -1,4 +1,5 @@
 body
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,500,500i,700,700i');
 .rec{
   height: 300px;
   background-color: grey;
@@ -12,5 +13,17 @@ body
 }
 
 .box {
-  width: 100%;
+  width: 90%;
+}
+.box h2 {
+  font-weight: 300;
+  font-family: 'Fira Sans', sans-serif;
+}
+.box h2 span {
+  font-weight: 400;
+}
+.box p {
+  font-size: 18px;
+  font-weight: 300;
+  font-family: 'Fira Sans', sans-serif;
 }
