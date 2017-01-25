@@ -14,87 +14,164 @@ contact
     br
     |     
     br
-    |     
-    form
-      h1 Formulaire de paiement
-      |  
-      p
-        | Les champs obligatoires sont suivis d&apos;un 
-        strong
-          abbr(title='obligatoire')
-        | .
-      |   
-      section
-        h2 Information de contact
-        |     
-        fieldset
-          legend Titre
+    body(style='background-color:#f0f0f0;')
+      #bgContact.container-fluid
+        // Formulaire
+        .row.pageContact
+          #section-title.col-md-4.center
+            h1.section-titre2  Nous joindre
+            |            
+            |             
+            .blocPosition
+              p
+                span.glyphicon.glyphicon-home
+                | &nbsp;&nbsp;779 Chemin de la Prairie,
+                br
+                | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 30380 Saint-Christol-l&egrave;s-Al&egrave;s - France
+              |             
+              p
+                span.glyphicon.glyphicon-phone-alt
+                | &nbsp;&nbsp;+33 (0)4 66 56 58 18
+              |             
+              p
+                span.glyphicon.glyphicon-envelope
+                | &nbsp;&nbsp;
+                a.mail(href=' reservation@lademeuredelarche.com')  reservation@lademeuredelarche.com
+              |             
+              p
+                span.glyphicon.glyphicon-send
+                | &nbsp;&nbsp;Coordonn&eacute;es GPS: 
+                strong 44.08715, 4.09465
+              |             
+              br
+              |              
+              #mapContact.googleMap
+                iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11462.599877848186!2d4.084496980414146!3d44.09057888849195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b441922353a783%3A0x3205bbe07d198b45!2s779+Chemin+de+la+Prairie%2C+30380+Saint-Christol-l%C3%A8s-Al%C3%A8s!5e0!3m2!1sfr!2sfr!4v1480501637633', width='380', height='260', frameborder='0', style='border:0', allowfullscreen='')
+              // <p><span class="glyphicon glyphicon-globe"></span>&nbsp;&nbsp;<a class="mail" href="http://www.lademeuredelarche.com/">www.lademeuredelarche.com</p>
+              .infos
+                h2.section-titre2 Infos pratiques
+                |             
+                p
+                  | A&eacute;roports: N&icirc;mes (38 km) Montpellier (75 km).
+                  br
+                  | Trains: Gare de N&icirc;mes, Gare d&rsquo; Al&egrave;s.
+                  br
+                  | Voiture: Parking priv&eacute; s&eacute;curis&eacute; sur place.
+                  br
+                  | Commerces et restaurants: &agrave; 2 km.
+          |         
+          #section-menu-contact.section.col-xs.6.col-sm-6.col-md-6.col-lg-6
+            h1.section-titre2 Formulaire
+            |         
+            |        
+            |           
+            .contact
+              #form_contact
+                form#contact(action='#', method='POST')
+                  #field-name.transform-field.row
+                    input#nom(class="inputContact",name='nom', type='text', required='')
+                    |                       
+                    label
+                      | Nom
+                  |                 
+                  #field-name.transform-field.row
+                    input#nom(class="inputContact",name='nom', type='text', required='')
+                    |                   
+                    label
+                      | Pr&eacute;nom
+                  |              
+                  #field-subject.transform-field.row
+                    input#sujet(class="inputContact",name='sujet', type='text', required='')
+                    |               
+                    label
+                      | Sujet
+                  |         
+                  #field-email.transform-field.row
+                    input#email(class="inputContact",name='email', type='text', required='')
+                    |           
+                    label
+                      | Email
+                  |     
+                  #field-message.transform-field-textarea.row
+                    textarea.textareaContact#message(name='message', type='text', required='')
+                    |       
+                    label
+                      | Message
+                  #field-submit.row.transform-field
+                    input(class="inputContact",type='submit', value='Envoyer')
+              // end of #form_contact
+        br
+        br
+        br
+        #reservation.row
+          .col-md-3.pageFb
+            // intégration page Facebook
+            h1.section-titre3 Notre actualit&eacute;
+            |     
+            |       
+            iframe(src='https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/LaDemeureDeLarche&tabs=timeline&width=520&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId', width='490', height='520', style='border:none;overflow:hidden', scrolling='no', frameborder='0', allowtransparency='true')
+            |       
           |       
-          ul
-            li
-              label(for='titre_1')
-                input#titre_1(type='radio', name='title', value='M.')
-                |             Monsieur
+          script.
+            (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.8";
+            fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+          |   
+          |     
+          .col-md-6.conditionReservation
+            h2 Conditions de r&eacute;servations
             |         
-            li
-              label(for='titre_2')
-                input#titre_2(type='radio', name='title', value='Mme')
-                |             Madame
-        |     
-        p
-          label(for='nom')
-            span Nom : 
+            p
+              | Arriv&eacute;es: 
+              font(size='4px')
+                strong 16h00 &agrave; 20h00
+              | .
+              br
+              |  D&eacute;parts jusqu&rsquo;&agrave; 
+              font(size='4px')
+                strong 11h00
+              | .
+              br
+              | Horaires petit-d&eacute;jeuner:
+              font(size='4px')
+                strong 8h30 &agrave; 10h00
+              | .
+              br
+              | Possibilit&eacute; de prendre le petit-d&eacute;jeuner en chambre,
+              br
+              |  en terrasse ou dans la pi&egrave;ce commune.
+              br
+              |         
+              font(size='4px') Saison haute
+              | : 
+              strong Avril &agrave; Octobre
+              br
+              |         
+              font(size='4px') Saison basse
+              | : 
+              strong Novembre &agrave; Avril
+              br
+              |         Un enfant de moins de 2 ans s&eacute;journe &agrave; titre gracieux pour l&apos;utilisation d&apos;un lit b&eacute;b&eacute;.
+              br
+              |         Toutes nos chambres et notre appartement sont non-fumeur.
+              br
+              |         Aucun lit d&apos;appoint ne peut &ecirc;tre install&eacute; dans la chambre.
+              br
+              |         Les animaux de compagnie ne sont pas admis au sein de l&apos;&eacute;tablissement.
             |         
-            input#nom(type='text', name='nomdutilisateur', required='')
+            h3
+              em Moyens de paiement
             |         
-            strong
-              abbr(title='obligatoire')
-        |  
-        p
-          label(for='courriel')
-            span Courriel : 
-            |  
-            input#courriel(type='email', name='courrielutilisateur', required='')
-            |  
-            strong
-              abbr(title='obligatoire')
-      |   
-      section
-        h2 Information de paiement
-        |     
-        p
-          label(for='carte')
-            span Type de carte :
-            |         
-            select#carte(name='carteutilisateur')
-              option(value='visa') Visa
-              |           
-              option(value='mc') Mastercard
-              |           
-              option(value='amex') American Express
-        |     
-        p
-          label(for='numero')
-            span Num&eacute;ro de la carte :
-            |         
-            input#numero(type='text', name='numerocarte', required='')
-            |         
-            strong
-              abbr(title='obligatoire')
-        |  
-        p
-          label(for='date')
-            span Date d&apos;expiration :
-            |  
-            input#date(type='text', name='expiration', required='')
-            |  
-            strong
-              abbr(title='obligatoire') *
-            |  
-            em formatt&eacute; comme mm/aa
-      |  
-      section
-        p
-          button Valider le paiement
+            p
+              strong
+                | Paiement s&eacute;curis&eacute;
+                img#logoCarte.img-responsive(src='img/logo/cartecb.png')
+                br
+                |         Ch&egrave;ques, esp&egrave;ces et Ch&egrave;ques vacances accept&eacute;s
+              img#logoCarte2.img-responsive(src='img/logo/cheque-vac.png')
 
     include ./footer

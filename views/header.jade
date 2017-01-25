@@ -1,6 +1,6 @@
 header
     nav.navbar.navbar-fixed-top
-      #menu.container-fluid
+      #menuNav.container-fluid
         #logo.row
           .col-md-12.col-lg-12
             img.img-responsive.center-block(src='img/HEADER-HOME4.png')
@@ -27,13 +27,13 @@ header
               a(href='demeure') La Demeure
             |             
             li.dropdown
-              a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='true')
+              a.dropdown-toggle(href='sejours', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='true')
                 | S&eacute;jours
                 span.glyphicon.glyphicon-chevron-down
               |               
               #sousmenu.dropdown-tabs
                 p
-                  a(href='sejours#chambres') Chambres
+                  a(href='sejours') Chambres
                 |                 
                 p
                   a(href='sejours#suites') Suites

@@ -1,0 +1,67 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/lumen/bootstrap.min.css')
+    link(rel='stylesheet', href='https://daneden.github.io/animate.css/animate.min.css')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js')
+  body
+    .container
+      .row
+        .panel.panel-primary
+          .panel-heading Image 
+            a.btn.btn-success.pull-right(href="/admin/home/add/image" role="button") Ajouter Image
+          .panel-body
+            table.table.table-condensed.table-bordered
+              thead
+                tr
+                  th Nom
+                  th Lien
+                  th Actions
+              tbody
+                tr
+                  td John
+                  td Doe
+                  td john@example.com
+                tr
+                  td Mary
+                  td Moe
+                  td mary@example.com
+                tr
+                  td July
+                  td Dooley
+                  td july@example.com
+      .row
+        .panel.panel-primary
+          .panel-heading Présentation 
+            a.btn.btn-success.pull-right(href="/admin/home/add/pres2" role="button") Ajouter Présentation Bis
+          .panel-body
+            table.table.table-condensed.table-bordered
+              thead
+                tr
+                  th Titre
+                  th Description
+                  th Action
+              tbody
+                tr
+                  td John
+                  td Doe
+                  td john@example.com
+                tr
+                  td Mary
+                  td Moe
+                  td mary@example.com
+                tr
+                  td July
+                  td Dooley
+                  td july@example.com
+      .row
+        .panel.panel-primary
+          .panel-heading Présentation Générale
+            a.btn.btn-success.pull-right(href="/admin/home/add/pres" role="button") Ajouter Présentation
+          .panel-body!= description
+        

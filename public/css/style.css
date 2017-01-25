@@ -1,15 +1,18 @@
-/*bordeau
-#9d2501
-
-vert clair typo logo
-#999966
-
-vert fonce
-#184a2d
-
-vert bouton réservez
-#d7d7b9
-*/
+.bordeau{
+		background-color: #9d2501 !important;
+	}
+	.vert-clair-logo{
+		background-color: #999966 !important;
+	}
+	.vert-foncé{
+		background-color: #184a2d!important;
+	}
+	.reserver-button{
+		background-color: #d7d7b9 !important;
+	}
+body {
+  margin-top: 150px;
+}
 a.vert {
   background-color: #999966!important;
 }
@@ -17,72 +20,127 @@ a.vert {
 h1{
   font-size: 35px;
 }
+#bgChambre {
+	padding-top: 90px;
+}
 /*Home Page Carousel */
 html,
 body {
     height: 100%;
 }
-header {
-  margin-bottom: 220px;
-}
-header.carousel {
-    height: 100%;
-
-}
 
 header.carousel .item,
 header.carousel .item.active,
 header.carousel .carousel-inner {
-    height: 120%;
+    height: 100%;
+
 }
 
 header.carousel .fill {
     width: 100%;
     height: 100%;
-    background-position: center;
+    background-position: bottom;
     background-size: cover;
 }
-/* partie chambres*/
-.row {
-  background-color: #fcfcfc!important;
+header.carousel .carousel {
+    height: 70%;
 }
+
+/* partie chambres*/
+
+/*******TABLEAU reservation************************************/
+#tableau{
+margin-left: auto;
+margin-right: auto;
+}
+#intitule {
+	margin-left:0px;
+	margin-right:0px;
+}
+#colTab h4 {
+	margin-left:0px;
+	margin-right:0px;
+	text-align: center;
+	font-weight: 400;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 22px;
+	padding-bottom: 10px;
+}
+#colTab{
+	margin-left:0px;
+	margin-right:0px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+#colTabMarges{
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+}
+#colTabMarges2{
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 20px;
+}
+.filet {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	border-top: 1px solid #999966 !important;
+}
+.booking{
+		text-decoration: none;
+		font-size: 18px;
+		list-style: none;
+		padding-left: 0px;
+		padding-right: 0px;
+		text-align: center;
+		font-weight: 300;
+		font-family: 'Fira Sans', sans-serif;
+}
+
+.booking li i{
+}
+.booking i{
+	list-style: none;
+	text-decoration: none;
+	font-size: 18px !important;
+  padding-right: 5px;
+  color: #9d2501 !important;
+}
+.booking span{
+	font-weight: 500;
+	color:#9d2501;
+	font-size: 24px;
+}
+.booking a img{
+	max-width: 20%;
+	height: auto;
+}
+.filet {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-top: 1px solid #999966!important;
+}
+/**********************************************************/
 .vert {
 color: #d7d7b9;
 }
+.contourBlanc{
+	background-color: white;
+}
+section#reserver {
+  background-color: #fcfcfc!important;
+}
 
-#intitule h4 {
-  padding-left: 80px;
-  font-size: 22px;
-
-}
-h4.fixtop1 {
-  text-align: right;
-  margin-left: 50px;
-}
-h4.fixtop{
-text-align: left;
-  margin-right: 30px;
-}
-h4.fixtop2 {
-
-  text-align: right;
-  margin-left: 60px;
-}
 #chambreDescription h1 {
-  color: #9d2501;
+  color: #9d2501!important;
   text-align: left;
   margin-top: 30px;
 }
 h2#titreSejour {
-  color: #9d2501;
+  color: #9d2501!important;
 }
-li.booking {
-display: inline-block;
-width: 200px;
-margin-left: 20px;
-vertical-align: top;
-text-align: center;
-}
+
 #homeChambre.container-fluid {
   width: 80%;
   padding-top: 250px;
@@ -95,23 +153,12 @@ h2.explication1 {
 }
 .description {
   padding-left: 50px;
-padding-bottom:  20px;
-}
-/*.prixAppart {
-  color: #9d2501;
-}*/
-i.glyphicon {
-  font-size: 18px !important;
-  color: #2E3438;
-  padding-right: 5px;
-  color: #9d2501;
+  padding-bottom:  20px;
+	font-weight: 300;
+	font-family: 'Fira Sans', sans-serif;
+	font-size: 16px;
 }
 
-img.img1 {
-  max-width: 20%;
-  height: auto;
-
-}
 img.img2 {
   max-width: 7%;
   height: auto;
@@ -152,79 +199,180 @@ img.img2 {
   left: 25px;
 }
 /* FOOTER DEBUT */
-footer{
-  background-color: #eaeaea;
-
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,500,500i,700,700i');
+/*******************************/
+#footer{
+  margin-top: 70px;
+  background-color: #c9ca9e!important;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#box{
+  background-color: #c9ca9e!important;
+}
+/**********col transport et services*********************************/
+.footer-brand {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.footer-brand h3 {
+  padding-left: 10px;
+  padding-right: 10px;
+  color:white!important;
+  font-weight: 400;
+  font-family: 'Fira Sans', sans-serif;
+}
+.footer-brand p {
+  font-size:16px;
+  color: black!important;
+}
+/***********************/
+.footer-reseaux{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.footer-reseaux ul{
+padding-left: 0px;
+}
+.footer-reseaux ul li {
+display: inline-block;
+position: relative;
+}
+.footer-reseaux a{
+font-size: 16px;
+font-weight: 300;
+font-family: 'Fira Sans', sans-serif;
+text-decoration: none;
+color: black!important;
+}
+.footer-reseaux a:hover{
+  color: #999966!important;
+}
+/********************************************/
+#socialFacebook{
+  border-radius: 5px;
+  background-color: white!important;
+  padding-left: 5px;
+  padding-right: 10px;
+  margin-right: 20px;
+}
+#socialFacebook a img {
+  margin:7px;
+  width: 35px;
+}
+#socialFacebook img{
+padding-right: 10px;
+border-right: 1px solid  #999966!important;;
 }
 
-.footerbox{
-  width: 100%;
+/********************************************/
+#socialMail{
+  margin-top: 0px;
+  padding-top:0px;
+  padding-right: 10px;
+  padding-bottom: 10px;
 }
-
-.footer-bs {
-  background-color: #eaeaea;
-  padding: 5px 5px;
-  color: black;
-  margin-bottom: 20px;
-  border-bottom-right-radius: 6px;
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 6px;
+#socialMail a img {
+  width: 40px;
+  margin-right: 20px;
+  margin-left: 0px;
 }
-.footer-bs .footer-brand, .footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { padding:10px 25px; }
-.footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { border-color: transparent; }
-.footer-bs .footer-brand h2 { margin:0px 0px 10px; }
-.footer-bs .footer-brand p { font-size:15px; color: #9d2501; }
-
-.footer-bs .footer-nav ul.pages { list-style:none; padding:0px; }
-.footer-bs .footer-nav ul.pages li { padding:5px 0px;}
-.footer-bs .footer-nav ul.pages a { color: #9d2501; text-decoration:none; text-transform:uppercase; }
-.footer-bs .footer-nav ul.pages a:hover { color: #999966; text-decoration:underline; }
-.footer-bs .footer-nav h4 {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  margin-bottom:10px;
+#IconPartenaire{
+  border-radius: 5px;
+  background-color: white!important;
+  width: 180px;
+  padding: 5px;
+  margin-right: 20px;
 }
-
-.footer-bs .footer-nav ul.list { list-style:none; padding:0px; }
-.footer-bs .footer-nav ul.list li { padding:5px 0px;}
-.footer-bs .footer-nav ul.list a { color: #9d2501; }
-.footer-bs .footer-nav ul.list a:hover { color: #999966; text-decoration:none; }
-
-.footer-bs .footer-social ul { list-style:none; padding:0px; }
-.footer-bs .footer-social h4 {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
+/*********col menu************************/
+.footer-nav{
+  background-color: #c9ca9e!important;
+  padding-left: 10px;
+  padding-right: 10px;
 }
-.footer-bs .footer-social li { padding:5px 4px;}
-.footer-bs .footer-social a { color: #9d2501;}
-.footer-bs .footer-social a:hover { color: #999966; text-decoration:none; }
+.footer-nav h3{
+  padding-left: 10px;
+  padding-right: 10px;
+  color:white!important;
+  font-weight: 400;
+  font-family: 'Fira Sans', sans-serif; }
 
-.footer-bs .footer-ns h4 {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  margin-bottom:10px;
-}
-.footer-bs .footer-ns p { font-size:12px; color: #9d2501; }
+.footer-nav ul.pages {list-style:none;}
+.footer-nav ul.pages li { padding:5px 0px;}
+.footer-nav ul.pages a { color:black; text-decoration:none; text-transform:uppercase; }
+.footer-nav ul.pages a:hover { color: #999966; }
 
-@media (min-width: 768px) {
-  .footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { border-left:solid 1px rgba(255,255,255,0.10); }
-}
-
+/*****balise HR valable pour le footer et la page sejours partie réservation*******************************/
 hr {
-    border-color: #999966;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border: 0;
-    border-top: 1px solid #999966;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border-top: 1px solid #999966!important;
+}
+/********************************************************/
+/*************footer-social****************************/
+.footer-social{
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #c9ca9e!important;
+  font-weight: 300;
+  font-family: 'Fira Sans', sans-serif;
+}
+.footer-social h3{
+  color:white!important;
+  font-weight: 400!important;
+  font-family: 'Fira Sans', sans-serif;
+}
+#googleMap{
+  margin: 0px;
+  padding: 0px;
+}
+#googleMap p{
+  padding-top: 10px;
+  padding-bottom: 20px;
+  color:black!important;
+  font-weight: 300!important;
+  font-family: 'Fira Sans', sans-serif;
+}
+/***************************************/
+.footer-mention{
+  background-color: #c9ca9e!important;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer-mention ul{
+text-align: center;
+}
+.footer-mention ul li{
+display: inline-block;
+position: relative;
+}
+.footer-mention li a{
+text-decoration: none;
+list-style: none;
+margin-left: 10px;
+margin-right: 10px;
+color:black!important;
+font-weight: 300!important;
+font-family: 'Fira Sans', sans-serif;
 }
 
 /* FOOTER FIN */
-
+/*******************************/
 @media(max-width: 1024px){
-  #intitule h4 {
-font-size: 18px;
+
 }
+
+/*******************************/
+
+@media (max-width: 768px) {
+	.booking span {
+		font-size: 32px;
+	}
+	.filet {
+		margin-top: 20px;
+		margin-bottom: 30px;
+		border-top: 14px solid #999966 !important;
+		opacity:0.5;
+	}
 }
+/*******************************/

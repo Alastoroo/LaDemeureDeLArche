@@ -1,63 +1,79 @@
-/************barre de reservation*********************************/
-.form-group{
-  padding-top: 20px;
-  padding-bottom: 20px;
-  margin-right: 10px;
-}
-.form-group label{
-  margin-right: 10px;
-  font-size: 14px;
-  color:white;
-}
-#formNumber{
-width:150px;
-  }
-#formNumber input{
-    width: 40%;
-  }
-#formSejour{
-  height: 33px;
-  border-radius: 5px;
-  border-color: #999966;
-  background-color: white;
-  }
+/***********PARTIE INFO DEMEURE****************************************************************/
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,500,500i,700,700i');
 /*******zone home demeure*****************************************/
-
+#BGHomeDemeure{
+background-color:#fcfcfc!important;
+margin-bottom: 80px;
+}
 #homeDemeure{
-padding-top: 280px;
-margin-bottom: 100px;
-}
- .thumbnail{
-  height: 150px;
-}
-.caption h3{
-margin-top: 0px;
-}
-#title{
-  font-size: 36px;
-}
+padding-top: 70px;
 
-#txtDemeure p{
+}
+#txthomeDemeure{
+      padding-bottom: 20px;
+      padding-left: 0px;
+}
+/*****GLIPH***********************/
+#pictohomeDemeure{
+text-align:center!important;
+}
+/****************************/
+#txthomeDemeure h3{
+  padding-top: 0px;
+  margin-top: 0px;
+  font-weight: 300;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 46px;
+  color: #999966!important;
+}
+#txthomeDemeure p{
     font-size: 18px;
+    font-weight: 300;
+    font-family: 'Fira Sans', sans-serif;
   }
-#homeGeographie{
-    background-color: #999966;
-    height: 250px;
-    background-image: url("../img/Carte-cevennes-france.png");
-    background-repeat: no-repeat;
-    background-size: 50%;
-    background-position:top left;
-    margin-bottom: 20px;
-  }
-/**************slide commentaires****************************/
-
-#commentaires{
-margin-bottom: 100px;
-  }
-#commentaires p{
-  height: 150px;
+/****************************/
+#infohomeDemeure{
+  padding-top: 20px;
+}
+#infoBlock{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#infoBlock h3{
+  font-weight: 300;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 24px;
+  color: #9d2501;!important;
   text-align: center;
 }
-#commentaires .item{
-background-color: white;
+#infoBlock p{
+  font-weight: 300;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 16px;
+  text-align: justify;
+}
+#homeGeographie{
+    background-color:#c9ca9e!important;
+    margin-bottom: 20px;
+    padding: 10px;
+
+  }
+#homeGeographie p{
+  padding-top: 10px;
+  font-size: 16px;
+  color: black!important;
+  font-weight: 300;
+  font-style: italic;
+  font-family: 'Fira Sans', sans-serif;
+  }
+/***************************************************************************/
+@media (max-width:980px) {
+
+  #homeGeographie p{
+      padding-top: 30px;
+    font-size: 18px;
+    line-height: 24px;
+
+    }
+
 }

@@ -1,4 +1,10 @@
 
+var livreController = require('../controllers/livreController');
+var mongoose = require('mongoose');
+var html2jade = require('html2jade');
+var HomeDescription = mongoose.model("homeDescription");
+var HomePres2 = mongoose.model("homePres2");
+var HomeImage = mongoose.model("homeImage");
 
 var isAuthenticated = function (req, res, next) {
   if (req.isAuthenticated())
@@ -8,10 +14,22 @@ var isAuthenticated = function (req, res, next) {
 
 module.exports = function (app, passport){
   app.get('/', function(req,res){
-    res.render("index");
+    HomeDescription.find().exec(function(err,homeDescription){
+      if(err){
+        console.log(err);
+      } else {
+        res.render("index", {description : homeDescription[homeDescription.length-1].presentation});
+      }
+    });
   });
   app.get('/home', function(req, res){
-    res.render("home");
+    HomeDescription.find().exec(function(err,homeDescription){
+      if(err){
+        console.log(err);
+      } else {
+        res.render("home", {description : homeDescription[homeDescription.length-1].presentation});
+      }
+    });
   });
   app.get('/demeure',function(req,res){
     res.render("demeure");
@@ -42,10 +60,37 @@ module.exports = function (app, passport){
     res.redirect('/admin');
   });
   app.get("/admin/home", isAuthenticated,function(req,res){
-    res.render("admin/home");
+    HomeDescription.find().exec(function(err,homeDescription){
+      if(err){
+        console.log(err);
+      } else {
+        console.log(homeDescription[homeDescription.length-1].presentation);
+        res.render("admin/home", {description : homeDescription[homeDescription.length-1].presentation});
+      }
+    });
   });
   app.get("/admin/home/add/image", isAuthenticated,function(req,res){
     res.render("admin/addImageHome");
+  });
+  app.post("/admin/home/add/image", isAuthenticated,function(req,res){
+
+  });
+  app.get("/admin/home/add/pres",isAuthenticated,function(req,res){
+    res.render("admin/addPresHome");
+  });
+  app.post("/admin/home/add/pres",isAuthenticated,function(req,res){
+      console.log(req.body.content);
+      HomeDescription.create({
+        presentation : req.body.content
+      }, function(err, homeDescription){
+        if(err){
+          console.log(err);
+          res.render('admin/addPresHome');
+        } else {
+          console.log(homeDescription);
+          res.render('admin/home');
+        }
+      });
   });
   app.post('/admin/connexion', passport.authenticate('local-login', {
     successRedirect : '/admin',
