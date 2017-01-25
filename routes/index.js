@@ -2,6 +2,7 @@
 var livreController = require('../controllers/livreController');
 var mongoose = require('mongoose');
 var html2jade = require('html2jade');
+var fs = require('fs');
 var HomeDescription = mongoose.model("homeDescription");
 var HomePres2 = mongoose.model("homePres2");
 var HomeImage = mongoose.model("homeImage");
@@ -18,8 +19,22 @@ module.exports = function (app, passport){
       if(err){
         console.log(err);
       } else {
-        var description = {presentation : homeDescription.length !== 0 ? homeDescription[homeDescription.length-1].presentation : null};
-        res.render("index", {description : description});
+        HomeImage.find().exec(function(err,homeImage){
+          if(err){
+            console.log(err);
+          } else {
+            HomePres2.find().exec(function(err,homePres2){
+              if(err){
+                console.log(err);
+              } else {
+                var description = {presentation : homeDescription.length !== 0 ? homeDescription[homeDescription.length-1].presentation : null};
+                var images = {urls : homeImage.length !== 0 ? homeImage : []};
+                var pres2  = {pres2 : homePres2.length !== 0 ? homePres2: []};
+                res.render("index", {description : description, images : images, presentations : pres2});
+              }
+            })
+          }
+        });
       }
     });
   });
@@ -28,7 +43,22 @@ module.exports = function (app, passport){
       if(err){
         console.log(err);
       } else {
-        res.render("home", {description : homeDescription[homeDescription.length-1].presentation});
+        HomeImage.find().exec(function(err,homeImage){
+          if(err){
+            console.log(err);
+          } else {
+            HomePres2.find().exec(function(err,homePres2){
+              if(err){
+                console.log(err);
+              } else {
+                var description = {presentation : homeDescription.length !== 0 ? homeDescription[homeDescription.length-1].presentation : null};
+                var images = {urls : homeImage.length !== 0 ? homeImage : []};
+                var pres2  = {pres2 : homePres2.length !== 0 ? homePres2: []};
+                res.render("home", {description : description, images : images, presentations : pres2});
+              }
+            })
+          }
+        });
       }
     });
   });
@@ -50,6 +80,8 @@ module.exports = function (app, passport){
   app.get('/reservation',function(req,res){
     res.render("reservation");
   });
+
+  /*Admin*/
   app.get('/admin/connexion',function(req,res){
     res.render("admin/connexion");
   });
@@ -87,6 +119,18 @@ module.exports = function (app, passport){
 
   app.get("/admin/home/add/image", isAuthenticated,function(req,res){
     res.render("admin/addImageHome");
+  });
+  app.get("/admin/home/image/delete/:imageId",isAuthenticated,function(req,res){
+    var imageId = req.params.imageId;
+    HomeImage.findOneAndRemove({_id:imageId}).exec(function(err,image){
+      if(err){
+        console.log(err);
+      } else {
+        console.log(image);
+        fs.unlink(process.env.PWD+'/public/'+image.url);
+        res.redirect('/admin/home');
+      }
+    })
   });
   app.post("/admin/home/add/image", isAuthenticated,function(req,res){
     var sampleFile;
