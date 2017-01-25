@@ -75,9 +75,6 @@ module.exports = function (app, passport){
             res.render("admin/home", {description : description, images : images});
           }
         });
-
-
-
       }
     });
   });
