@@ -64,6 +64,7 @@ module.exports = function (app, passport){
       if(err){
         console.log(err);
       } else {
+
         HomeImage.find().exec(function(err,homeImage){
           if(err){
             console.log(err);
@@ -76,9 +77,11 @@ module.exports = function (app, passport){
         });
 
 
+
       }
     });
   });
+
   app.get("/admin/home/add/image", isAuthenticated,function(req,res){
     res.render("admin/addImageHome");
   });
@@ -108,6 +111,26 @@ module.exports = function (app, passport){
     // Use the mv() method to place the file somewhere on your server
 
   });
+//-----------------------------------------------------------------------------------------------
+  app.get("/admin/home/add/pres2",isAuthenticated,function(req,res){
+    res.render("admin/addPres2Home");
+  });
+  app.post("/admin/home/add/pres2",isAuthenticated,function(req,res){
+    HomePres2.create({
+      select : req.body.sel1,
+      titre : req.body.title,
+      description : req.body.content
+    }, function(err, homePres){
+      if(err){
+        console.log(err);
+        res.render("admin/addPres2Home");
+      } else {
+        console.log(homePres);
+        res.render('admin/home');
+      }
+    });
+  });
+//---------------------------------------------------------------------------------------------------
   app.get("/admin/home/add/pres",isAuthenticated,function(req,res){
     res.render("admin/addPresHome");
   });
