@@ -65,7 +65,7 @@ module.exports = function (app, passport){
         console.log(err);
       } else {
 
-        description = {description : homeDescription[homeDescription.length-1].presentation !== undefined ? homeDescription[homeDescription.length-1].presentation : null};
+        description = {description : homeDescription[homeDescription.length-1].presentation !== "undefined" ? homeDescription[homeDescription.length-1].presentation : null};
 
         res.render("admin/home", description);
 
