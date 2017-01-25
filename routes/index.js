@@ -64,7 +64,7 @@ module.exports = function (app, passport){
       if(err){
         console.log(err);
       } else {
-        console.log(homeDescription[homeDescription.length-1].presentation);
+        
         res.render("admin/home", {description : homeDescription[homeDescription.length-1].presentation});
       }
     });
