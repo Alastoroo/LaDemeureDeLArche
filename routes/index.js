@@ -18,7 +18,8 @@ module.exports = function (app, passport){
       if(err){
         console.log(err);
       } else {
-        res.render("index", {description : homeDescription[homeDescription.length-1].presentation});
+        var description = {presentation : homeDescription.length !== 0 ? homeDescription[homeDescription.length-1].presentation : null};
+        res.render("index", {description : description});
       }
     });
   });
@@ -104,9 +105,7 @@ module.exports = function (app, passport){
           }
         });
       }
-    })
-    // Use the mv() method to place the file somewhere on your server
-
+    });
   });
 //-----------------------------------------------------------------------------------------------
   app.get("/admin/home/add/pres2",isAuthenticated,function(req,res){
