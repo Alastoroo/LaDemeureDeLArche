@@ -64,8 +64,18 @@ module.exports = function (app, passport){
       if(err){
         console.log(err);
       } else {
-        description = {description : homeDescription.length !== 0 ? homeDescription[homeDescription.length-1].presentation : null};
-        res.render("admin/home", description);
+        HomeImage.find().exec(function(err,homeImage){
+          if(err){
+            console.log(err);
+          } else {
+            console.log(homeImage);
+            var description = {presentation : homeDescription.length !== 0 ? homeDescription[homeDescription.length-1].presentation : null};
+            var images = {urls : homeImage.length !== 0 ? homeImage : null};
+            res.render("admin/home", {description : description, images : images});
+          }
+        });
+
+
       }
     });
   });
@@ -73,6 +83,29 @@ module.exports = function (app, passport){
     res.render("admin/addImageHome");
   });
   app.post("/admin/home/add/image", isAuthenticated,function(req,res){
+    var sampleFile;
+    if (!req.files) {
+      res.send('No files were uploaded.');
+      return;
+    }
+    // The name of the input field (i.e. "sampleFile") is used to retrieve the uploaded file
+    sampleFile = req.files.sampleFile;
+    HomeImage.create({url : 'img/carousel/'+sampleFile.name}, function(err,image){
+      if(err){
+        console.log(err);
+      } else {
+        sampleFile.mv(process.env.PWD+'/public/img/carousel/'+sampleFile.name, function(err) {
+          if (err) {
+            console.log(err);
+            res.redirect('/admin/home/add/image');
+          }
+          else {
+            res.redirect('/admin/home');
+          }
+        });
+      }
+    })
+    // Use the mv() method to place the file somewhere on your server
 
   });
   app.get("/admin/home/add/pres",isAuthenticated,function(req,res){
@@ -88,7 +121,7 @@ module.exports = function (app, passport){
           res.render('admin/addPresHome');
         } else {
           console.log(homeDescription);
-          res.render('admin/home');
+          res.redirect('/admin/home');
         }
       });
   });

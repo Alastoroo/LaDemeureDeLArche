@@ -9,6 +9,7 @@ var session       = require('express-session');
 var express       = require('express');
 var path          = require('path');
 var bodyParser    = require('body-parser');
+var fileUpload    = require('express-fileupload');
 
 var app = express();
 
@@ -22,14 +23,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(morgan('dev')); // log every request to the console
 app.use(cookieParser()); // read cookies (needed for auth)
-app.use(bodyParser()); // get information from html forms
-// app.use(require('express-session')({
-//   secret: 's3cr3t14d3m3ur3d314rc|-|3',
-//   resave: false,
-//   saveUnitialized: false,
-//
-// }));
-
+app.use(bodyParser());// get information from html forms
+app.use(fileUpload()); 
 
 //PASSPORT ===================================================================
 // set up our express application

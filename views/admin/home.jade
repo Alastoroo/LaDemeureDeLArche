@@ -19,22 +19,14 @@ html
             table.table.table-condensed.table-bordered
               thead
                 tr
-                  th Nom
                   th Lien
                   th Actions
               tbody
-                tr
-                  td John
-                  td Doe
-                  td john@example.com
-                tr
-                  td Mary
-                  td Moe
-                  td mary@example.com
-                tr
-                  td July
-                  td Dooley
-                  td july@example.com
+                each image, i in images.urls
+                  tr
+                    td= image.url
+                    td 
+                      a.btn.brn-warning(href='/admin/home/image/delete/' + image._id) Supprimer
       .row
         .panel.panel-primary
           .panel-heading Présentation 
@@ -63,5 +55,5 @@ html
         .panel.panel-primary
           .panel-heading Présentation Générale
             a.btn.btn-success.pull-right(href="/admin/home/add/pres" role="button") Ajouter Présentation
-          .panel-body!= description
+          .panel-body!= description.presentation
         
