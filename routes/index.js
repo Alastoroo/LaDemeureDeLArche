@@ -120,10 +120,10 @@ module.exports = function (app, passport){
     }, function(err, homePres){
       if(err){
         console.log(err);
-        res.render("admin/addPres2Home");
+        res.redirect("/admin/addPres2Home");
       } else {
         console.log(homePres);
-        res.render('admin/home');
+        res.redirect('/admin/home');
       }
     });
   });
