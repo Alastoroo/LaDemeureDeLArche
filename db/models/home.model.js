@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 
 var homePres2Schema = new mongoose.Schema({
+  select : Number,
   title : String,
   description : String
 });

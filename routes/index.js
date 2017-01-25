@@ -65,19 +65,40 @@ module.exports = function (app, passport){
         console.log(err);
       } else {
 
-        description = {description : homeDescription[homeDescription.length-1].presentation !== "undefined" ? homeDescription[homeDescription.length-1].presentation : null};
+        description = {description : homeDescription.length !== 0 ? homeDescription[homeDescription.length-1].presentation : null};
 
         res.render("admin/home", description);
 
       }
     });
   });
+
   app.get("/admin/home/add/image", isAuthenticated,function(req,res){
     res.render("admin/addImageHome");
   });
   app.post("/admin/home/add/image", isAuthenticated,function(req,res){
 
   });
+//-----------------------------------------------------------------------------------------------
+  app.get("/admin/home/add/pres2",isAuthenticated,function(req,res){
+    res.render("admin/addPres2Home");
+  });
+  app.post("/admin/home/add/pres2",isAuthenticated,function(req,res){
+    HomePres2.create({
+      select : req.body.sel1,
+      titre : req.body.title,
+      description : req.body.content
+    }, function(err, homePres){
+      if(err){
+        console.log(err);
+        res.render("admin/addPres2Home");
+      } else {
+        console.log(homePres);
+        res.render('admin/home');
+      }
+    });
+  });
+//---------------------------------------------------------------------------------------------------
   app.get("/admin/home/add/pres",isAuthenticated,function(req,res){
     res.render("admin/addPresHome");
   });
