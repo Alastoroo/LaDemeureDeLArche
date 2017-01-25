@@ -70,7 +70,7 @@ module.exports = function (app, passport){
           } else {
             console.log(homeImage);
             var description = {presentation : homeDescription.length !== 0 ? homeDescription[homeDescription.length-1].presentation : null};
-            var images = {urls : homeImage.length !== 0 ? homeImage : null};
+            var images = {urls : homeImage.length !== 0 ? homeImage : []};
             res.render("admin/home", {description : description, images : images});
           }
         });
