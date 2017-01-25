@@ -65,15 +65,20 @@ module.exports = function (app, passport){
       if(err){
         console.log(err);
       } else {
-
         HomeImage.find().exec(function(err,homeImage){
           if(err){
             console.log(err);
           } else {
-            console.log(homeImage);
-            var description = {presentation : homeDescription.length !== 0 ? homeDescription[homeDescription.length-1].presentation : null};
-            var images = {urls : homeImage.length !== 0 ? homeImage : []};
-            res.render("admin/home", {description : description, images : images});
+            HomePres2.find().exec(function(err,homePres2){
+              if(err){
+                console.log(err);
+              } else {
+                var description = {presentation : homeDescription.length !== 0 ? homeDescription[homeDescription.length-1].presentation : null};
+                var images = {urls : homeImage.length !== 0 ? homeImage : []};
+                var pres2  = {pres2 : homePres2.length !== 0 ? homePres2: []};
+                res.render("admin/home", {description : description, images : images, presentations : pres2});
+              }
+            })
           }
         });
       }
@@ -113,8 +118,8 @@ module.exports = function (app, passport){
   });
   app.post("/admin/home/add/pres2",isAuthenticated,function(req,res){
     HomePres2.create({
-      select : req.body.sel1,
-      titre : req.body.title,
+      select : parseInt(req.body.sel1),
+      title : req.body.title,
       description : req.body.content
     }, function(err, homePres){
       if(err){

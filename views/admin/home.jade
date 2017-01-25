@@ -35,22 +35,17 @@ html
             table.table.table-condensed.table-bordered
               thead
                 tr
+                  th Index
                   th Titre
-                  th Description
                   th Action
               tbody
-                tr
-                  td John
-                  td Doe
-                  td john@example.com
-                tr
-                  td Mary
-                  td Moe
-                  td mary@example.com
-                tr
-                  td July
-                  td Dooley
-                  td july@example.com
+                each pres in presentations.pres2
+                  tr
+                    td= pres.select
+                    td= pres.title
+                    td 
+                      a.btn.btn-primary(href='/admin/home/pres2/update/'+pres._id) Edition
+                      a.btn.btn-warning(href='/admin/home/pres2/delete/'+pres._id) Supprimer
       .row
         .panel.panel-primary
           .panel-heading Présentation Générale
