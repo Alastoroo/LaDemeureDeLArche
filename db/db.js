@@ -45,3 +45,4 @@ process.on('SIGTERM', function() {
 require('./models/users.model.js');
 require('./models/livre.model.js');
 require('./models/home.model.js');
+require('./models/chambre.model.js');

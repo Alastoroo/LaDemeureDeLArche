@@ -12,18 +12,28 @@ html
   body
     .container
       .row
+        a.btn.btn-primary(href='/admin', role="button") Retour
         .panel.panel-primary
-          .panel-heading Image 
+          .panel-heading Chambres 
             a.btn.btn-success.pull-right(href="/admin/chambre/add/" role="button") Ajouter Chambre
           .panel-body
             table.table.table-condensed.table-bordered
               thead
                 tr
-                  th Lien
+                  th Titre
+                  th Tarifs
                   th Actions
               tbody
-                each 
+                each chambre, i in chambres
                   tr
-                    td= ""
-                    td 
-                      a.btn.btn-warning(href='/admin/chambre/delete/' + "") Supprimer
+                    td!= chambre.title
+                    td
+                      each tarif, j in chambre.tarifs
+                        br
+                        span!= tarif.nbPersonne
+                        span!= tarif.description
+                        span #{tarif.prix} €
+                    td
+                      a.btn.btn-primary(href='/admin/chambre/'+chambre._id+'/add/tarif') Ajouter Tarif
+                      a.btn.btn-success(href='/admin/chambre/update/'+ chambre._id) Modifier Chambre
+                      a.btn.btn-warning(href='/admin/chambre/delete/' + chambre._id) Supprimer
