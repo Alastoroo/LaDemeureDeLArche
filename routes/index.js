@@ -47,7 +47,14 @@ module.exports = function (app, passport){
     res.render("demeure");
   });
   app.get('/sejours',function(req,res){
-    res.render("sejours");
+    Chambre.find().exec(function(err,chambres){
+      if(err){
+        console.log(err);
+      } else {
+        console.log(chambres[0].tarifs);
+        res.render("sejours", {chambres : chambres});
+      }
+    })
   });
   app.get('/tourisme',function(req,res){
     res.render("tourisme");
