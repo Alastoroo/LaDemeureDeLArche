@@ -25,10 +25,10 @@ html
                 th Url
                 th Actions
             tbody
-              each alentour, i in alentours.content
+              each alentour, i in alentours
                 tr
                   td!= alentour.title
                   td!= alentour.description
                   td= alentour.urlImage
                   td 
-                    a.btn.btn-warning(href='/admin/alentours/delete/' + alentour_id) Supprimer    
+                    a.btn.btn-warning(href='/admin/alentours/delete/' + alentour._id) Supprimer    
