@@ -7,6 +7,8 @@ var HomeDescription = mongoose.model("homeDescription");
 var HomePres2 = mongoose.model("homePres2");
 var HomeImage = mongoose.model("homeImage");
 var Chambre = mongoose.model("Chambre");
+var DemeureDescription = mongoose.model("DemeureDescription");
+var DemeureImage = mongoose.model("DemeureImage");
 
 var isAuthenticated = function (req, res, next) {
   if (req.isAuthenticated())
@@ -231,7 +233,6 @@ module.exports = function (app, passport){
       }
     });
   });
-
   /*FIN CHAMBRE */
 
   /*DEBUT HOME*/
@@ -381,4 +382,78 @@ module.exports = function (app, passport){
     failureFlash : true
   }));
   /*FIN HOME*/
+
+  /*DEBUT DEMEURE*/
+  app.get('/admin/demeure',isAuthenticated,function(req,res){
+    DemeureDescription.find().exec(function(err,demeureDescription){
+      if(err){
+        console.log(err);
+      } else {
+        DemeureImage.find().exec(function(err,demeureImage){
+          if(err){
+            console.log(err);
+          } else{
+            var description = {presentation : demeureDescription.length !== 0 ? demeureDescription[demeureDescription.length-1].presentation : null};
+            var images = {urls : demeureImage.length !== 0 ? demeureImage : []};
+            res.render('admin/demeure', {description : description, images : images});
+          }
+        })
+
+      }
+    });
+  });
+  app.get('/admin/demeure/add/description',isAuthenticated,function(req,res){
+    res.render('admin/addDemeureDescription');
+  });
+  app.post('/admin/demeure/add/description',isAuthenticated,function(req,res){
+    DemeureDescription.create({
+      presentation  : req.body.content
+    },function(err,DemeureDescription){
+      if(err){
+        console.log(err);
+      } else {
+        res.redirect('/admin/demeure');
+      }
+    });
+  });
+  app.get("/admin/demeure/add/image", isAuthenticated,function(req,res){
+    res.render("admin/addImageDemeure");
+  });
+  app.get("/admin/demeure/image/delete/:imageId",isAuthenticated,function(req,res){
+    var imageId = req.params.imageId;
+    HomeImage.findOneAndRemove({_id:imageId}).exec(function(err,image){
+      if(err){
+        console.log(err);
+      } else {
+        console.log(image);
+        fs.unlink(process.env.PWD+'/public/'+image.url);
+        res.redirect('/admin/demeure');
+      }
+    })
+  });
+  app.post("/admin/demeure/add/image", isAuthenticated,function(req,res){
+    var sampleFile;
+    if (!req.files) {
+      res.send('No files were uploaded.');
+      return;
+    }
+    // The name of the input field (i.e. "sampleFile") is used to retrieve the uploaded file
+    sampleFile = req.files.sampleFile;
+    DemeureImage.create({url : 'img/demeureApropos/'+sampleFile.name}, function(err,image){
+      if(err){
+        console.log(err);
+      } else {
+        sampleFile.mv(process.env.PWD+'/public/img/demeureApropos/'+sampleFile.name, function(err) {
+          if (err) {
+            console.log(err);
+            res.redirect('/admin/demeure/add/image');
+          }
+          else {
+            res.redirect('/admin/demeure');
+          }
+        });
+      }
+    });
+  });
+  /*FIN DEMEURE*/
 }
