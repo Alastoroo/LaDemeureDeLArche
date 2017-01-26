@@ -17,18 +17,18 @@ html
           .panel-heading Alentours
             a.btn.btn-success.pull-right(href="/admin/alentours/add" role="button") Ajouter Alentours
           .panel-body
-          table.table.table-condensed.table-bordered
-            thead
-              tr
-                th Title
-                th Description
-                th Url
-                th Actions
-            tbody
-              each alentour, i in alentours
+            table.table.table-condensed.table-bordered
+              thead
                 tr
-                  td!= alentour.title
-                  td!= alentour.description
-                  td= alentour.urlImage
-                  td 
-                    a.btn.btn-warning(href='/admin/alentours/delete/' + alentour._id) Supprimer    
+                  th Title
+                  th Description
+                  th Url
+                  th Actions
+              tbody
+                each alentour, i in alentours
+                  tr
+                    td!= alentour.title
+                    td!= alentour.description
+                    td= alentour.urlImage
+                    td 
+                      a.btn.btn-warning(href='/admin/alentours/delete/' + alentour._id) Supprimer    
