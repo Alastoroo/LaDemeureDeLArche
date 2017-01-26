@@ -153,8 +153,8 @@ label {
   transition-duration: 0.2s;
   transition-property: transform;
 }
-textarea, input {
-  position: relative;
+.entry {
+	position: relative;
   float: left;
   border: none;
   border-bottom: 1px solid #9d2501!important;
@@ -174,7 +174,7 @@ input {
 input:focus + label {
   transform: translateY(-40px) translateX(-10px) scale(0.7);
 }
-#section-menu-contact input[type="submit"]{
+#section-menu-contact .entry[type="submit"]{
   position: relative;
   width: 60%;
   border: 2px solid;
