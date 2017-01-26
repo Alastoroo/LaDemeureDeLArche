@@ -47,3 +47,4 @@ require('./models/livre.model.js');
 require('./models/home.model.js');
 require('./models/chambre.model.js');
 require('./models/demeure.model.js');
+require('./models/alentours.model.js');

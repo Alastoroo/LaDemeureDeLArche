@@ -32,9 +32,24 @@ html
                   tr
                     td= image.url
                     td 
-                      a.btn.btn-warning(href='/admin/home/image/delete/' + image._id) Supprimer    
+                      a.btn.btn-warning(href='/admin/demeure/image/delete/' + image._id) Supprimer    
       .row
         .panel.panel-primary
           .panel-heading Equipements et loirs
             a.btn.btn-success.pull-right(href="/admin/demeure/add/equipement" role="button") Ajouter Equipement
           .panel-body
+          table.table.table-condensed.table-bordered
+            thead
+              tr
+                th Title
+                th Description
+                th Url
+                th Actions
+            tbody
+              each equip, i in equipements.equip
+                tr
+                  td!= equip.title
+                  td!= equip.description
+                  td= equip.urlImage
+                  td 
+                    a.btn.btn-warning(href='/admin/demeure/equipement/delete/' + equip._id) Supprimer    

@@ -9,6 +9,8 @@ var HomeImage = mongoose.model("homeImage");
 var Chambre = mongoose.model("Chambre");
 var DemeureDescription = mongoose.model("DemeureDescription");
 var DemeureImage = mongoose.model("DemeureImage");
+var DemeureEquipement = mongoose.model("DemeureEquipement");
+var Alentours = mongoose.model("Alentours");
 
 var isAuthenticated = function (req, res, next) {
   if (req.isAuthenticated())
@@ -383,6 +385,22 @@ module.exports = function (app, passport){
   }));
   /*FIN HOME*/
 
+  /*DEBUT ALENTOURS*/
+  app.get("/admin/alentours", isAuthenticated, function(req,res){
+    Alentours.find().exec(function(err,alentours){
+      if(err){
+        console.log(err);
+      } else {
+        var alentours = alentours.length !== 0 ? alentours : [];
+        res.render("admin/alentours", {alentours : alentours});
+      }
+    });
+  });
+  app.get("/admin/alentours/add", isAuthenticated, function(req,res){
+    res.render("admin/addAlentours")
+  });
+
+  /*FIN ALENTOURS*/
   /*DEBUT DEMEURE*/
   app.get('/admin/demeure',isAuthenticated,function(req,res){
     DemeureDescription.find().exec(function(err,demeureDescription){
@@ -393,12 +411,18 @@ module.exports = function (app, passport){
           if(err){
             console.log(err);
           } else{
-            var description = {presentation : demeureDescription.length !== 0 ? demeureDescription[demeureDescription.length-1].presentation : null};
-            var images = {urls : demeureImage.length !== 0 ? demeureImage : []};
-            res.render('admin/demeure', {description : description, images : images});
+            DemeureEquipement.find().exec(function(err,demeureEquipement){
+              if(err){
+                console.log(err);
+              } else {
+                var description = {presentation : demeureDescription.length !== 0 ? demeureDescription[demeureDescription.length-1].presentation : null};
+                var images = {urls : demeureImage.length !== 0 ? demeureImage : []};
+                var equipements = {equip : demeureEquipement !== 0 ? demeureEquipement : []}
+                res.render('admin/demeure', {description : description, images : images, equipements : equipements});
+              }
+            });
           }
-        })
-
+        });
       }
     });
   });
@@ -419,9 +443,36 @@ module.exports = function (app, passport){
   app.get("/admin/demeure/add/image", isAuthenticated,function(req,res){
     res.render("admin/addImageDemeure");
   });
+  app.get("/admin/demeure/add/equipement", isAuthenticated,function(req,res){
+    res.render("admin/addEquipementDemeure");
+  });
+  app.post("/admin/demeure/add/equipement", isAuthenticated,function(req,res){
+    var sampleFile;
+    if (!req.files) {
+      res.send('No files were uploaded.');
+      return;
+    }
+    // The name of the input field (i.e. "sampleFile") is used to retrieve the uploaded file
+    sampleFile = req.files.sampleFile;
+    DemeureEquipement.create({title : req.body.title, description: req.body.content ,urlImage : 'img/demeureApropos/'+sampleFile.name}, function(err,image){
+      if(err){
+        console.log(err);
+      } else {
+        sampleFile.mv(process.env.PWD+'/public/img/demeureApropos/'+sampleFile.name, function(err) {
+          if (err) {
+            console.log(err);
+            res.redirect('/admin/demeure/add/image');
+          }
+          else {
+            res.redirect('/admin/demeure');
+          }
+        });
+      }
+    });
+  });
   app.get("/admin/demeure/image/delete/:imageId",isAuthenticated,function(req,res){
     var imageId = req.params.imageId;
-    HomeImage.findOneAndRemove({_id:imageId}).exec(function(err,image){
+    DemeureImage.findOneAndRemove({_id:imageId}).exec(function(err,image){
       if(err){
         console.log(err);
       } else {
