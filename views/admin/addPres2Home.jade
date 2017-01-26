@@ -15,29 +15,30 @@ html
   body
     .container
       .row
-        a.btn.btn-primary(href='/admin/home' role="button") Retour
+        a.btn.btn-warning(href='/admin/home' role="button") Retour
         .panel.panel-primary
           .panel-heading Ajout Description
           .panel-body
             form#summernoteForm.form-horizontal(method='post')
-              .form-group
-                label(for='sel1') Sélectionner la sous-présentation à changer:
-                select#sel1.form-control(name="sel1")
-                  option 1
-                  option 2
-                  option 3
-                  option 4
-              .form-group
-                label.col-xs-3.control-label Titre sous-présentation
-                .col-xs-5
-                  input.form-control(type='text', name='title')
-              .form-group
-                label.col-xs-3.control-label Contenue sous-présentation
-                .col-xs-9
-                  textarea.form-control(name='content', style='height: 400px;')
-              .form-group
-                .col-xs-9.col-xs-offset-3
-                  button.btn.btn-default(type='submit') Submit
+                .form-group
+                  label.control-label.col-xs-3(for='sel1') Sélectionner la sous-présentation à changer:
+                  .col-xs-5
+                    select#sel1.form-control(name="sel1")
+                      option 1
+                      option 2
+                      option 3
+                      option 4
+                .form-group
+                  label.col-xs-3.control-label Titre sous-présentation
+                  .col-xs-5
+                    input.form-control(type='text', name='title')
+                .form-group
+                  label.col-xs-3.control-label Contenue sous-présentation
+                  .col-xs-9
+                    textarea.form-control(name='content', style='height: 400px;')
+                .form-group
+                  .col-xs-9.col-xs-offset-3
+                    button.btn.btn-success(type='submit') Submit
 script.
   $(document).ready(function() {
   $('#summernoteForm').find('[name="content"]').summernote({

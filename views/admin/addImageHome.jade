@@ -15,10 +15,10 @@ html
   body
     .container
       .row
-        a.btn.btn-primary(href='/admin/home' role="button") Retour
+        a.btn.btn-warning(href='/admin/home' role="button") Retour
         .panel.panel-primary
           .panel-heading Ajout Image
           .panel-body
             form#uploadForm.form-horizontal(ref='uploadForm', action='/admin/home/add/image', method='post', enctype='multipart/form-data')
               input.form-control(type='file', name='sampleFile')
-              button.btn.btn-primary(type='submit') Upload!
+              button.btn.btn-success(type='submit') Upload!
