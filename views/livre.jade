@@ -1,14 +1,7 @@
-doctype html
-
-html(lang='en')
-    head
-        include ./head
-livre
-    |     
-    title Livre d'or
-    |   
-    body
-        include ./header
+head
+  include ./head
+  include ./header
+  body(style="margin-top: 350px")
     .container
         h2#livre Livre d'or
         form(action='/envoi', method='post')

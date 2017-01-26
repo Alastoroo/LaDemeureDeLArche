@@ -60,7 +60,7 @@ contact
                   br
                   | Commerces et restaurants: &agrave; 2 km.
           |         
-          #section-menu-contact.section.col-md-6
+          #section-menu-contact.section.col-xs.6.col-sm-6.col-md-6.col-lg-6
             h1.section-titre2 Formulaire
             |         
             |        
@@ -70,6 +70,7 @@ contact
                 form#contact(action='#', method='POST')
                   #field-name.transform-field.row
                     input.entry#nom(name='nom', type='text', required='')
+
                     |                       
                     label
                       | Nom
@@ -98,7 +99,7 @@ contact
                     label
                       | Message
                   #field-submit.row.transform-field
-                    input(type='submit', value='Envoyer')
+                    input(class="inputContact",type='submit', value='Envoyer')
               // end of #form_contact
         br
         br
