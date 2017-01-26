@@ -275,7 +275,7 @@ module.exports = function (app, passport){
         fs.unlink(process.env.PWD+'/public/'+image.url);
         res.redirect('/admin/home');
       }
-    })
+    });
   });
   app.post("/admin/home/add/image", isAuthenticated,function(req,res){
     var sampleFile;
@@ -398,6 +398,47 @@ module.exports = function (app, passport){
   });
   app.get("/admin/alentours/add", isAuthenticated, function(req,res){
     res.render("admin/addAlentours")
+  });
+  app.get("/admin/alentours/delete/:alentoursId", isAuthenticated, function(req,res){
+    var alentoursId = req.params.alentoursId;
+    Alentours.findOneAndRemove({_id:alentoursId}).exec(function(err,alentours){
+      if(err){
+        console.log(err);
+      } else {
+        console.log(alentours);
+        fs.unlink(process.env.PWD+'/public/'+alentours.urlImage);
+        res.redirect('/admin/alentours');
+      }
+    });
+    res.redirect("/admin/alentours")
+  });
+  app.post("/admin/alentours/add", isAuthenticated, function(req,res){
+    var sampleFile;
+    if (!req.files) {
+      res.send('No files were uploaded.');
+      return;
+    }
+    // The name of the input field (i.e. "sampleFile") is used to retrieve the uploaded file
+    sampleFile = req.files.sampleFile;
+    Alentours.create({
+      title : req.body.title,
+      description : req.body.content,
+      urlImage : 'img/alentours/'+sampleFile.name
+    }, function(err,alentour){
+      if(err){
+        console.log(err);
+      } else {
+        sampleFile.mv(process.env.PWD+'/public/img/alentours/'+sampleFile.name, function(err) {
+          if (err) {
+            console.log(err);
+            res.redirect('/admin/alentours/add');
+          }
+          else {
+            res.redirect('/admin/alentours');
+          }
+        });
+      }
+    });
   });
 
   /*FIN ALENTOURS*/
