@@ -17,37 +17,30 @@ html
       .row
         a.btn.btn-primary(href='/admin/home' role="button") Retour
         .panel.panel-primary
-          .panel-heading Ajout Chambre
+          .panel-heading Modifier Chambre
           .panel-body
-            form#summernoteForm.form-horizontal(action="/admin/chambre/add" method='post' ,encType="multipart/form-data")
+            form#summernoteForm.form-horizontal(action="/admin/chambre/update/"+chambre._id method='post' ,encType="multipart/form-data")
               .form-group
                 label.col-xs-3.control-label(for='sel1') Sélectionner le thème (pour les dossiers):
                 .col-xs-5
                   select#sel1.form-control(name="sel1")
-                    option Zen
-                    option Renoir
-                    option Romance
-                    option Azur
-                    option Appartement
+                    option(selected=chambre.theme == "Zen") Zen
+                    option(selected=chambre.theme == "Renoir") Renoir
+                    option(selected=chambre.theme == "Romance") Romance
+                    option(selected=chambre.theme == "Azur") Azur
+                    option(selected=chambre.theme == "Appartement") Appartement
               .form-group
                 label.col-xs-3.control-label Titre Chambre
                 .col-xs-5
-                  input.form-control(type='text', name='title')
+                  input.form-control(type='text', name='title' value='#{chambre.title}')
               .form-group
                 label.col-xs-3.control-label Description
                 .col-xs-9
-                  textarea.form-control(name='description', style='height: 400px;')
+                  textarea.form-control(name='description', style='height: 400px;')!= chambre.description
               .form-group
                 label.col-xs-3.control-label Equipements
                 .col-xs-9
-                  textarea.form-control(name='equipements', style='height: 400px;')
-              .form-group
-                label.col-xs-3.control-label Images
-                .col-xs-9
-                  input.form-control(type='file', name='images1')
-                  input.form-control(type='file', name='images2')
-                  input.form-control(type='file', name='images3')
-                  input.form-control(type='file', name='images4')
+                  textarea.form-control(name='equipements', style='height: 400px;')!= chambre.equipement
               .form-group
                 .col-xs-9.col-xs-offset-3
                   button.btn.btn-default(type='submit') Valider

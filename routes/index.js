@@ -6,6 +6,9 @@ var fs = require('fs');
 var HomeDescription = mongoose.model("homeDescription");
 var HomePres2 = mongoose.model("homePres2");
 var HomeImage = mongoose.model("homeImage");
+var Chambre = mongoose.model("Chambre");
+var DemeureDescription = mongoose.model("DemeureDescription");
+var DemeureImage = mongoose.model("DemeureImage");
 
 var isAuthenticated = function (req, res, next) {
   if (req.isAuthenticated())
@@ -68,6 +71,171 @@ module.exports = function (app, passport){
     req.logout();
     res.redirect('/admin');
   });
+  /* CHAMBRE */
+  app.get("/admin/chambre", isAuthenticated,function(req,res){
+    Chambre.find().exec(function(err,chambres){
+      if(err){
+        console.log(err);
+      } else {
+        res.render("admin/chambres", {chambres : chambres});
+      }
+    });
+  });
+  app.get("/admin/chambre/add", isAuthenticated,function(req,res){
+    res.render("admin/addChambre");
+  });
+  app.post("/admin/chambre/:chambreId/add/tarif", isAuthenticated,function(req,res){
+    var chambreId = req.params.chambreId;
+    Chambre.findOne({_id : chambreId}).exec(function(err, chambre){
+      if(err){
+        console.log(err);
+      } else {
+        tarif = {
+          nbPersonne : req.body.sel1,
+          description : req.body.description,
+          prix : req.body.tarif,
+          descriptionPrix : req.body.destarif
+        }
+        chambre.title = chambre.title;
+        chambre.description = chambre.description;
+        chambre.equipement = chambre.equipement;
+        chambre.images = chambre.images;
+        chambre.tarifs.push(tarif);
+        chambre.save(function(err,chambreUpdated){
+          if(err){
+            console.log(err);
+          } else {
+            res.redirect('/admin/chambre');
+          }
+        });
+      }
+    });
+  });
+  app.get("/admin/chambre/:chambreId/add/tarif", isAuthenticated,function(req,res){
+    var chambreId = req.params.chambreId;
+    Chambre.findOne({_id : chambreId}).exec(function(err, chambre){
+      if(err){
+        console.log(err);
+      } else {
+        res.render("admin/addTarif", {chambre: chambre});
+      }
+    });
+  });
+  app.get("/admin/chambre/update/:chambreId", isAuthenticated,function(req,res){
+    var chambreId = req.params.chambreId;
+    Chambre.findOne({_id:chambreId}).exec(function(err,chambre){
+      if(err){
+        console.log(err);
+      } else {
+        console.log(chambre);
+        res.render('admin/editChambre',{chambre: chambre});
+      }
+    })
+  });
+  app.post("/admin/chambre/update/:chambreId", isAuthenticated,function(req,res){
+    var chambreId = req.params.chambreId;
+    Chambre.findOne({_id:chambreId}).exec(function(err,chambre){
+      if(err){
+        console.log(err);
+      } else {
+        console.log(chambre);
+        chambre.theme = req.body.sel1;
+        chambre.title = req.body.title;
+        chambre.description = req.body.description;
+        chambre.equipement = req.body.equipements;
+        chambre.save(function(err,chambreUpdated){
+          if(err){
+            console.log(err);
+          } else {
+            res.redirect('/admin/chambre');
+          }
+        });
+
+      }
+    })
+  });
+  app.get("/admin/chambre/delete/:chambreId", isAuthenticated,function(req,res){
+    var chambreId = req.params.chambreId;
+    Chambre.findOneAndRemove({_id:chambreId}).exec(function(err,chambre){
+      if(err){
+        console.log(err);
+      } else {
+        console.log(chambre);
+        res.redirect('/admin/chambre');
+      }
+    })
+  });
+  app.post("/admin/chambre/add", isAuthenticated,function(req,res){
+    console.log("toto");
+    var images = [];
+    if (!req.files) {
+      res.send('No files were uploaded.');
+      return;
+    }
+    if(req.files.images1){
+      if(req.files.images2){
+        if(req.files.images3){
+           if(req.files.images4){
+             images.push("img/chambres/"+req.body.sel1+"/"+req.files.images1.name);
+             images.push("img/chambres/"+req.body.sel1+"/"+req.files.images2.name);
+             images.push("img/chambres/"+req.body.sel1+"/"+req.files.images3.name);
+             images.push("img/chambres/"+req.body.sel1+"/"+req.files.images4.name);
+           } else {
+             images.push("img/chambres/"+req.body.sel1+"/"+req.files.images1.name);
+             images.push("img/chambres/"+req.body.sel1+"/"+req.files.images2.name);
+             images.push("img/chambres/"+req.body.sel1+"/"+req.files.images3.name);
+           }
+        } else {
+          images.push("img/chambres/"+req.body.sel1+"/"+req.files.images1.name);
+          images.push("img/chambres/"+req.body.sel1+"/"+req.files.images2.name);
+        }
+      } else {
+        images.push("img/chambres/"+req.body.sel1+"/"+req.files.images1.name);
+      }
+    }
+    console.log(images);
+    var image1 = req.files.images1;
+    var image2 = req.files.images2 ? req.files.images2 : null;
+    var image3 = req.files.images3 ? req.files.images3 : null;
+    var image4 = req.files.images4 ? req.files.images4 : null;
+
+    Chambre.create({
+      theme : req.body.sel1,
+      title : req.body.title,
+      description : req.body.description,
+      equipement : req.body.equipements,
+      images : images
+    }, function(err, chambre){
+      if(err){
+        console.log(err);
+      } else {
+        image1.mv(process.env.PWD+'/public/img/chambres/'+req.body.sel1+'/'+image1.name,function(err){
+          if(image2 !== null){
+            image2.mv(process.env.PWD+'/public/img/chambres/'+req.body.sel1+'/'+image2.name, function(err){
+              if(image3 !== null){
+                image3.mv(process.env.PWD+'/public/img/chambres/'+req.body.sel1+'/'+image3.name, function(err){
+                  if(image4 !== null){
+                    image4.mv(process.env.PWD+'/public/img/chambres/'+req.body.sel1+'/'+image4.name, function(err){
+                      res.redirect("/admin/chambre");
+                    });
+                  } else {
+                    res.redirect("/admin/chambre");
+                  }
+                });
+              } else {
+                res.redirect("/admin/chambre");
+              }
+            });
+          } else {
+            res.redirect("/admin/chambre");
+          }
+        });
+      }
+    });
+  });
+  /*FIN CHAMBRE */
+
+  /*DEBUT HOME*/
   app.get("/admin/home", isAuthenticated,function(req,res){
     HomeDescription.find().exec(function(err,homeDescription){
       if(err){
@@ -92,15 +260,8 @@ module.exports = function (app, passport){
       }
     });
   });
-
   app.get("/admin/home/add/image", isAuthenticated,function(req,res){
     res.render("admin/addImageHome");
-  });
-  app.get("/admin/chambre/add", isAuthenticated,function(req,res){
-    res.render("admin/addChambre");
-  });
-  app.post("/admin/chambre/add", isAuthenticated,function(req,res){
-    res.render("admin/addChambre");
   });
   app.get("/admin/home/image/delete/:imageId",isAuthenticated,function(req,res){
     var imageId = req.params.imageId;
@@ -220,5 +381,79 @@ module.exports = function (app, passport){
     failureRedirect : '/admin/connexion',
     failureFlash : true
   }));
+  /*FIN HOME*/
 
+  /*DEBUT DEMEURE*/
+  app.get('/admin/demeure',isAuthenticated,function(req,res){
+    DemeureDescription.find().exec(function(err,demeureDescription){
+      if(err){
+        console.log(err);
+      } else {
+        DemeureImage.find().exec(function(err,demeureImage){
+          if(err){
+            console.log(err);
+          } else{
+            var description = {presentation : demeureDescription.length !== 0 ? demeureDescription[demeureDescription.length-1].presentation : null};
+            var images = {urls : demeureImage.length !== 0 ? demeureImage : []};
+            res.render('admin/demeure', {description : description, images : images});
+          }
+        })
+
+      }
+    });
+  });
+  app.get('/admin/demeure/add/description',isAuthenticated,function(req,res){
+    res.render('admin/addDemeureDescription');
+  });
+  app.post('/admin/demeure/add/description',isAuthenticated,function(req,res){
+    DemeureDescription.create({
+      presentation  : req.body.content
+    },function(err,DemeureDescription){
+      if(err){
+        console.log(err);
+      } else {
+        res.redirect('/admin/demeure');
+      }
+    });
+  });
+  app.get("/admin/demeure/add/image", isAuthenticated,function(req,res){
+    res.render("admin/addImageDemeure");
+  });
+  app.get("/admin/demeure/image/delete/:imageId",isAuthenticated,function(req,res){
+    var imageId = req.params.imageId;
+    HomeImage.findOneAndRemove({_id:imageId}).exec(function(err,image){
+      if(err){
+        console.log(err);
+      } else {
+        console.log(image);
+        fs.unlink(process.env.PWD+'/public/'+image.url);
+        res.redirect('/admin/demeure');
+      }
+    })
+  });
+  app.post("/admin/demeure/add/image", isAuthenticated,function(req,res){
+    var sampleFile;
+    if (!req.files) {
+      res.send('No files were uploaded.');
+      return;
+    }
+    // The name of the input field (i.e. "sampleFile") is used to retrieve the uploaded file
+    sampleFile = req.files.sampleFile;
+    DemeureImage.create({url : 'img/demeureApropos/'+sampleFile.name}, function(err,image){
+      if(err){
+        console.log(err);
+      } else {
+        sampleFile.mv(process.env.PWD+'/public/img/demeureApropos/'+sampleFile.name, function(err) {
+          if (err) {
+            console.log(err);
+            res.redirect('/admin/demeure/add/image');
+          }
+          else {
+            res.redirect('/admin/demeure');
+          }
+        });
+      }
+    });
+  });
+  /*FIN DEMEURE*/
 }

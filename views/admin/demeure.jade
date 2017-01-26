@@ -11,29 +11,30 @@ html
     script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js')
   body
     .container
+      a.btn.btn-primary(href='/admin', role="button") Retour
       .row
-        a.btn.btn-primary(href='/admin', role="button") Retour
         .panel.panel-primary
-          .panel-heading Chambres 
-            a.btn.btn-success.pull-right(href="/admin/chambre/add/" role="button") Ajouter Chambre
+          .panel-heading Présentation Générale
+            a.btn.btn-success.pull-right(href="/admin/demeure/add/description" role="button") Ajouter Présentation
+          .panel-body!= description.presentation
+      .row
+        .panel.panel-primary
+          .panel-heading Image Slider Demeure
+            a.btn.btn-success.pull-right(href="/admin/demeure/add/image" role="button") Ajouter Image
           .panel-body
             table.table.table-condensed.table-bordered
               thead
                 tr
-                  th Titre
-                  th Tarifs
+                  th Lien
                   th Actions
               tbody
-                each chambre, i in chambres
+                each image, i in images.urls
                   tr
-                    td!= chambre.title
-                    td
-                      each tarif, j in chambre.tarifs
-                        br
-                        span!= tarif.nbPersonne
-                        span!= tarif.description
-                        span #{tarif.prix} €
-                    td
-                      a.btn.btn-primary(href='/admin/chambre/'+chambre._id+'/add/tarif') Ajouter Tarif
-                      a.btn.btn-success(href='/admin/chambre/update/'+ chambre._id) Modifier Chambre
-                      a.btn.btn-warning(href='/admin/chambre/delete/' + chambre._id) Supprimer
+                    td= image.url
+                    td 
+                      a.btn.btn-warning(href='/admin/home/image/delete/' + image._id) Supprimer    
+      .row
+        .panel.panel-primary
+          .panel-heading Equipements et loirs
+            a.btn.btn-success.pull-right(href="/admin/demeure/add/equipement" role="button") Ajouter Equipement
+          .panel-body

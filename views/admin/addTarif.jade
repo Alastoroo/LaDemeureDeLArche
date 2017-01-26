@@ -17,48 +17,33 @@ html
       .row
         a.btn.btn-primary(href='/admin/home' role="button") Retour
         .panel.panel-primary
-          .panel-heading Ajout Chambre
+          .panel-heading Ajout Tarif sur chambre
           .panel-body
-            form#summernoteForm.form-horizontal(action="/admin/chambre/add" method='post' ,encType="multipart/form-data")
+            form#summernoteForm.form-horizontal(action="/admin/chambre/"+chambre._id+'/add/tarif' method='post' ,encType="multipart/form-data")
               .form-group
-                label.col-xs-3.control-label(for='sel1') Sélectionner le thème (pour les dossiers):
+                label.col-xs-3.control-label(for='sel1') Sélectionner la nombre de personne:
                 .col-xs-5
                   select#sel1.form-control(name="sel1")
-                    option Zen
-                    option Renoir
-                    option Romance
-                    option Azur
-                    option Appartement
+                    option 2
+                    option 4
               .form-group
-                label.col-xs-3.control-label Titre Chambre
-                .col-xs-5
-                  input.form-control(type='text', name='title')
-              .form-group
-                label.col-xs-3.control-label Description
+                label.col-xs-3.control-label Description chambre
                 .col-xs-9
                   textarea.form-control(name='description', style='height: 400px;')
               .form-group
-                label.col-xs-3.control-label Equipements
+                label.col-xs-3.control-label Tarif
                 .col-xs-9
-                  textarea.form-control(name='equipements', style='height: 400px;')
+                  input.form-control(name='tarif',type="number")
               .form-group
-                label.col-xs-3.control-label Images
+                label.col-xs-3.control-label Description Tarif
                 .col-xs-9
-                  input.form-control(type='file', name='images1')
-                  input.form-control(type='file', name='images2')
-                  input.form-control(type='file', name='images3')
-                  input.form-control(type='file', name='images4')
+                  input.form-control(name='destarif', type="text")
               .form-group
                 .col-xs-9.col-xs-offset-3
                   button.btn.btn-default(type='submit') Valider
 script.
   $(document).ready(function() {
   $('#summernoteForm').find('[name="description"]').summernote({
-  height: 400
-  }).on('summernote.change', function(customEvent, contents, $editable) {
-  $('#summernoteForm').formValidation('revalidateField', 'content');
-  }).end();
-  $('#summernoteForm').find('[name="equipements"]').summernote({
   height: 400
   }).on('summernote.change', function(customEvent, contents, $editable) {
   $('#summernoteForm').formValidation('revalidateField', 'content');
