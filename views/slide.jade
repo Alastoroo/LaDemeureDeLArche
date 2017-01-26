@@ -1,36 +1,19 @@
 slide
 header#myCarousel.carousel.slide
    ol.carousel-indicators
-     li.active(data-target='#myCarousel', data-slide-to='0')
-     |             
-     li(data-target='#myCarousel', data-slide-to='1')
-     |             
-     li(data-target='#myCarousel', data-slide-to='2')
-     |             
-     li(data-target='#myCarousel', data-slide-to='3')
+     each image, i in images.urls
+       li.active(data-target='#myCarousel', data-slide-to=i)
    |         
    .carousel-inner
-     .item.active
-       .fill(style="background-image:url('img/demeure/home.jpg');")
-       |                 
-       .carousel-caption
-     |             
-     .item
-       .fill(style="background-image:url('img/demeure/piscine.jpg');")
-       |                 
-       .carousel-caption
-     |             
-     .item
-       .fill(style="background-image:url('img/demeure/entree.jpg');")
-       |                 
-       .carousel-caption
-     |             
-     .item
-       .fill(style="background-image:url('img/demeure/home4.jpg');")
-       |                 
-       .carousel-caption
-      
-       script.
-            $('.carousel').carousel({
-            interval: 4000 //changes the speed
-            })
+     each image, i in images.urls
+       if i == 0
+         .item.active
+           .fill(style="background-image:url('"+image.url+"');")               
+       else 
+         .item
+           .fill(style="background-image:url('"+image.url+"');")               
+    .carousel-caption
+script.
+  $('.carousel').carousel({
+    interval: 4000 //changes the speed
+  });

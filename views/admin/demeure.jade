@@ -1,0 +1,55 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/lumen/bootstrap.min.css')
+    link(rel='stylesheet', href='https://daneden.github.io/animate.css/animate.min.css')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js')
+  body
+    .container
+      a.btn.btn-primary(href='/admin', role="button") Retour
+      .row
+        .panel.panel-primary
+          .panel-heading Présentation Générale
+            a.btn.btn-success.pull-right(href="/admin/demeure/add/description" role="button") Ajouter Présentation
+          .panel-body!= description.presentation
+      .row
+        .panel.panel-primary
+          .panel-heading Image Slider Demeure
+            a.btn.btn-success.pull-right(href="/admin/demeure/add/image" role="button") Ajouter Image
+          .panel-body
+            table.table.table-condensed.table-bordered
+              thead
+                tr
+                  th Lien
+                  th Actions
+              tbody
+                each image, i in images.urls
+                  tr
+                    td= image.url
+                    td 
+                      a.btn.btn-warning(href='/admin/demeure/image/delete/' + image._id) Supprimer    
+      .row
+        .panel.panel-primary
+          .panel-heading Equipements et loirs
+            a.btn.btn-success.pull-right(href="/admin/demeure/add/equipement" role="button") Ajouter Equipement
+          .panel-body
+          table.table.table-condensed.table-bordered
+            thead
+              tr
+                th Title
+                th Description
+                th Url
+                th Actions
+            tbody
+              each equip, i in equipements.equip
+                tr
+                  td!= equip.title
+                  td!= equip.description
+                  td= equip.urlImage
+                  td 
+                    a.btn.btn-warning(href='/admin/demeure/equipement/delete/' + equip._id) Supprimer    

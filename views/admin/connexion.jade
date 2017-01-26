@@ -1,0 +1,32 @@
+doctype html
+// views/login.ejs
+html
+  head
+    meta(charset='utf-8')
+    title Node Authentification
+    link(rel='stylesheet', href='//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css')
+    // load bootstrap css
+    link(rel='stylesheet', href='//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css')
+    // load fontawesome
+  style.
+    body { padding-top:80px; }
+  body
+    .container
+      .col-sm-6.col-sm-offset-3
+        h1
+          span.fa.fa-sign-in
+          |  Login
+        // show any messages that come back with authentification
+        // LOGIN FORM
+        form(action='/admin/connexion', method='post')
+          .form-group
+            label Email
+            input.form-control(type='text', name='email')
+          .form-group
+            label Password
+            input.form-control(type='password', name='password')
+          button.btn.btn-warning.btn-lg(type='submit') Login
+          hr
+          p
+            | Or go 
+            a(href='/') home
