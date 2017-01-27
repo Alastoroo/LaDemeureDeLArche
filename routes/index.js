@@ -44,8 +44,41 @@ module.exports = function (app, passport){
     });
   });
   app.get('/demeure',function(req,res){
-    res.render("demeure");
+    DemeureDescription.find().exec(function(err,demeureDescription){
+      if(err){
+        console.log(err);
+      } else {
+        DemeureImage.find().exec(function(err,demeureImage){
+          if(err){
+            console.log(err);
+          } else{
+            DemeureEquipement.find().exec(function(err,demeureEquipement){
+              if(err){
+                console.log(err);
+              } else {
+                var description = {presentation : demeureDescription.length !== 0 ? demeureDescription[demeureDescription.length-1].presentation : null};
+                var images = {urls : demeureImage.length !== 0 ? demeureImage : []};
+                var equipements = {equip : demeureEquipement !== 0 ? demeureEquipement : []}
+                res.render('demeure', {description : description, images : images, equipements : equipements});
+              }
+            });
+          }
+        });
+      }
+    });
   });
+    app.get("/tourisme", function(req,res){
+      Alentours.find().exec(function(err,alentours){
+        if(err){
+          console.log(err);
+        } else {
+          console.log('alentours', alentours);
+          var alentours = alentours.length !== 0 ? alentours : [];
+          res.render("tourisme", {alentours : alentours});
+        }
+      });
+    });
+
   app.get('/sejours',function(req,res){
     Chambre.find().exec(function(err,chambres){
       if(err){
@@ -55,9 +88,6 @@ module.exports = function (app, passport){
         res.render("sejours", {chambres : chambres});
       }
     })
-  });
-  app.get('/tourisme',function(req,res){
-    res.render("tourisme");
   });
   app.get('/livre',function(req,res){
     res.render("livre");
@@ -398,6 +428,7 @@ module.exports = function (app, passport){
       if(err){
         console.log(err);
       } else {
+        console.log('alentours', alentours);
         var alentours = alentours.length !== 0 ? alentours : [];
         res.render("admin/alentours", {alentours : alentours});
       }
@@ -417,7 +448,6 @@ module.exports = function (app, passport){
         res.redirect('/admin/alentours');
       }
     });
-    res.redirect("/admin/alentours")
   });
   app.post("/admin/alentours/add", isAuthenticated, function(req,res){
     var sampleFile;
@@ -430,7 +460,8 @@ module.exports = function (app, passport){
     Alentours.create({
       title : req.body.title,
       description : req.body.content,
-      urlImage : 'img/alentours/'+sampleFile.name
+      urlImage : 'img/alentours/'+sampleFile.name,
+      url : req.body.url
     }, function(err,alentour){
       if(err){
         console.log(err);
