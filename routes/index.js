@@ -1,5 +1,3 @@
-
-var livreController = require('../controllers/livreController');
 var mongoose = require('mongoose');
 var html2jade = require('html2jade');
 var fs = require('fs');
@@ -11,6 +9,7 @@ var DemeureDescription = mongoose.model("DemeureDescription");
 var DemeureImage = mongoose.model("DemeureImage");
 var DemeureEquipement = mongoose.model("DemeureEquipement");
 var Alentours = mongoose.model("Alentours");
+var Livre = mongoose.model("livre");
 
 var isAuthenticated = function (req, res, next) {
   if (req.isAuthenticated())
@@ -90,7 +89,31 @@ module.exports = function (app, passport){
     })
   });
   app.get('/livre',function(req,res){
-    res.render("livre");
+    Livre
+      .find()
+        .exec(function(err,livre){
+          if(err) {
+            console.log(err);
+          }else{
+            console.log("livre",livre);
+            var livres = livre.length !== 0 ? livres : [];
+            res.render("livre",{livres: livres});
+          }
+    });
+  });
+  app.post('/livre',function(req,res){
+    Livre
+      .create({
+        reservation: req.body.reservation,
+        etoiles: req.body.star,
+        commentaire: req.body.commentaire
+      },function(err, livre){
+        if(err) {
+          console.log(err);
+        } else {
+          res.redirect("/livre");
+        }
+      });
   });
   app.get('/contact', function(req,res){
     res.render("contact");

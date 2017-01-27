@@ -4,48 +4,42 @@ head
   body(style="margin-top: 350px")
     .container
         h2#livre Livre d'or
-        form(action='/envoi', method='post')
+        form(action='/livre', method='post')
+          .form-group
             .row
                 .col-xs-5
                     .form-group
                         label(for='sleep') Votre réservation
                         select#sleep.form-control.FORM(name='reservation')
-                            option Chambre Azur
-                            option Chambre Romance
-                            option Suite Renoir
-                            option Suite Zen
-                            option L'appartement
+                          option Chambre Azur
+                          option Chambre Romance
+                          option Suite Renoir
+                          option Suite Zen
+                          option L'appartement
                 #stars.col-xs-7
                     fieldset.rating
-                        input#star5(type='radio', name='rating', value='5')
-                        label.full(for='star5', title='Awesome - 5 stars')
-                        input#star4half(type='radio', name='rating', value='4 and a half')
-                        label.half(for='star4half', title='Pretty good - 4.5 stars')
-                        input#star4(type='radio', name='rating', value='4')
-                        label.full(for='star4', title='Pretty good - 4 stars')
-                        input#star3half(type='radio', name='rating', value='3 and a half')
-                        label.half(for='star3half', title='Meh - 3.5 stars')
-                        input#star3(type='radio', name='rating', value='3')
-                        label.full(for='star3', title='Meh - 3 stars')
-                        input#star2half(type='radio', name='rating', value='2 and a half')
-                        label.half(for='star2half', title='Kinda bad - 2.5 stars')
-                        input#star2(type='radio', name='rating', value='2')
-                        label.full(for='star2', title='Kinda bad - 2 stars')
-                        input#star1half(type='radio', name='rating', value='1 and a half')
-                        label.half(for='star1half', title='Meh - 1.5 stars')
-                        input#star1(type='radio', name='rating', value='1')
-                        label.full(for='star1', title='Sucks big time - 1 star')
-                        input#starhalf(type='radio', name='rating', value='half')
-                        label.half(for='starhalf', title='Sucks big time - 0.5 stars')
-
-            .form-group
-                .row
-                    .col-xs-7
-                        label(for='comment') Commentaire
-                        textarea#comment.form-control.FORM(rows='5' name='commentaire' placeholder='Votre commentaire...')
-                    .col-xs-5
-                input.btn.btn-default.btn-lg.send(type='submit', value='Envoyer')
-
+                      input#star-5.inputStar.inputStar-5(type='radio', name='star')
+                      label.labelStar.star-5(for='star-5')
+                      input#star-4.inputStar.star-4(type='radio', name='star')
+                      label.labelStar.star-4(for='star-4')
+                      input#star-3.inputStar.star-3(type='radio', name='star')
+                      label.labelStar.star-3(for='star-3')
+                      input#star-2.inputStar.star-2(type='radio', name='star')
+                      label.labelStar.star-2(for='star-2')
+                      input#star-1.inputStar.star-1(type='radio', name='star')
+                      label.labelStar.star-1(for='star-1')
+          .form-group
+            .row
+              .col-xs-7
+                  label(for='comment') Commentaire
+                  textarea#comment.form-control.FORM(rows='5' name='commentaire' placeholder='Votre commentaire...')
+              .col-xs-5
+            input.btn.btn-primary.btn-lg.send.pull-right(type='submit', value='Envoyer')
+        each livre in livres
+          span= livre.reservation
+          - for(i =1 ; i<=livre.etoiles;i++)
+            input#star1(type='radio',name="rating")
+          p= livre.commentaire 
 
 
 include ./footer
