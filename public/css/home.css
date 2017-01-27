@@ -6,13 +6,18 @@ background-color:#fcfcfc!important;
 margin-bottom: 80px;
 }
 #homeDemeure{
-padding-top: 180px;
+padding-top: 70px;
 
 }
 #txthomeDemeure{
       padding-bottom: 20px;
+      padding-left: 0px;
 }
-
+/*****GLIPH***********************/
+#pictohomeDemeure{
+text-align:center!important;
+}
+/****************************/
 #txthomeDemeure h3{
   padding-top: 0px;
   margin-top: 0px;
@@ -26,11 +31,7 @@ padding-top: 180px;
     font-weight: 300;
     font-family: 'Fira Sans', sans-serif;
   }
-#pictohomeDemeure{
-color: #999966!important;
-font-size: 50px;
-text-align: center;
-}
+/****************************/
 #infohomeDemeure{
   padding-top: 20px;
 }
@@ -42,24 +43,37 @@ text-align: center;
   font-weight: 300;
   font-family: 'Fira Sans', sans-serif;
   font-size: 24px;
-  color: #999966!important;
+  color: #9d2501;!important;
   text-align: center;
 }
 #infoBlock p{
-  font-size: 16px;
-  text-align: justify;
   font-weight: 300;
   font-family: 'Fira Sans', sans-serif;
+  font-size: 16px;
+  text-align: justify;
 }
 #homeGeographie{
-    background-color: #999966!important;
-    height: 250px;
-    background-image: url("../img/Carte-cevennes-france.png");
-    background-repeat: no-repeat;
-    background-size: 50%;
-    background-position:top left;
+    background-color:#c9ca9e!important;
     margin-bottom: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 10px;
+
+  }
+#homeGeographie p{
+  padding-top: 10px;
+  font-size: 16px;
+  color: black!important;
+  font-weight: 300;
+  font-style: italic;
+  font-family: 'Fira Sans', sans-serif;
   }
 /***************************************************************************/
+@media (max-width:980px) {
+
+  #homeGeographie p{
+      padding-top: 30px;
+    font-size: 18px;
+    line-height: 24px;
+
+    }
+
+}

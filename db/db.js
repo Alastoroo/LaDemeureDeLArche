@@ -43,3 +43,8 @@ process.on('SIGTERM', function() {
 });
 // BRING IN YOUR SCHEMAS & MODELS
 require('./models/users.model.js');
+require('./models/livre.model.js');
+require('./models/home.model.js');
+require('./models/chambre.model.js');
+require('./models/demeure.model.js');
+require('./models/alentours.model.js');

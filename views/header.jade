@@ -1,9 +1,10 @@
 header
     nav.navbar.navbar-fixed-top
-      #menu.container-fluid
+      #menuNav.container-fluid
         #logo.row
           .col-md-12.col-lg-12
-            img.img-responsive.center-block(src='img/HEADER-HOME4.png')
+            a(href='/')
+              img.img-responsive.center-block(src='img/HEADER-HOME4.png')
             |                 
             h3 Chambres d&apos;h&ocirc;tes et g&icirc;te aux portes des C&eacute;vennes
         |         
@@ -20,7 +21,7 @@ header
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           ul.nav.navbar-nav
             li#iconHome
-              a(href='home')
+              a(href='/')
                 span.glyphicon.glyphicon-home
             |             
             li
@@ -54,6 +55,6 @@ header
               a(href='reservation', type='submit') R&eacute;server
     |   
     script.
-      jQuery(document).ready(function() {
+      $(document).ready(function() {
       $('.collapse').collapse();
       });

@@ -7,20 +7,20 @@ form.form-horizontal(action='/inscription', method='post')
     label.col-sm-2.control-label(for="inputEmail3")
     |     
     .col-sm-10
-      input.form-control(type="text", name="firstname", placeholder="Prénom")
+      input.form-control.formCtrl(type="text", name="firstname", placeholder="Prénom")
   |   
   .form-group
     label.col-sm-2.control-label(for="inputEmail3")
     |     
     .col-sm-10
-      input#inputEmail3.form-control(type="text", name="lastname",placeholder="Nom")
+      input#inputEmail3.form-control.formCtrl(type="text", name="lastname",placeholder="Nom")
   |   
   .form-group(class=typeof error === "undefined" ? "" : "has-error has-feedback")
     label.col-sm-2.control-label(for="inputEmail3")
     |     
     .col-sm-10
-      input#inputEmail3.form-control(type="email", name="email", placeholder="Email")
-      span.glyphicon.glyphicon-remove.form-control-feedback(aria-hidden="true")  
+      input#inputEmail3.form-control.formCtrl(type="email", name="email", placeholder="Email")
+      span.glyphicon.glyphicon-remove.form-control.formCtrl-feedback(aria-hidden="true")  
       .has-error
         p.has-error!= error
   |   
@@ -28,7 +28,7 @@ form.form-horizontal(action='/inscription', method='post')
     label.col-sm-2.control-label(for="inputPassword3")
     |     
     .col-sm-10
-      input#inputPassword3.form-control(type="password", name="Mot de passe", placeholder="Password")
+      input#inputPassword3.form-control.formCtrl(type="password", name="Mot de passe", placeholder="Password")
   |   
   .form-group
     .col-sm-offset-2.col-sm-10

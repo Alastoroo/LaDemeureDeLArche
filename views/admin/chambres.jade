@@ -1,0 +1,39 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/lumen/bootstrap.min.css')
+    link(rel='stylesheet', href='https://daneden.github.io/animate.css/animate.min.css')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js')
+  body
+    .container
+      .row
+        a.btn.btn-primary(href='/admin', role="button") Retour
+        .panel.panel-primary
+          .panel-heading Chambres 
+            a.btn.btn-success.pull-right(href="/admin/chambre/add/" role="button") Ajouter Chambre
+          .panel-body
+            table.table.table-condensed.table-bordered
+              thead
+                tr
+                  th Titre
+                  th Tarifs
+                  th Actions
+              tbody
+                each chambre, i in chambres
+                  tr
+                    td!= chambre.title
+                    td
+                      each tarif, j in chambre.tarifs
+                        br
+                        span!= tarif.nbPersonne
+                        span!= tarif.description
+                        span #{tarif.prix} €
+                    td
+                      a.btn.btn-primary(href='/admin/chambre/'+chambre._id+'/add/tarif') Ajouter Tarif
+                      a.btn.btn-success(href='/admin/chambre/update/'+ chambre._id) Modifier Chambre
+                      a.btn.btn-warning(href='/admin/chambre/delete/' + chambre._id) Supprimer

@@ -1,100 +1,51 @@
-doctype html
+head
+  include ./head
+  include ./header
+  body(style="margin-top: 350px")
+    .container
+        h2#livre Livre d'or
+        form(action='/envoi', method='post')
+            .row
+                .col-xs-5
+                    .form-group
+                        label(for='sleep') Votre réservation
+                        select#sleep.form-control.FORM(name='reservation')
+                            option Chambre Azur
+                            option Chambre Romance
+                            option Suite Renoir
+                            option Suite Zen
+                            option L'appartement
+                #stars.col-xs-7
+                    fieldset.rating
+                        input#star5(type='radio', name='rating', value='5')
+                        label.full(for='star5', title='Awesome - 5 stars')
+                        input#star4half(type='radio', name='rating', value='4 and a half')
+                        label.half(for='star4half', title='Pretty good - 4.5 stars')
+                        input#star4(type='radio', name='rating', value='4')
+                        label.full(for='star4', title='Pretty good - 4 stars')
+                        input#star3half(type='radio', name='rating', value='3 and a half')
+                        label.half(for='star3half', title='Meh - 3.5 stars')
+                        input#star3(type='radio', name='rating', value='3')
+                        label.full(for='star3', title='Meh - 3 stars')
+                        input#star2half(type='radio', name='rating', value='2 and a half')
+                        label.half(for='star2half', title='Kinda bad - 2.5 stars')
+                        input#star2(type='radio', name='rating', value='2')
+                        label.full(for='star2', title='Kinda bad - 2 stars')
+                        input#star1half(type='radio', name='rating', value='1 and a half')
+                        label.half(for='star1half', title='Meh - 1.5 stars')
+                        input#star1(type='radio', name='rating', value='1')
+                        label.full(for='star1', title='Sucks big time - 1 star')
+                        input#starhalf(type='radio', name='rating', value='half')
+                        label.half(for='starhalf', title='Sucks big time - 0.5 stars')
 
-html(lang='en')
-  head
-    include ./head
-livre
-  |     
-  title Les sejours
-  |   
-  body
-  
-    include ./header
+            .form-group
+                .row
+                    .col-xs-7
+                        label(for='comment') Commentaire
+                        textarea#comment.form-control.FORM(rows='5' name='commentaire' placeholder='Votre commentaire...')
+                    .col-xs-5
+                input.btn.btn-default.btn-lg.send(type='submit', value='Envoyer')
 
-    br
-    |     
-    br
-    |    
-    form
-      h1 Formulaire de paiement
-      |  
-      p
-        | Les champs obligatoires sont suivis d&apos;un 
-        strong
-          abbr(title='obligatoire')
-        | .
-      |   
-      section
-        h2 Information de contact
-        |     
-        fieldset
-          legend Titre
-          |       
-          ul
-            li
-              label(for='titre_1')
-                input#titre_1(type='radio', name='title', value='M.')
-                |             Monsieur
-            |         
-            li
-              label(for='titre_2')
-                input#titre_2(type='radio', name='title', value='Mme')
-                |             Madame
-        |     
-        p
-          label(for='nom')
-            span Nom : 
-            |         
-            input#nom(type='text', name='nomdutilisateur', required='')
-            |         
-            strong
-              abbr(title='obligatoire')
-        |  
-        p
-          label(for='courriel')
-            span Courriel : 
-            |  
-            input#courriel(type='email', name='courrielutilisateur', required='')
-            |  
-            strong
-              abbr(title='obligatoire')
-      |   
-      section
-        h2 Information de paiement
-        |     
-        p
-          label(for='carte')
-            span Type de carte :
-            |         
-            select#carte(name='carteutilisateur')
-              option(value='visa') Visa
-              |           
-              option(value='mc') Mastercard
-              |           
-              option(value='amex') American Express
-        |     
-        p
-          label(for='numero')
-            span Num&eacute;ro de la carte :
-            |         
-            input#numero(type='text', name='numerocarte', required='')
-            |         
-            strong
-              abbr(title='obligatoire')
-        |  
-        p
-          label(for='date')
-            span Date d&apos;expiration :
-            |  
-            input#date(type='text', name='expiration', required='')
-            |  
-            strong
-              abbr(title='obligatoire') *
-            |  
-            em formatt&eacute; comme mm/aa
-      |  
-      section
-        p
-          button Valider le paiement
- 
-    include ./footer
+
+
+include ./footer

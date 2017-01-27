@@ -5,14 +5,16 @@
   padding-bottom:20px;
 }
 #logo h3{
+  font-weight: 300;
   font-size: 18px;
   font-family: 'Fira Sans',300, sans-serif;
   margin-top: 0px;
   text-align: center;
   color:#999966!important;
 }
+
 /**********************************************/
-#menu{
+#menuNav{
   padding: 0px;
   margin: 0px;
   height: auto;
@@ -34,6 +36,7 @@ background-color: #999966!important;
   padding-top: 20px;
   padding-bottom: 20px;
   font-size: 20px;
+  font-weight: 300;
   font-family:'Fira Sans', sans-serif;
   color:white!important;
 }
@@ -43,40 +46,35 @@ background-color: #999966!important;
      transition-duration: 0.4s;
      color: #999966!important;
 }
+.navbar .navbar-nav li a:active{
+    background-color:black!important;
+}
 .navbar .navbar-nav li button{
-  /*font-size: 20px;
-  font-family:'Fira Sans', sans-serif;
-  background-color: #c9ca9e!important;*/
+  background-color: #c9ca9e!important;
 }
 .navbar .navbar-nav li button:hover{
-  background-color: #c9ca9e!important;
-  -webkit-transition-duration: 0.4s; /* Safari */
+  -webkit-transition-duration: 0.4s;
    transition-duration: 0.4s;
 }
 .navbar .navbar-collapse {
   text-align: center;
 }
 
-.glyphicon-chevron-down{
-  margin-left:20px;
-  font-size:14px;
-}
-/**************************/
+/******HOME Style Icon Home Bootstrap********************/
 #iconHome{
 margin-right:120px;
 }
-
 #iconHome a{
   padding-left:20px;
   padding-right:20px;
 }
 #iconHome a:hover{
 }
-.glyphicon-home{
+#iconHome a span{
 font-size: 20px;
+color: white;
 }
-/**************************/
-/**************************/
+/******BTN reservation Nav bar********************/
 #btn-reservation{
   margin-left:120px;
 }
@@ -85,6 +83,7 @@ font-size: 20px;
   padding-right:20px;
   font-size:20px;
   color:white!important;
+font-weight: 300;
   font-family:'Fira Sans', sans-serif;
 }
 #btn-reservation a{
@@ -92,17 +91,14 @@ font-size: 20px;
 }
 #btn-reservation a:hover{
   background-color:#eea236!important;
+    color:white!important;
 }
-/*.active{
-  padding: 0px;
-  margin: 0px;
-}*/
-
+/*********************************************/
 /*SOUSDROPMENU*/
 #sousmenu{
   width:1980px;
   position:absolute;
-  background-color:white!important;
+  background-color:#c9ca9e!important;
   margin:0px;
   padding:0px;
   left:-740px;
@@ -114,24 +110,44 @@ font-size: 20px;
   float:center;
 }
 #sousmenu a {
-  padding-top:20px;
-  padding-bottom:20px;
+  padding-top:17px;
+  padding-bottom:17px;
   padding-left:140px;
   padding-right:140px;
-  color: #999966!important;
+  color: #63642b!important;
 }
 #sousmenu a:hover{
-  background-color:#c9ca9e!important;
+  background-color:#d8d8b5!important;
 }
+
 .dropdown {
     position:relative;
     display:inline-block;
 }
+/****Navbar dropdown style caret****/
+.dropdown a span {
+  color: white;
+  margin-left:20px;
+  font-size:14px;
+}
+.dropdown a span:hover {
+  font-size: 20px;
+  color:#999966!important;
+}
+/******************************/
 .dropdown:hover .dropdown-tabs {
   margin:0px;
   padding:0px;
   display:block;
 position:absolute;
+color: #999966!important;
+}
+.dropdown-toggle {
+  background-color:#999966!important;
+}
+
+.dropdown:after .dropdown-toggle:hover {
+  background-color:#999966!important;
 }
 .dropdown-tabs{
   display: none;
@@ -142,8 +158,8 @@ position:absolute;
   text-decoration:none;
   list-style:none;
 }
-.dropdown-toggle{
-}
+
+
 /**********************************************/
 /***************************************************************************/
 @media (max-width:1280px) {
@@ -168,7 +184,7 @@ position:absolute;
 
   #sousmenu{
     width: 1280px;
-    left: -360px;
+    left: -380px;
   }
   #sousmenu a {
     padding-left: 140px;

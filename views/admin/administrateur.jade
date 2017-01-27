@@ -1,0 +1,49 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title
+    link(rel='stylesheet', href='style.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/lumen/bootstrap.min.css')
+    link(rel='stylesheet', href='https://daneden.github.io/animate.css/animate.min.css')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js')
+  body
+    .container
+      .row
+        .col-xs-6.col-xs-offset-4
+          h1 Menu Administrateur
+        .col-xs-1.col-xs-offset-1
+          a.btn.btn-warning(href="/admin/logout", role='button') Se déconnecter
+      .row
+        .col-xs-6
+          .thumbnail
+            .caption
+              h3 Modification Home
+              p ...
+              p
+                a.btn.btn-primary(href='/admin/home', role='button') Modifier
+        .col-xs-6
+          .thumbnail
+            .caption
+              h3 Modification Demeure
+              p ...
+              p
+                a.btn.btn-primary(href='/admin/demeure', role='button') Modifier
+      .row
+        .col-xs-6
+          .thumbnail
+            .caption
+              h3 Modification Chambres
+              p ...
+              p
+                a.btn.btn-primary(href='/admin/chambre', role='button') Modifier
+        .col-sm-6
+          .thumbnail
+            .caption
+              h3 Modification Aux alentours
+              p ...
+              p
+                a.btn.btn-primary(href='/admin/alentours', role='button') Modifier
