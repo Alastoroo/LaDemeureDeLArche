@@ -139,7 +139,7 @@ padding-left: 50px;
 .transform-field {
   height: 40px;
 }
-label {
+.labelContact {
   font-size: 20px;
 
   position: absolute;
@@ -153,7 +153,9 @@ label {
   transition-duration: 0.2s;
   transition-property: transform;
 }
-.textareaContact, .inputContact {
+
+.entry {
+	position: relative;
   position: relative;
   float: left;
   border: none;
@@ -174,7 +176,7 @@ label {
 .inputContact:focus + label {
   transform: translateY(-40px) translateX(-10px) scale(0.7);
 }
-#section-menu-contact input[type="submit"]{
+#section-menu-contact .entry[type="submit"]{
   position: relative;
   width: 60%;
   border: 2px solid;
