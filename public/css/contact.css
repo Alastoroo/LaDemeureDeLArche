@@ -1,222 +1,96 @@
-
-.bordeau{
-		background-color: #9d2501!important;
-	}
-	.vert-clair-logo{
-		background-color: #999966!important;
-	}
-
-	.vert-foncé{
-		background-color: #184a2d!important;
-
-	}
-	.reserver-button{
-
-		background-color: #d7d7b9 !important;
-
-	}
-  /*pagecontact*/
-
-
-#bgContact {
- margin-left: 120px;
- padding-top: 80px;
-
+section#contact {
+    background-color: #c9ca9e;
+    /*background-image: url('http://www.lademeuredelarche.com/loisirs/');*/
+    background-position: center;
+    background-repeat: no-repeat;
 }
-.googleMap {
-  border-color:
+section {
+    padding: 150px 0PX;
 }
-.pageFb {
-    width: 50%;
-  }
-
-.infos {
-  padding-top: 25px;
+section#contact .section-heading {
+    color: white;
 }
-.fondVert  {
-	background-color: #999966;
+section#contact .form-group {
+    margin-bottom: 25px;
+}
+section#contact .form-group input,
+section#contact .form-group textarea {
+    padding: 20px;
+}
+section#contact .form-group input.form-control {
+    height: auto;
+}
+section#contact .form-group textarea.form-control {
+    height: 236px;
+}
+section#contact .form-control:focus {
+    border-color: #fed136;
+    box-shadow: none;
+}
+section#contact ::-webkit-input-placeholder {
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: black;
+}
+.gellary_bg_none img{
 	width: 100%;
-	height: 75px;
+	height: 250px;
 }
-h1.fondVert {
-	text-align: center;
-	padding-top: 20px;
+section#contact :-moz-placeholder {
+    /* Firefox 18- */
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #eeeeee;
 }
-span.glyphicon {
-  font-size: 18px !important;
-  color: #9d2501;
+section#contact ::-moz-placeholder {
+    /* Firefox 19+ */
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #eeeeee;
 }
-
-a.mail {
-	text-decoration: none;
-	color: black!important;
-
+section#contact :-ms-input-placeholder {
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #eeeeee;
 }
-.contact {
-	padding-left: 40px;
-	font-style: italic;
-	font-size: 16px;
-}
-.contact p{
-	color: black!important;
-	font-style: italic;
-	padding-top: 5px;
-
-}
-.titleTitle {
-  padding-left: 20px;
-  color: #9d2501!important;
+section#contact .text-danger {
+    color: #e74c3c;
 }
 
-.blocPosition{
-	padding-left: 40px;
-	width: 110%;
-  padding-top: 20px;
+.about_our_company{
+    text-align: center;
 }
-#section-title{
-	padding-top: 40px;
-	font-size: 16px;
+.about_our_company h1{
+    font-size: 25px;
 }
-/*formulaire de contact*/
-
-#contact div {
-  margin-left: 0;
-  margin-right: 0;
-
-}
-.reservation {
-  margin-top: 20px;
-}
-#reservation {
-  padding-top: 30px;
-}
-.section-titre2  {
-padding-left: 50px;
- font-style: italic;
-	color: #999966!important;
-}
-.section-titre3 {
-  padding: 18px;
-  text-align: center;
-  background-color: #999966;
-  color: white;
-  opacity: 0.8;
-  width: 490px;
-  padding-bottom: 30px;
-}
-
-.conditionReservation {
-  font-size: 16px;
-	margin-top: 22px;
-}
-.conditionReservation p {
-  margin-top: 20px;
-}
-
-#mapContact {
-	padding-left: -10px;
-}
-#logoCarte {
-  width: 20%;
-  padding-top: 10px;
-}
-#logoCarte2 {
-  width: 10%;
-  padding-top: 10px;
-}
-#section-menu-contact {
-  width: 65%;
-  padding-left: 180px;
-  padding-top: 40px;
-}
-.transform-field-textarea, .transform-field {
-  position: relative;
-  margin-top: 40px;
-  padding-top: 30px;
-  float: left;
-  width: 100%;
-}
-.transform-field {
-  height: 40px;
-}
-.labelContact {
-  font-size: 20px;
-
-  position: absolute;
-  height: 100px;
-  max-width: 300px;
-  left: 18px;
-  color: #606060!important;
-  z-index: -1;
-
-  font-style: italic;
-  transition-duration: 0.2s;
-  transition-property: transform;
-}
-
-.entry {
-	position: relative;
-  position: relative;
-  float: left;
-  border: none;
-  border-bottom: 1px solid #9d2501!important;
-  background: transparent;
-  outline: none;
-  height: 150px;
-  font-family: Fira,"Lucida Sans",serif;
-  font-style: italic;
-  width: 70%;
-  margin-left: 15px;
-  transition-property: transform;
-  font-size: 26px;
-}
-.inputContact {
-  height: 35px;
-}
-.inputContact:focus + label {
-  transform: translateY(-40px) translateX(-10px) scale(0.7);
-}
-#section-menu-contact .entry[type="submit"]{
-  position: relative;
-  width: 60%;
-  border: 2px solid;
-  border-color: #9d2501!important;
-  color: black;
-  background-color: rgba(255,255,255,0.3);
-  border-radius: 2px 2px 2px 2px;
-  -moz-border-radius: 2px 2px 2px 2px;
-  -webkit-border-radius: 2px 2px 2px 2px;
-  height: 50px;
-}
-#section-menu-contact input[type="submit"]:hover {
-  background-color: #999966;
-  color: rgba(255,255,255,0.9);
-  transition: background-color 0.4s ease-in;
-}
-
-#field-name {
-    margin-top: 20px;
-}
-#form_contact {
-    margin-bottom:50px;
-    margin-right: 50px;
-}
-#contact {
-    min-height: 200px;
-}
-#field-submit{
+.titleline-icon {
     position: relative;
-    width: 100%;
+    max-width: 100px;
+    border-top: 4px double #F99700;
+    margin: 20px auto 20px;
 }
-#field-submit .inputContact{
-    margin-top: 45px;
-    margin-bottom: 50px;
+.titleline-icon:after {
+    position: absolute;
+    top: -11px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-family: 'FontAwesome';
+    content: "\f141";
+    font-size: 20px;
+    line-height: 1;
+    color: #F99700;
+    text-align: center;
+    vertical-align: middle;
+    width: 40px;
+    height: 20px;
+    background: #ffffff;
 }
-.textareaContact:focus + label, .inputContact:valid + label {
-  transform: translateY(-40px) translateX(-10px) scale(0.7);
-}
-@media (max-width: 768px) {
-	#menu-contact {
-		width: 60%;
-	}
+.btn{
+	background-color: #9d2501;
+	color: white;
 }

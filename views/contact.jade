@@ -10,169 +10,57 @@ contact
   body
   
     include ./header
-
     br
     |     
     br
     body(style='background-color:#f0f0f0;')
-      #bgContact.container-fluid
-        // Formulaire
-        .row.pageContact
-          #section-title.col-md-4.center
-            h1.section-titre2  Nous joindre
-            |            
-            |             
-            .blocPosition
-              p
-                span.glyphicon.glyphicon-home
-                | &nbsp;&nbsp;779 Chemin de la Prairie,
+      section#contact(style='')
+        .container
+          .row
+            .about_our_company(style='margin-bottom: 20px;')
+              h1(style='color:#fff;') Contactez-nous.
+              .titleline-icon
+              p(style='color:#fff;') Vous pouvez nous envoyer un mail. Nous repondrons dans les plus bref delais.
+          .row
+            .col-md-8
+              form#contactForm(name='sentMessage', novalidate='')
+                .row
+                  .col-md-6
+                    .form-group
+                      input#name.form-control(type='text', placeholder='Your Name ...', required='', data-validation-required-message='Please enter your name.')
+                      p.help-block.text-danger
+                    .form-group
+                      input#email.form-control(type='email', placeholder='Your Email ...', required='', data-validation-required-message='Please enter your email address.')
+                      p.help-block.text-danger
+                    .form-group
+                      input#phone.form-control(type='tel', placeholder='Your Phone ...', required='', data-validation-required-message='Please enter your phone number.')
+                      p.help-block.text-danger
+                  .col-md-6
+                    .form-group
+                      textarea#message.form-control(placeholder='Your Message ...', required='', data-validation-required-message='Please enter a message.')
+                      p.help-block.text-danger
+                  .clearfix
+                  .col-lg-12.text-center
+                    #success
+                    button.btn.btn-xl.get(type='submit') Send Message
+            .col-md-4
+              p(style='color:#fff;')
+                strong
+                  i.fa.fa-map-marker
+                  |  Address
                 br
-                | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 30380 Saint-Christol-l&egrave;s-Al&egrave;s - France
-              |             
-              p
-                span.glyphicon.glyphicon-phone-alt
-                | &nbsp;&nbsp;+33 (0)4 66 56 58 18
-              |             
-              p
-                span.glyphicon.glyphicon-envelope
-                | &nbsp;&nbsp;
-                a.mail(href=' reservation@lademeuredelarche.com')  reservation@lademeuredelarche.com
-              |             
-              p
-                span.glyphicon.glyphicon-send
-                | &nbsp;&nbsp;Coordonn&eacute;es GPS: 
-                strong 44.08715, 4.09465
-              |             
-              br
-              |              
-              #mapContact.googleMap
-                iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11462.599877848186!2d4.084496980414146!3d44.09057888849195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b441922353a783%3A0x3205bbe07d198b45!2s779+Chemin+de+la+Prairie%2C+30380+Saint-Christol-l%C3%A8s-Al%C3%A8s!5e0!3m2!1sfr!2sfr!4v1480501637633', width='380', height='260', frameborder='0', style='border:0', allowfullscreen='')
-              // <p><span class="glyphicon glyphicon-globe"></span>&nbsp;&nbsp;<a class="mail" href="http://www.lademeuredelarche.com/">www.lademeuredelarche.com</p>
-              .infos
-                h2.section-titre2 Infos pratiques
-                |             
-                p
-                  | A&eacute;roports: N&icirc;mes (38 km) Montpellier (75 km).
-                  br
-                  | Trains: Gare de N&icirc;mes, Gare d&rsquo; Al&egrave;s.
-                  br
-                  | Voiture: Parking priv&eacute; s&eacute;curis&eacute; sur place.
-                  br
-                  | Commerces et restaurants: &agrave; 2 km.
-          |         
-          #section-menu-contact.section.col-xs.6.col-sm-6.col-md-6.col-lg-6
-            h1.section-titre2 Formulaire
-            |         
-            |        
-            |           
-            .contact
-              #form_contact
-                form#contact(action='#', method='POST')
-                  #field-name.transform-field.row
-                    input.entry#nom(name='nom', type='text', required='')
-
-                    |                       
-                    label.labelContact
-                      | Nom
-                  |                 
-                  #field-name.transform-field.row
-                    input.entry#nom(name='nom', type='text', required='')
-                    |                   
-                    label.labelContact
-                      | Pr&eacute;nom
-                  |              
-                  #field-subject.transform-field.row
-                    input.entry#sujet(name='sujet', type='text', required='')
-                    |               
-                    label.labelContact
-                      | Sujet
-                  |         
-                  #field-email.transform-field.row
-                    input.entry#email(name='email', type='text', required='')
-                    |           
-                    label.labelContact
-                      | Email
-                  |     
-                  #field-message.transform-field-textarea.row
-                    textarea.entry#message(name='message', type='text', required='')
-                    |       
-                    label.labelContact
-                      | Message
-                  #field-submit.row.transform-field
-                    input(class="inputContact",type='submit', value='Envoyer')
-              // end of #form_contact
-        br
-        br
-        br
-        #reservation.row
-          .col-md-3.pageFb
-            // intégration page Facebook
-            h1.section-titre3 Notre actualit&eacute;
-            |     
-            |       
-            iframe(src='https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/LaDemeureDeLarche&tabs=timeline&width=520&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId', width='490', height='520', style='border:none;overflow:hidden', scrolling='no', frameborder='0', allowtransparency='true')
-            |       
-          |       
-          script.
-            (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.8";
-            fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));
-          |   
-          |     
-          .col-md-6.conditionReservation
-            h2 Conditions de r&eacute;servations
-            |         
-            p
-              | Arriv&eacute;es: 
-              font(size='4px')
-                strong 16h00 &agrave; 20h00
-              | .
-              br
-              |  D&eacute;parts jusqu&rsquo;&agrave; 
-              font(size='4px')
-                strong 11h00
-              | .
-              br
-              | Horaires petit-d&eacute;jeuner:
-              font(size='4px')
-                strong 8h30 &agrave; 10h00
-              | .
-              br
-              | Possibilit&eacute; de prendre le petit-d&eacute;jeuner en chambre,
-              br
-              |  en terrasse ou dans la pi&egrave;ce commune.
-              br
-              |         
-              font(size='4px') Saison haute
-              | : 
-              strong Avril &agrave; Octobre
-              br
-              |         
-              font(size='4px') Saison basse
-              | : 
-              strong Novembre &agrave; Avril
-              br
-              |         Un enfant de moins de 2 ans s&eacute;journe &agrave; titre gracieux pour l&apos;utilisation d&apos;un lit b&eacute;b&eacute;.
-              br
-              |         Toutes nos chambres et notre appartement sont non-fumeur.
-              br
-              |         Aucun lit d&apos;appoint ne peut &ecirc;tre install&eacute; dans la chambre.
-              br
-              |         Les animaux de compagnie ne sont pas admis au sein de l&apos;&eacute;tablissement.
-            |         
-            h3
-              em Moyens de paiement
-            |         
-            p
-              strong
-                | Paiement s&eacute;curis&eacute;
-                img#logoCarte.img-responsive(src='img/logo/cartecb.png')
+                |                             La Demeure de l’Arche, Gite et chambres d’hôtes dans le Gard, 779 chemin de la prairie, 30380 Saint-Christol les Alès (France)
+              p(style='color:#fff;')
+                strong
+                  i.fa.fa-phone
+                  |  Phone Number
                 br
-                |         Ch&egrave;ques, esp&egrave;ces et Ch&egrave;ques vacances accept&eacute;s
-              img#logoCarte2.img-responsive(src='img/logo/cheque-vac.png')
-
+                |                             04.66.56.58.18 (+33 international)
+              p(style='color:#fff;')
+                strong
+                  i.fa.fa-envelope
+                  |   Email Address
+                br
+                |                             reservation@lademeuredelarche.com
+              p
     include ./footer
