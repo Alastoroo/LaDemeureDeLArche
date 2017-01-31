@@ -127,7 +127,7 @@ module.exports = function (app, passport){
       service: 'gmail',
         auth: {
           user: 'colinb.dev@gmail.com',
-          pass: 'TTionoanyin741'
+          pass: 'password'
       }
     });
     var mailOption = {
