@@ -17,29 +17,30 @@ contact
       section#contact(style='')
         .container
           .row
-            .fb-page(data-href='https://www.facebook.com/LaDemeureDeLarche', data-width='380', data-hide-cover='false', data-show-facepile='false', data-show-posts='false')
-            #map
+            iframe.col-xs-6(src='https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/LaDemeureDeLarche&tabs=timeline&width=520&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId', width='500', height='260', style='border:none;overflow:hidden', scrolling='no', frameborder='0', allowtransparency='true')
+            #mapContact.googleMap
+              iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11462.599877848186!2d4.084496980414146!3d44.09057888849195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b441922353a783%3A0x3205bbe07d198b45!2s779+Chemin+de+la+Prairie%2C+30380+Saint-Christol-l%C3%A8s-Al%C3%A8s!5e0!3m2!1sfr!2sfr!4v1480501637633', width='500', height='260', frameborder='0', style='border:0', allowfullscreen='')
             .about_our_company(style='margin-bottom: 20px;')
               h1(style='color:#fff;') Contactez-nous.
               .titleline-icon
               p(style='color:#fff;') Vous pouvez nous envoyer un mail. Nous repondrons dans les plus bref delais.
           .row
             .col-md-8
-              form#contactForm(name='sentMessage', novalidate='')
+              form#contactForm(name='sentMessage', novalidate='', action='/contact', method='POST')
                 .row
                   .col-md-6
                     .form-group
-                      input#name.form-control(type='text', placeholder='Your Name ...', required='', data-validation-required-message='Please enter your name.')
+                      input#name.form-control(name='name',type='text', placeholder='Your Name ...', required, data-validation-required-message='Please enter your name.')
                       p.help-block.text-danger
                     .form-group
-                      input#email.form-control(type='email', placeholder='Your Email ...', required='', data-validation-required-message='Please enter your email address.')
+                      input#email.form-control(name='email',type='email', placeholder='Your Email ...', required, data-validation-required-message='Please enter your email address.')
                       p.help-block.text-danger
                     .form-group
-                      input#phone.form-control(type='tel', placeholder='Your Phone ...', required='', data-validation-required-message='Please enter your phone number.')
+                      input#phone.form-control(name='tel',type='text', placeholder='Your Phone ...', required, data-validation-required-message='Please enter your phone number.')
                       p.help-block.text-danger
                   .col-md-6
                     .form-group
-                      textarea#message.form-control(placeholder='Your Message ...', required='', data-validation-required-message='Please enter a message.')
+                      textarea#message.form-control(name='message',placeholder='Your Message ...', required, data-validation-required-message='Please enter a message.')
                       p.help-block.text-danger
                   .clearfix
                   .col-lg-12.text-center

@@ -10,6 +10,7 @@ var DemeureImage = mongoose.model("DemeureImage");
 var DemeureEquipement = mongoose.model("DemeureEquipement");
 var Alentours = mongoose.model("Alentours");
 var Livre = mongoose.model("livre");
+var nodemailer = require('nodemailer');
 
 var isAuthenticated = function (req, res, next) {
   if (req.isAuthenticated())
@@ -88,6 +89,7 @@ module.exports = function (app, passport){
       }
     })
   });
+  // LIVRE DEBUT
   app.get('/livre',function(req,res){
     Livre
       .find()
@@ -115,9 +117,41 @@ module.exports = function (app, passport){
         }
       });
   });
-  app.get('/contact', function(req,res){
+  // LIVRE FIN
+  // CONTACT DEBUT
+  app.get('/contact', function(req,res) {
     res.render("contact");
   });
+  app.post('/contact', function(req,res) {
+    var transporter = nodemailer.createTransport({
+      service: 'gmail',
+        auth: {
+          user: 'colinb.dev@gmail.com',
+          pass: 'TTionoanyin741'
+      }
+    });
+    var mailOption = {
+      from: req.body.email,
+      to: "colinb.dev@gmail.com",
+      subject : req.body.name,
+      text: req.body.message + ' ' +req.body.email,
+      html: '<b>' + req.body.email + '<br>' + req.body.message + '<b>'
+    };
+    transporter.sendMail(mailOption, function(error, info){
+      if(error){
+        console.log(error);
+        res.redirect('/contact');
+      } else {
+        console.log(info);
+        res.redirect('/contact');
+      }
+
+    });
+    transporter.close();
+  });// faire le poste contact nodemailer
+
+  //CONTACT FIN
+
   app.get('/reservation',function(req,res){
     res.render("reservation");
   });
