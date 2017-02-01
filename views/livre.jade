@@ -18,15 +18,15 @@ head
                           option L'appartement
                 #stars.col-xs-7
                     fieldset.rating
-                      input#star-5.inputStar.inputStar-5(type='radio', name='star')
+                      input#star-5.inputStar.inputStar-5(type='radio', value='5', name='star')
                       label.labelStar.star-5(for='star-5')
-                      input#star-4.inputStar.star-4(type='radio', name='star')
+                      input#star-4.inputStar.star-4(type='radio', value='4',name='star')
                       label.labelStar.star-4(for='star-4')
-                      input#star-3.inputStar.star-3(type='radio', name='star')
+                      input#star-3.inputStar.star-3(type='radio', value='3',name='star')
                       label.labelStar.star-3(for='star-3')
-                      input#star-2.inputStar.star-2(type='radio', name='star')
+                      input#star-2.inputStar.star-2(type='radio', value='2',name='star')
                       label.labelStar.star-2(for='star-2')
-                      input#star-1.inputStar.star-1(type='radio', name='star')
+                      input#star-1.inputStar.star-1(type='radio', value='1',name='star')
                       label.labelStar.star-1(for='star-1')
           .form-group
             .row
@@ -35,11 +35,22 @@ head
                   textarea#comment.form-control.FORM(rows='5' name='commentaire' placeholder='Votre commentaire...')
               .col-xs-5
             input.btn.btn-primary.btn-lg.send.pull-right(type='submit', value='Envoyer')
+        br
+        br
+        br
+        br
+        br
+        br    
+        hr    
         each livre in livres
-          span= livre.reservation
-          - for(i =1 ; i<=livre.etoiles;i++)
-            input#star1(type='radio',name="rating")
-          p= livre.commentaire 
+          .list-group
+            a.list-group-item
+              h4.list-group-item-heading= livre.reservation
+                - for(i=1 ; i<=livre.etoiles;i++)
+                  &nbsp;
+                  span
+                    i.fa.fa-star.starColor(aria-hidden="true")
+              p.list-group-item-text= livre.commentaire
 
 
 include ./footer

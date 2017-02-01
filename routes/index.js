@@ -98,12 +98,14 @@ module.exports = function (app, passport){
             console.log(err);
           }else{
             console.log("livre",livre);
-            var livres = livre.length !== 0 ? livres : [];
+            var livres = livre.length !== 0 ? livre : [];
             res.render("livre",{livres: livres});
           }
     });
   });
   app.post('/livre',function(req,res){
+
+    console.log(req.body.star);
     Livre
       .create({
         reservation: req.body.reservation,

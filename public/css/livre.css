@@ -17,6 +17,9 @@ fieldset, label { margin: 0; padding: 0; }
   border-color : #9d2501;
 }
 
+.starColor {
+  color : #9d2501;
+}
 
 
 .inputStar{
