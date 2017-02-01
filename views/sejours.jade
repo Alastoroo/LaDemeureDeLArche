@@ -45,14 +45,10 @@ sejours
             |                 
             h2#titreSejour Descriptif
             |                 
-            p!= chambre.equipement
-            |                   
+            p!= chambre.equipement                  
             img#positionLogo.img2(src='img/logo/parking.png', alt='logo parking')
-            | &nbsp;
             img#positionLogo.img2(src='img/logo/wifi.png', alt='logo wifi')
-            | &nbsp;
             img#positionLogo.img2(src='img/logo/no-smoking.png', alt='idée cadeau')
-            | &nbsp;
             img#positionLogo.img2(src='img/logo/notanimal.png', alt='idée cadeau')
         |              
         each tarif in chambre.tarifs
