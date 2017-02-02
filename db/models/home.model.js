@@ -9,6 +9,7 @@ var homePres2Schema = new mongoose.Schema({
 var homeDescriptionSchema = new mongoose.Schema({
   presentation : String
 });
+
 var homeImageSchema = new mongoose.Schema({
   url : String
 });

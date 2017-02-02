@@ -12,7 +12,11 @@ var demeureEquipementSchema = new mongoose.Schema({
   description : String,
   urlImage : String
 });
+var demeureImageSchema = new mongoose.Schema({
+  url : String
+});
 
 mongoose.model("DemeureEquipement", demeureEquipementSchema,'demeureEquipement');
 mongoose.model("DemeureDescription", demeureDescriptionSchema, "demeureDescription");
 mongoose.model("DemeureImage", demeureImageSchema, "demeureImage");
+mongoose.model("DeumeurSlidImage", demeureSlidImageSchema, "DeumeurSlidImage")
