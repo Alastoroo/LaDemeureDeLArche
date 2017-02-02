@@ -21,22 +21,6 @@ html
           .panel-body!= description.presentation
       .row
         .panel.panel-primary
-          .panel-heading Image multi Demeure
-            a.btn.btn-success.pull-right(href="/admin/demeure/add/image" role="button") Ajouter Image
-          .panel-body
-            table.table.table-condensed.table-bordered
-              thead
-                tr
-                  th Lien
-                  th Actions
-              tbody
-                each image, i in images.urls
-                  tr
-                    td= image.url
-                    td 
-                      a.btn.btn-warning(href='/admin/demeure/image/delete/' + image._id) Supprimer
-      .row
-        .panel.panel-primary
           .panel-heading Image Slider Demeure
             a.btn.btn-success.pull-right(href="/admin/demeure/add/image" role="button") Ajouter Image
           .panel-body

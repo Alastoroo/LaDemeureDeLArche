@@ -7,16 +7,18 @@ var demeureDescriptionSchema = new mongoose.Schema({
 var demeureImageSchema = new mongoose.Schema({
   url : String
 });
+
 var demeureEquipementSchema = new mongoose.Schema({
   title : String,
   description : String,
   urlImage : String
 });
-var demeureImageSchema = new mongoose.Schema({
+
+var DemeureSlidImage = new mongoose.Schema({
   url : String
 });
 
 mongoose.model("DemeureEquipement", demeureEquipementSchema,'demeureEquipement');
 mongoose.model("DemeureDescription", demeureDescriptionSchema, "demeureDescription");
 mongoose.model("DemeureImage", demeureImageSchema, "demeureImage");
-mongoose.model("DeumeurSlidImage", demeureSlidImageSchema, "DeumeurSlidImage")
+mongoose.model("DemeureSlidImage", DemeureSlidImage, "DemeureSlidImage")
