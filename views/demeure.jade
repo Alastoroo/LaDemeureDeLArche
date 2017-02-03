@@ -25,36 +25,39 @@ demeure
           .col-md-12
             #theCarousel.carousel.slide.multi-item-carousel
               .carousel-inner
-                .item.active
-                  .col-xs-4
-                    a(href='#1')
-                      img.img-responsive(src='http://placehold.it/300/f44336/000000')
-                .item
-                  .col-xs-4
-                    a(href='#1')
-                      img.img-responsive(src='http://placehold.it/300/e91e63/000000')
-                .item
-                  .col-xs-4
-                    a(href='#1')
-                      img.img-responsive(src='http://placehold.it/300/9c27b0/000000')
-                .item
-                  .col-xs-4
-                    a(href='#1')
-                      img.img-responsive(src='http://placehold.it/300/673ab7/000000')
-                .item
-                  .col-xs-4
-                    a(href='#1')
-                      img.img-responsive(src='http://placehold.it/300/4caf50/000000')
-                .item
-                  .col-xs-4
-                    a(href='#1')
-                      img.img-responsive(src='http://placehold.it/300/8bc34a/000000')
-                // add  more items here
-                // Example item start:
-                .item
-                  .col-xs-4
-                    a(href='#1')
-                      img.img-responsive(src='http://placehold.it/300/8bc34a/000000')
+                each image, i in images.urls
+                  if i == 0
+                    .item.active
+                    img.img-responsive(src='#{image.url}')               
+                  else 
+                    .item
+                    img.img-responsive(src='#{image.url}') 
+                //- .item
+                //-   .col-xs-4
+                //-     a(href='#1')
+                //-       img.img-responsive(src='http://placehold.it/300/e91e63/000000')
+                //- .item
+                //-   .col-xs-4
+                //-     a(href='#1')
+                //-       img.img-responsive(src='http://placehold.it/300/9c27b0/000000')
+                //- .item
+                //-   .col-xs-4
+                //-     a(href='#1')
+                //-       img.img-responsive(src='http://placehold.it/300/673ab7/000000')
+                //- .item
+                //-   .col-xs-4
+                //-     a(href='#1')
+                //-       img.img-responsive(src='http://placehold.it/300/4caf50/000000')
+                //- .item
+                //-   .col-xs-4
+                //-     a(href='#1')
+                //-       img.img-responsive(src='http://placehold.it/300/8bc34a/000000')
+                //- // add  more items here
+                //- // Example item start:
+                //- .item
+                //-   .col-xs-4
+                //-     a(href='#1')
+                //-       img.img-responsive(src='http://placehold.it/300/8bc34a/000000')
                 // Example item end
               //- a.left.carousel-control(href='#theCarousel', data-slide='prev')
               //-   i.glyphicon.glyphicon-chevron-left

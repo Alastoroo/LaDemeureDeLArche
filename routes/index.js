@@ -11,7 +11,7 @@ var DemeureEquipement = mongoose.model("DemeureEquipement");
 var Alentours = mongoose.model("Alentours");
 var Livre = mongoose.model("livre");
 var nodemailer = require('nodemailer');
-var DemeureSlidImage = mongoose.model('DemeureSlidImage');
+
 
 var isAuthenticated = function (req, res, next) {
   if (req.isAuthenticated())
@@ -56,17 +56,12 @@ module.exports = function (app, passport){
             DemeureEquipement.find().exec(function(err,demeureEquipement){
               if(err){
                 console.log(err);
-               } else {DemeureSlidImage.find().exec(function(err,DemeureSlidImage){
-                 if(err){
-                   console.log(err);
-                }else {
+               } else {
                 var description = {presentation : demeureDescription.length !== 0 ? demeureDescription[demeureDescription.length-1].presentation : null};
                 // var imagesSlide = {urls : DemeureSlidImage.length !== 0 ? DemeureSlidImage : []};
                 var images = {urls : demeureImage.length !== 0 ? demeureImage : []};
                 var equipements = {equip : demeureEquipement !== 0 ? demeureEquipement : []}
                 res.render('demeure', {description : description, images : images, equipements : equipements});
-                  }
-                });
               }
             });
           }
