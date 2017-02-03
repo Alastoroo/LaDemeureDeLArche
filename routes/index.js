@@ -583,6 +583,7 @@ module.exports = function (app, passport){
   app.get("/admin/demeure/add/image", isAuthenticated,function(req,res){
     res.render("admin/addImageDemeure");
   });
+
   app.get("/admin/demeure/add/equipement", isAuthenticated,function(req,res){
     res.render("admin/addEquipementDemeure");
   });

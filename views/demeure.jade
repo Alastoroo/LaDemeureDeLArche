@@ -22,16 +22,16 @@ demeure
         
       .container
         .row
-          .col-md-12
+          .carousel
             #theCarousel.carousel.slide.multi-item-carousel
               .carousel-inner
                 each image, i in images.urls
                   if i == 0
                     .item.active
-                    img.img-responsive(src='#{image.url}')               
+                      img.img-responsive1.col-xs-4(src='#{image.url}')               
                   else 
                     .item
-                    img.img-responsive(src='#{image.url}') 
+                      img.img-responsive1.col-xs-4(src='#{image.url}') 
                 //- .item
                 //-   .col-xs-4
                 //-     a(href='#1')
