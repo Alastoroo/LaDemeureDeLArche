@@ -126,11 +126,12 @@ module.exports = function (app, passport){
   });
   app.post('/contact', function(req,res) {
     var transporter = nodemailer.createTransport({
-      service: 'gmail',
-        auth: {
-          user: 'colinb.dev@gmail.com',
-          pass: 'password'
-      }
+          host: 'ssl0.ovh.net',
+          port: 465,
+          auth: {
+            user: 'username',
+            pass: 'password'
+          }
     });
     var mailOption = {
       from: req.body.email,
